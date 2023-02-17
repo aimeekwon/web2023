@@ -1,6 +1,6 @@
 
         /* 웹폰트 */
-        @import url('https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css');
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
         /* 여백초기화 */
         *{
             margin: 0;
@@ -69,7 +69,7 @@
             border-bottom: 1px dashed #dcdcdc;
         }
 
-        .main__manu {
+        .main__menu {
             padding-bottom: 40px;
             border-bottom: 1px dashed #dcdcdc;
         }
