@@ -3,7 +3,10 @@
 
 # HTML
 블록구조와 인라인구조
+시멘틱태그
 
+# JAVASCRIPT
+변수, 상수, 배열, 객체
 
 ## Class Table 코딩
 
