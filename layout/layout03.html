@@ -4,94 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>레이아웃3 - float방식</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f3fbff;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+            height: 1080px;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #E1F5FE;
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: #B3E5FC;
+        }
+        #main {
+            width: 1200px;
+            overflow: hidden;
+        }
+        #aside {
+            width: 300px;
+            height: 780px;
+            background-color: #039BE5;
+            float: left;
+        }
+        #article1 {
+            width: 900px;
+            height: 260px;
+            background-color: #03A9F4;
+            float: left;
+        }
+        #article2 {
+            width: 900px;
+            height: 260px;
+            background-color: #29B6F6;
+            float: left;
+        }
+        #article3 {
+            width: 900px;
+            height: 260px;
+            background-color: #4FC3F7;
+            float: left;
+        }
+
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #006a9b;
+        }
+    </style>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    
-    body{
-        background-color: #00423b;
-
-    }
-    #wrap {
-        margin: 0 auto;
-        width: 1280px;
-        height: 1080px;
-        
-    }
-    #header{
-        width: 100%;
-        height: 100px;
-        background-color: #E0F2F1;
-    }
-    #nav{
-        width: 100%;
-        height: 100px;
-        background-color: #B2DFDB;
-    }
-    #aside{
-        width: 30%;
-        height: 780px;
-        float: left;
-    }
-    #aside .aside01 {
-        width: 100%;
-        height: 390px;
-        background-color: #80CBC4;
-        
-    }
-    #aside .aside02 {
-        width: 100%;
-        height: 390px;
-        background-color: #4DB6AC;
-        
-    }
-
-    #section{
-        float: left; 
-        width: 70%;
-        height: 780px;
-        background-color: #26A69A;
-    }
-    #footer {
-        clear: both;
-        width: 100%;
-        height: 100px;  
-        
-    }
-    #footer .foot01 {
-        width: 50%;
-        float: left;
-        height: 100px;
-        background-color: #00897B;
-    }
-    #footer .foot02 {
-        width: 50%;
-        float: left;
-        height: 100px;
-        background-color: #00796B;
-    }
-    #footer::after {
-        content: "";
-        clear:both;
-    }
-</style>
 <body>
+    <!-- div#wrap>#header+#nav+#main+#footer -->
     <div id="wrap">
-        <header id="header"></header>
-        <nav id="nav"></nav>
-        <aside id="aside">
-            <div class="aside01"></div>
-            <div class="aside02"></div>
-        </aside>
-        <section id="section"></section>
-        <footer id="footer">
-            <div class="foot01"></div>
-            <div class="foot02"></div>
-        </footer>
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="main">
+            <div id="aside"></div>
+            <div id="article1"></div>
+            <div id="article2"></div>
+            <div id="article3"></div>
+        </div>
+        <div id="footer"></div>
     </div>
 </body>
 </html>
