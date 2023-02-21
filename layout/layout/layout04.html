@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout4 - float</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #EEEBE9;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1280px;
+            height: 1080px;
+
+        }
+        #header{
+            width: 100%;
+            height: 100px;
+            background-color: #74574A;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #684D43;
+        }
+        #aside {
+            width: 35%;
+            height: 780px;
+            float: left;
+        }
+        #aside .side01{
+            width: 100%;
+            height: 390px;
+            background-color: #9D8980;
+            float: left;
+        }
+        #aside .side02{
+            width: 100%;
+            height: 390px;
+            background-color: #B9AAA5;
+            float: left;
+        }
+        #section {
+            width: 65%;
+            height: 780px;
+            float: left;
+            background-color: #9D8980;
+
+        }
+        #section .sec01{
+            width: 100%;
+            height: 390px;
+            float: left;
+            background-color: #886F65;
+
+        }
+        #section .sec02{
+            width: 100%;
+            height: 390px;
+            float: left;
+            background-color: #4A352F;
+
+        }
+        #footer {
+            clear: both;
+            width: 100%;
+            height: 100px;
+            background-color: #D5CCC9;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside">
+            <div class="side01"></div>
+            <div class="side02"></div>
+        </aside>
+        <section id="section">
+            <div class="sec01"></div>
+            <div class="sec02"></div>
+        </section>
+        <footer id="footer">
+
+
+        </footer>
+    </div>
+</body>
+</html>

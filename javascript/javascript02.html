@@ -80,6 +80,113 @@
                     <li><a href="#">04. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
                 </ul>
             </div>
+            <div class="main__sample">
+                <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다--> 
+                <div id="sample01" class="sample">
+                    <h3>01. 변수 : 데이터 블러오기</h3>
+                    <p>변수 안에 저장된 데이터를 불러오는 방법입니다</p>
+<pre class="line-numbers"><code class="language-js">
+    let x = 100, y = 200, z = "javascript";
+    
+    console.log(x , y, z);
+</code></pre>
+<div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                "javascript"
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample1 -->
+                <div id="sample01" class="sample">
+                    <h3>02. 상수 : 데이터 불러오기</h3>
+                    <p>상수 안에 저장된 데이터를 불러오는 방법입니다</p>
+<pre class="line-numbers"><code class="language-js">
+    const x = 100, y = 200, z = "javascript";
+            
+    console.log(x, y, z);
+</code></pre>
+<div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                "javascript"
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample2 -->
+                <div id="sample01" class="sample">
+                    <h3>03. 배열 : 데이터 불러오기</h3>
+                    <p>배열 안에 저장된 데이터를 불러오는 방법입니다</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, "javascript"];
+
+    console.log(arr[0], arr[1], arr[2]);
+</code></pre>
+<div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                "javascript"
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample3 -->
+                <div id="sample01" class="sample">
+                    <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
+                    <p>배열 안에 또다른 배열이 있는 데이터를 불러오는 방법입니다</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, ["javascript", "react"]];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2][0]);
+    console.log(arr[2][1]);
+</code></pre>
+<div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                "javascript"<br>
+                                "react"
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample4 --> 
+                <div id="sample01" class="sample">
+                    <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
+                    <p>배열 안에 또다른 배열이 있는 데이터를 불러오는 방법입니다</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, "javascript"];
+
+    console.log(arr.length);
+</code></pre>
+<div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                "javascript"<br>
+                                "react"
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample4 -->                                 
         </div>
     </main>
     <!-- //main -->

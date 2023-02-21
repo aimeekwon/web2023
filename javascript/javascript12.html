@@ -51,6 +51,10 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
+                    <li><a href="#">02. 데이터 이펙트 : 1부터 50까지 출력하기</a></li>
+                    <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</a></li>
+                    <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
+                    <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 5의 나머지가 0인 것만 출력하기</a></li>
 
                 </ul>
             </div>
@@ -96,7 +100,7 @@
                     <p>for문을 이용해서 0부터 100까지 5의 배수만 출력하는 예제입니다</p>
 <pre class="line-numbers"><code class="language-js">
     for( let i=0; i&lt=100; i+=5){
-            console.log(i)
+            console.log(i)  //i+=5 : i = i + 5
         }
 //5, 10, 15, 20, ~~ 100
 </code></pre>
@@ -104,10 +108,10 @@
                 <!-- //sample4 --> 
                 <div id="sample01" class="sample">
                     <h3>05. 데이터 이펙트 : 1부터 100까지 5의 나머지가 0인 것만 출력하기</h3>
-                    <p>if문을 이용해서 0부터 100까지 5의 나머지가 0인 것만 출력출력하는 예제입니다</p>
+                    <p>if문을 이용해서 0부터 100까지 5의 나머지가 0인 것만 출력하는 예제입니다</p>
 <pre class="line-numbers"><code class="language-js">
     for( let i = 1 ; i&lt=100; i++){
-        if(i % 5 == 0){
+        if(i % 5 == 0){  // i를 5로 나누었을 때 나머지가 0인 것
             console.log(i)
         }         
     }
@@ -124,36 +128,34 @@
     <!-- //footer -->
     <script src="assets/js/prism.js"></script>
     <script>
-        //01. 1부터 100까지 출력하기
-        for( let i=1; i<=100; i++){
-            // console.log(i)
+        // //01. 1부터 100까지 출력하기
+        // for( let i=1; i<=100; i++){
+        //     // console.log(i)
 
-        }
-        //02. 0부터 50까지 출력하기
-        for( let i=0; i<=50; i++ ){
-            // console.log(i)
-        }
-        //03. 0부터 100까지 짝수만 출력하기
+        // }
+        // //02. 0부터 50까지 출력하기
+        // for( let i=0; i<=50; i++ ){
+        //     // console.log(i)
+        // }
+        // //03. 0부터 100까지 짝수만 출력하기
 
-                            //i = i + 2
-        for( let i=0; i<=100; i+=2){
-            // console.log(i)
-        }
-        //04. 0부터 100까지 5의 배수만 출력하기
-        for( let i=0; i<=100; i+=5){
-        //    console.log(i)
-        }
-        //05. 5의 나머지가 0인 것만 출력
+        //                     //i = i + 2
+        // for( let i=0; i<=100; i+=2){
+        //     // console.log(i)
+        // }
+        // //04. 0부터 100까지 5의 배수만 출력하기
+        // for( let i=0; i<=100; i+=5){
+        // //    console.log(i)
+        // }
+        // //05. 5의 나머지가 0인 것만 출력
 
-        for( let i = 1 ; i<=100; i++){
-            if(i % 5 == 0){
-        //        console.log(i)
-            }         
-        }
-        //
-        for (let i = 0; i<=100; i++){
+        // for( let i = 1 ; i<=100; i++){
+        //     if(i % 5 == 0){
+        // //        console.log(i)
+        //     }         
+        // }
+        // //
 
-        }
         
     </script>  
 </body>
