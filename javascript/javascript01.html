@@ -63,15 +63,14 @@
                     <li><a href="#">06. 배열 : 데이터 저장(여러개) : 표현방법2</a></li>
                     <li><a href="#">07. 배열 : 데이터 저장(여러개) : 표현방법3</a></li>
                     <li><a href="#">08. 배열 : 데이터 저장(여러개) : 표현방법4</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장(키와 값) : 표현방법1</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장(키와 값) : 표현방법2</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장(키와 값) : 표현방법3</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장(키와 값) : 표현방법4</a></li>
-
-                    <li><a href="#">01. 객체 : 데이터 저장(키와 값) : 표현방법5</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장(키와 값) : 표현방법6</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장(키와 값) : 표현방법7</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장(키와 값) : 표현방법8</a></li>
+                    <li><a href="#">09. 객체 : 데이터 저장(키와 값) : 표현방법1</a></li>
+                    <li><a href="#">10. 객체 : 데이터 저장(키와 값) : 표현방법2</a></li>
+                    <li><a href="#">11. 객체 : 데이터 저장(키와 값) : 표현방법3</a></li>
+                    <li><a href="#">12. 객체 : 데이터 저장(키와 값) : 표현방법4</a></li>
+                    <li><a href="#">13. 객체 : 데이터 저장(키와 값) : 표현방법5</a></li>
+                    <li><a href="#">14. 객체 : 데이터 저장(키와 값) : 표현방법6</a></li>
+                    <li><a href="#">15. 객체 : 데이터 저장(키와 값) : 표현방법7</a></li>
+                    <li><a href="#">16. 객체 : 데이터 저장(키와 값) : 표현방법8</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -130,9 +129,9 @@
                         <details>
                             <summary>결과확인하기</summary>
                             <div>
-                                100<br>
+                                300<br>
                                 200<br>
-                                "javascript"
+                                "react"
                             </div>
                         </details>
                     </div>
@@ -164,7 +163,7 @@
                             <div>
                                 400<br>
                                 600<br>
-                                "javascript"
+                                javascriptreact
                             </div>
                             <div class="notice">
                                 <h4>연산자 : 변수의 연산이 가능하다.</h4>
@@ -562,7 +561,7 @@
                     <p>데이터를 한줄에 표현한다</p>
                     <div class="script">
 <pre><code class="language-js">{                      
-         const obj = {a:100, b:200, c:"javascript"};
+         const obj = { a:100, b:200, c:"javascript" };
 
          console.log(obj.a);
          console.log(obj.b);
@@ -588,9 +587,10 @@
                     <div class="script">
 <pre><code class="language-js">{                      
          const obj = [
-         {a:100, b:200},
-         {c: "javascript"}
+             {a: 100, b: 200},
+             {c: "javascript"}
          ];
+
          console.log(obj[0].a);
          console.log(obj[0].b);
          console.log(obj[1].c);      
@@ -619,7 +619,7 @@
              b: [200, 300],
              c: {x: 400, y: 500},
              d: "javascript"
-          };
+         };
 
          console.log(obj.a); 
          console.log(obj.b[0]);
@@ -676,15 +676,21 @@
                 <!-- //sample14 -->  
                 <div id="sample10" class="sample">
                     <h3>20. 객체 : 데이터저장(키와 값) : 표현방법8</h3>
-                    <p>함수를 넣는다() <br>객체안에 실행문이 들어갈수 있다<br>변수에 함수를 넣을 수 있다</p>
+                    <p>함수를 넣는다() <br>객체안에 실행문이 들어갈수 있다
                     <div class="script">
 <pre><code class="language-js">{                      
          const obj = {
              a: 100,
              b: [200, 300],
              c: "javascript",
-             d : function(){
-                 console.log("javascript가 실행되었습니다");
+             d: function(){
+                 console.log("javascript가 실행되었습니다");  // 변수에 함수를 넣을 수 있다
+             },
+             e: function(){
+                console.log(obj.c + "가 실행되었습니다.")     // + 는 연결연산자로도 쓴다.  
+             },
+             f: function(){
+                console.log(this.c + "가 실행되었습니다.")    // this는 자기자신을 표현할 때 쓴다
              }
 
          };
@@ -693,7 +699,9 @@
          console.log(obj.b[0]);
          console.log(obj.b[1]);
          console.log(obj.c);
-         obj.d();      
+         obj.d();   
+         obj.e();
+         obj.f();   
 }
 </code></pre>                        
                         </div>
@@ -705,6 +713,8 @@
                                     200<br>
                                     300<br>
                                     javascript<br>
+                                    javascript가 실행되었습니다<br>
+                                    javascript가 실행되었습니다<br>
                                     javascript가 실행되었습니다
                                 </div>
                             </details>
@@ -931,13 +941,23 @@
 // ///////////////07        
 //         //객체 : 데이터저장(키와값) : 표현방법8  :함수를 넣는다(): 
         {
+            const j = "javascript";
+
             const obj = {
                 a: 100,
                 b: [200, 300],
                 c: "javascript",
                 d : function(){
                     console.log("javascript가 실행되었습니다");
+                },
+                e: function(){
+                    console.log(obj.c + "가 실행되었습니다.")
+                },
+                f: function(){
+                    console.log(this.c + "가 실행되었습니다.")
                 }
+                //this 자기자신을 표현할 때 쓴다
+                // + 를 연결연산자로 쓴다.
                 //객체안에는 실행문이 들어갈수 있다
                 //변수에 함수넣을수 있다
             };
@@ -947,6 +967,9 @@
             console.log(obj.b[1]);
             console.log(obj.c);
             obj.d();
+            obj.e();
+            obj.f();
+
 
 
         }

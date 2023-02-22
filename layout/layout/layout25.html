@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout25 - grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #886F65;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #74574A;
+        }
+        #main {
+            width: 100%;
+            height: 780px;
+            background-color: #B9AAA5;
+        }
+        #main .container {
+            display: grid;
+            grid-template-areas: 
+            "article01 article01"
+            "article02 article02"
+            "article03 article04"
+            
+            ;
+            grid-template-columns: 600px 600px;
+            grid-template-rows: 100px 200px 480px;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #684D43;
+        }
+        .container {
+            margin: 0 auto;
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .article01 {
+            grid-area: article01;
+            background-color: #594139;
+        }
+        .article02 {
+            grid-area: article02;
+            background-color: #4E342E;
+        }
+        .article03 {
+            grid-area: article03;
+            background-color: #4A352F;
+        }
+        .article04 {
+            grid-area: article04;
+            background-color: #3E2723;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main">
+            <div class="container">
+                <article class="article01"></article>
+                <article class="article02"></article>
+                <article class="article03"></article>
+                <article class="article04"></article>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>
