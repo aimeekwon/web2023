@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5,6,7,8,9,10];
+
+         document.write(arr[4],'<br>');
+         document.write(arr[6],arr[7],'<br>');
+         document.write(arr[1]+arr[9],'<br>');
+         document.write(arr[8]*arr[9],'<br>');
+
+         for(let i=1; i<9; i++){
+            document.write(i);
+
+         }
+         document.write('<br>');
+
+         for(let i=1; i<=100; i++){
+            if(i % 2 == 0){
+                document.write(i);
+            }
+         }
+        //  for(let i=2; i<=100; i+=2){
+        //     document.write(i)
+        //  }
+         document.write('<br>');
+         for(let i=1; i<=100; i++){
+            if(i % 4 == 0){
+                document.write(i);
+            }
+         }
+         document.write('<br>');
+         for(let i=4; i<=100; i+=4){
+            document.write(i);
+         }
+        document.write('<br>');
+         for(let i=1; i<10; i++){
+            
+              for(let j=1; j<10; j++ ){
+                  if(i % 8 == 0){
+                  document.write(i + "*" + j + "="+ i*j,'<br>');
+              }
+            }
+         }
+        // document.write('<br>');
+        //  let table = "<table border='1'>";
+        //         for(let i=1; i<=15; i++){
+        //             table += "<tr>";
+
+        //             for(let j=1; j<=15; j++){
+        //                 table += "<td>"+j+"</td>";
+        //             }
+
+        //             table += "</tr>";
+        //         }
+        //         table += "</table>"; 
+
+        // document.write(table);
+
+
+    // 1-8 출력
+                arr = [1,2,3,4,5,6,7,8];
+                document.write(arr);
+                document.write('<br>');
+    // 1-100 까지 출력
+                for(let i=1; i<=100; i++){
+                    document.write(i);
+                }
+                document.write('<br>');
+    // 1-100 까지 4의 배수 출력
+                for(let i=4; i<=100; i+=4){
+                    document.write(i);
+                }
+                document.write('<br>');
+
+    // 구구단 8단 만들기
+                for(let i=1; i<10; i++){
+                    if(i % 8 == 0){
+                        for(let j=1; j<10; j++){
+                            document.write(i+'*'+j+'='+i*j,'<br>')
+                        }
+                    }
+                }
+                document.write('<br>');
+    //15칸 테이블 만들기
+                let table = "<table border='1'>";
+                    for(i=1; i<=100; i++){
+                        table += "<tr>";
+                        for(j=1; j<=100; j++){
+                            table += "<td>"+j+"</td>";
+                        }
+                        table +="</tr>";
+                    }        
+                
+                table += "</table>";
+
+                document.write(table); 
+
+            //     let table = "<table style='border:1px solid red;'>";
+            //         for(i=1; i<=10; i++){
+            //             table += "<tr>";
+            //                 for(j=1; j<=10; j++){
+            //                     table += "<td>"+j+"</td>"
+            //                 }
+            //                 table += "</tr>"
+            //         }
+            //         table += "</table>";
+            //         document.write(table);
+
+            //   //7단만들기
+            //   for(let i=7; i<=7; i++){
+            //     for(let j=1; j<10; j++){
+            //         document.write(i+'*'+j+'='+i*j);
+            //     }
+            //   }      
+
+
+            //   let i = 5;
+            //    for(let j=1; j<10; j++){
+            //     document.write(i+'*'+j+'='+i*j, '<br>');
+            //    }
+    </script>
+</body>
+</html>

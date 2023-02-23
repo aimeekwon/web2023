@@ -53,9 +53,10 @@
                     <li><a href="#">01. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
                     <li><a href="#">02. 데이터 이펙트 : 1부터 50까지 출력하기</a></li>
                     <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</a></li>
-                    <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
-                    <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 5의 나머지가 0인 것만 출력하기</a></li>
-
+                    <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</a></li>
+                    <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
+                    <li><a href="#">06. 데이터 이펙트 : for문 이용해서 100칸 테이블 만들기</a></li>
+                    <li><a href="#">07. 데이터 이펙트 : 중첩 for문 이용해서 구구단 만들기</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -64,7 +65,7 @@
                     <h3>01. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
                     <p>for문을 이용해서 1부터 100까지 출력하는 예제입니다</p>
                     <!-- for는 반복문이므로 제어문이다 -->
-                    <!-- 태그 바꿔쓰기 < :  &lt -->
+                    <!-- 태그 바꿔쓰기 < :  &lt   > : &gt-->
 <pre class="line-numbers"><code class="language-js">
     for( let i=1; i&lt=100; i++){ 
          console.log(i)  //반복문 for문
@@ -96,20 +97,14 @@
                 </div>
                 <!-- //sample3 -->
                 <div id="sample01" class="sample">
-                    <h3>04. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
-                    <p>for문을 이용해서 0부터 100까지 5의 배수만 출력하는 예제입니다</p>
+                    <h3>04. 데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</h3>
+                    <p>for문과 if문을 이용해서 0부터 100까지 5의 배수만 출력하는 예제입니다</p>
 <pre class="line-numbers"><code class="language-js">
     for( let i=0; i&lt=100; i+=5){
             console.log(i)  //i+=5 : i = i + 5
         }
 //5, 10, 15, 20, ~~ 100
-</code></pre>
-                </div>
-                <!-- //sample4 --> 
-                <div id="sample01" class="sample">
-                    <h3>05. 데이터 이펙트 : 1부터 100까지 5의 나머지가 0인 것만 출력하기</h3>
-                    <p>if문을 이용해서 0부터 100까지 5의 나머지가 0인 것만 출력하는 예제입니다</p>
-<pre class="line-numbers"><code class="language-js">
+
     for( let i = 1 ; i&lt=100; i++){
         if(i % 5 == 0){  // i를 5로 나누었을 때 나머지가 0인 것
             console.log(i)
@@ -118,7 +113,79 @@
 //5, 10, 15, 10,  ~~ 100
 </code></pre>
                 </div>
-                <!-- //sample5 -->                                                 
+                <!-- //sample4 --> 
+                <div id="sample01" class="sample">
+                    <h3>05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
+                    <p>for문과 if문을 조합하여 1부터 100까지 짝수와 홀수에 색을 넣어 출력하는 예제입니다<br>반복문과 조건문을 같이 쓴 형태입니다</p>
+<pre class="line-numbers"><code class="language-js">
+    for(let i=1; i&lt=100; i++){
+        if(i % 2 == 0){
+            document.write("&ltspan style='color:blue'&gt"+i+"&lt/span&gt")
+        }
+        if(i % 2 == 1){
+            document.write("&ltspan style='color:red'&gt"+i+"&lt/span&gt")
+        }
+    }
+//1,2,3,4,5  ~~ 100    
+</code></pre>
+                </div>
+                <!-- //sample5 -->    
+                <div id="sample01" class="sample">
+                    <h3>06. 데이터 이펙트 : for문 이용해서 100칸 테이블 만들기</h3>
+                    <p>for문을 이용하여 테이블을 만드는 예제입니다</p>
+<pre class="line-numbers"><code class="language-js">
+    let table = "&lttable border='1'&gt";
+                    
+        for(let i=1; i&lt=100; i++){
+            table += "&lttr&gt";
+                for(let j=1; j&lt=100; j++){
+                    table += "&lttd&gt"+j+"&lt/td&gt"
+                }
+            table += "i&lt/tr&gt";    
+        }
+        table += "&lt/table&gt";
+        
+    document.write(table);   
+//    
+</code></pre>
+                </div>
+                <!-- //sample5 -->                
+                <div id="sample01" class="sample">
+                    <h3>07. 데이터 이펙트 : 중첩 for문 이용해서 구구단 만들기</h3>
+                    <p>for문을 중첩 이용 하여 구구단을 만드는 예제입니다</p>
+<pre class="line-numbers"><code class="language-js">
+    for(i=1; i&lt10; i++){
+        document.write(i+"단","&ltbr&gt");
+        for(j=1; j&lt10; j++){
+            document.write(i+'*'+j+'='+i*j,'i&ltbr&gt');
+        }
+        document.write("&ltbr&gt&ltbr&gt")
+    }   
+</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과확인하기</summary>
+                        <div>
+                            <img src="assets/ico/1x1.jpg">
+                            <img src="assets/ico/2x2.jpg">
+                            <img src="assets/ico/3x3.jpg">
+                            <img src="assets/ico/4x4.jpg">
+                            <img src="assets/ico/5x5.jpg">
+                            <span>..........................................</span>
+                            <img src="assets/ico/9x9.jpg">
+                        </div>
+                    </details>
+                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+                </div>
+                <!-- //sample5 -->   
+
         </div>
     </main>
     <!-- //main -->
@@ -155,8 +222,86 @@
         //     }         
         // }
         // //
-
         
+        //for문 이용 1부터 99까지 출력
+            // {
+            //     for(let i=1; i<100; i++){
+            //         console.log(i);
+            //     }
+            // }
+        //if문을 이용해서 1-99 짝수만 출력    
+            // {
+            //     for(let i=1; i<100; i++){
+            //         if(i % 2 == 0){
+            //             console.log(i);
+            //         }
+            //     }
+            // }
+            //if문을 이용해서 1-99 짝수(파란색)만 출력 : 반복문과 조건문을 같이 쓴 형태 (for문 if문 조합/ script와 html조합)
+            
+                // for (let i = 1; i<100; i++){
+                //     if(i % 2 == 0){
+                //         document.write("<span style='color:blue'>"+i+"</span>")
+                //     }
+                //     if(i % 2 == 1){
+                //         document.write("<span style='color:red'>"+i+"</span>")
+                //     }
+                // }
+            
+            //구구단 만들기 연습     
+            // {
+            //     for(i=0; i<10; i++){
+            //         console.log("i :"+ i)
+            //         for(j=1; j<10; j++){
+            //             console.log("i *"+j)
+            //         }
+            //     }
+            // }
+
+          //05. for문으로 table만들기 
+            // {    let table = "<table>";
+            //      table += "</table>";
+                
+            //      document.write(table);
+            // }  
+ 
+            //05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기
+            // {
+            //     for(let i=1; i<=100; i++){
+            //         if(i % 2 == 0){
+            //             document.write("<span style='color:blue'>"+i+"<span>")
+            //         }
+            //         if(i % 2 == 1){
+            //             document.write("<span style='color:red'>"+i+"<span>")
+            //         }
+            //     }
+            // }
+            //06. 데이터 이펙트 : for문 이용해서 100칸 테이블 만들기
+            // {
+            //     let table = "<table border='1'>";
+                    
+            //         for(let i=1; i<=100; i++){
+            //             table += "<tr>";
+            //                 for(let j=1; j<=100; j++){
+            //                     table += "<td>"+j+"</td>"
+            //                 }
+            //             table += "</tr>";    
+            //         }
+            //         table += "</table>";
+
+            //     document.write(table);
+            // }
+            // }
+            //07. 데이터 이펙트 : 중첩 for문 이용해서 구구단 만들기  
+            // {
+            //     for(i=1; i<10; i++){
+            //         document.write(i+"단","<br>");
+            //         for(j=1; j<10; j++){
+            //             document.write(i+'*'+j+'='+i*j,'<br>');
+            //         }
+            //         document.write("<br><br>")
+            //     }
+            // }
     </script>  
 </body>
 </html>

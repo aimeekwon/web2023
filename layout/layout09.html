@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout09</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #B9AAA5;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+            height: 1080px;
+        }
+        .clearfix::before,
+        .clearfix::after {
+            display: block;
+            content: "";
+            line-height: 0;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+        #aside {
+            width: 30%;  
+            height: 100%;
+            float: left;         
+        }
+        #side1 {
+            width: 100%;
+            height: 15%;
+            background-color: #9D8980;
+            float: left;
+        }
+        #side2 {
+            width: 100%;
+            height: 20%;
+            background-color: #886F65;
+            float: left;
+        }
+        #side3 {
+            width: 100%;
+            height: 65%;
+            background-color: #74574A;
+            float: left;
+        }
+        #contents {
+            width: 70%;
+            height: 100%;
+            float: left;
+        }
+        #main {
+            width: 100%;
+            height: 50%;
+            background-color: #594139;
+            float: left;
+
+        }
+        #section {
+            width: 100%;
+            height: 40%;
+            float: left;
+            background-color: #684D43;
+        }
+        #sec1 {
+            width: 33.33%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.2);
+            float: left;
+        }
+        #sec2 {
+            width: 33.33%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.1);
+            float: left;
+        }
+        #sec3 {
+            width: 33.33%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
+            float: left;
+        }
+        #footer {
+            width: 100%;
+            height: 10%;
+            float: left;
+
+        }
+        #logo {
+            width: 20%;
+            height: 100%;
+            background-color: #4E342E;
+            float: left;
+        }
+        #f_menu {
+            width: 80%;
+            height: 50%;
+            background-color: #4A352F;
+            float: left;
+        }
+        #f_copy{
+            width: 80%;
+            height: 50%;
+            background-color: #3E2723;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap" class="clearfix">
+        <div id="aside" >
+            <div id="side1"></div>
+            <div id="side2"></div>
+            <div id="side3"></div>
+        </div>
+        <div id="contents" >
+            <div id="main"></div>
+            <div id="section">
+                <div id="sec1"></div>
+                <div id="sec2"></div>
+                <div id="sec3"></div>
+            </div>
+            <div id="footer" >
+                <div id="logo"></div>
+                <div id="f_menu"></div>
+                <div id="f_copy"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
