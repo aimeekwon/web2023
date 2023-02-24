@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript  : 데이터 제어하기</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
     <link rel="shortcut icon" href="assets/ico/javascript.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type=image/png sizes="192x192" href="assets/ico/javascript192x192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+
+
 </head>
 <body>
     <header id="header">
@@ -49,19 +53,131 @@
                 <ul>
                     <li><a href="#">01. if문</a></li>
                     <li><a href="#">02. if문 생략</a></li>
-                    <li><a href="#">03. 다중 if</a></li>
-                    <li><a href="#">04. 중첩 if</a></li>
-                    <li><a href="#">04. 삼항연산자 if</a></li>
-                    <li><a href="#">04. switch문</a></li>
-                    <li><a href="#">04. while문</a></li>
-                    <li><a href="#">04. do while문</a></li>
-                    <li><a href="#">04. for문</a></li>
-                    <li><a href="#">04. 중첩for문</a></li>
-                    <li><a href="#">04. break문</a></li>
-                    <li><a href="#">04. continue문</a></li>
+                    <li><a href="#">03. 삼항연산자 if</a></li>
+                    <li><a href="#">04. 다중 if</a></li>
+                    <li><a href="#">05. 중첩 if</a></li>
+
+                    <li><a href="#">06. switch문</a></li>
+                    <li><a href="#">07. while문</a></li>
+                    <li><a href="#">08. do while문</a></li>
+                    <li><a href="#">09. for문</a></li>
+                    <li><a href="#">10. 중첩for문</a></li>
+                    <li><a href="#">11. break문</a></li>
+                    <li><a href="#">12. continue문</a></li>
                     
                 </ul>
             </div>
+            <div class="main__sample">
+                <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다-->             
+                <div id="sample01" class="sample">
+                    <h3>01. if문</h3>
+                    <p>if문은 가장 간단한 조건문이다.<br>주어진 조건이 참이면 실행되는 코드 블록을 만든다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">                      
+    // false : 0, null, undefined, false, ""(빈문자열) 
+    // true : 1, 2, "0", "1", "ABC", [], {}, true              
+    if(0){
+       document.write("실행되었습니다. (true)")
+    } else {
+       document.write( "실행되었습니다.(false)")
+    } 
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+            <div class="main__sample">
+                <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다-->             
+                <div id="sample01" class="sample">
+                    <h3>02. if문 생략</h3>
+                    <p></p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">                      
+    const num = 100;
+    // if(num){
+    //     document.write("실행되었습니다.(true)")
+    // } else {
+    //     document.write("실행되었습니다.(true)")
+    // }
+
+    if(num) document.write ("실행되었습니다.(true)")
+    else document.write ("실행되었습니다.(false)") 
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample02 -->
+            <div class="main__sample">
+                <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다-->             
+                <div id="sample01" class="sample">
+                    <h3>03. 삼항 연산자</h3>
+                    <p>if-else문을 간단하게 표현하는 효율적인 방법이다. <br>삼항연산자는 물음표(?)와 콜론(:)을 사용하여 구성된다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">                      
+    const num = 100;
+    // 원본
+    // if(num == 100){
+    //     document.write("true")
+    // } else {
+    //     document.write("false")
+    // }
+
+    (num == 100) ? document.write("true") : document.write("false");  
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample02 -->
+            <div class="main__sample">
+                <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다-->             
+                <div id="sample01" class="sample">
+                    <h3>04. 다중 if</h3>
+                    <p>여러 개의 if문을 연속해서 사용하는 것이다. <br>각 문은 독립적으로 실행된다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">   
+    const num = 100;
+    
+    if(num == 90){
+        document.write("실행되었습니다(num == 90)");
+    }else if(num == 100){
+        document.write("실행되었습니다(num == 100)");
+    }else if(num == 110){
+        document.write("실행되었습니다(num == 110)");
+    }else if(num == 120){
+        document.write("실행되었습니다(num == 120)");
+    }else {
+        document.write("실행되었습니다");
+    }
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample02 -->
+            <div class="main__sample">
+                <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다-->             
+                <div id="sample01" class="sample">
+                    <h3>05. 중첩 if</h3>
+                    <p>중첩 if문은 if문 안에 또 다른 if문을 사용하는 것이다. <br>이렇게 중첩된 if문은 복잡한 조건문을 작성할 때 사용된다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">                      
+    const num = 100;
+
+    if( num == 100){
+        document.write("실행되었습니다.(1)");
+        if(num == 100){
+            document.write("실행되었습니다.(2)");
+            if(num == 100){
+                document.write("실행되었습니다.(3)");
+            }
+        }
+    
+    } else {
+        document.write("실행되었습니다.(4)")
+    }
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample03 -->
+
+
+
+
         </div>
     </main>
     <!-- //main -->
@@ -69,6 +185,222 @@
         <a href="mailto:aimee00418@gmail.com">aimee00418@gmail.com</a>
     </footer>
     <!-- //footer -->
-    <script></script>           
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>                 
+
+         //02. if문 생략
+        //  {
+        //     const num = 100;
+        //     // if(num){
+        //     //     document.write("실행되었습니다.(true)")
+        //     // } else {
+        //     //     document.write("실행되었습니다.(true)")
+        //     // }
+
+        //     if(num) document.write ("실행되었습니다.(true)")
+        //     else document.write ("실행되었습니다.(false)")
+            
+        //  }
+        //03. 삼항연산자 (조건 연산자, if문의 변형)
+        //효율을 위해서 삼항연산자를 쓰는 추세이다. 
+        // {
+        //     const num = 100;
+        //     // 원본
+        //     // if(num == 100){
+        //     //     document.write("true")
+        //     // } else {
+        //     //     document.write("false")
+        //     // }
+
+        //     (num == 100) ? document.write("true") : document.write("false"); 
+
+        // }
+
+        //04. 다중if
+        // {
+        //     const num = 100;
+        //     if(num == 90){
+        //         document.write("실행되었습니다(num == 90)");
+        //     }else if(num == 100){
+        //         document.write("실행되었습니다(num == 100)");
+        //     }else if(num == 110){
+        //         document.write("실행되었습니다(num == 110)");
+        //     }else if(num == 120){
+        //         document.write("실행되었습니다(num == 120)");
+        //     }else {
+        //         document.write("실행되었습니다");
+        //     }
+        // }
+        //05.증첩if
+        // {
+        //     const num = 100;
+
+        //     if( num == 100){
+        //         document.write("실행되었습니다.(1)");
+        //         if(num == 100){
+        //             document.write("실행되었습니다.(2)");
+        //             if(num == 100){
+        //                 document.write("실행되었습니다.(3)");
+        //             }
+        //         }
+            
+        //     } else {
+        //         document.write("실행되었습니다.(4)")
+        //     }
+        // }
+
+
+        //09. for문
+        //1-100까지
+        
+        // for(let i=1; i<=100; i++){
+        //     document.write(i);
+        // }
+        // const arr = [1,2,3,4,5,6,7,8,9];
+
+        // for(let i=0; i<arr.length; i++){
+        //     document.write(arr[i]);
+        // }
+        // document.write('<br>')
+        // //짝수
+        // for(let i=1; i<arr.length; i+=2){
+        //     document.write(arr[i])
+        // }
+        // document.write('<br>')
+        // //홀수
+        // for(let i=0; i<arr.length; i+=2){
+        //     document.write(arr[i])
+        // }
+        // document.write('<br>')
+        // //홀수
+        // for( let i=0; i<arr.length; i++)
+        //     if( i % 2 == 0){
+        //         document.write(arr[i])
+        //     }
+        // document.write('<br>')
+        // //짝수
+        // for(let i=0; i<arr.length; i++){
+        //     if( i % 2 == 1){
+        //         document.write(arr[i])
+        //     }
+        // }
+        // document.write('<br>')
+        // //짝수
+        // for( let i=0; i<arr.length; i++)
+        //     if( i % 2 == 0){
+        //         document.write("<span style='color:red'>"+arr[i]+"</span>")
+        //         //`<span style='color:red'>arr[i]</span>`  : ``백틱;새로운 문법으로 문자와 숫자구별을 위한 큰따옴표나 '+ '없이도 작성 가능
+        //     } else {
+        //         document.write(`<span style='color:blue'>${i}</span>`)
+        //     }
+        // document.write('<br>')
+
+            // let table = "<table border='1'>"
+            
+            // for(let i=0; i<5; i++){
+            //     table += "<tr>";
+            //     for(let j=0; j<; j++){
+            //         table += "<td>"+j+"</td>"
+            //     }
+            //     table += "</tr>"
+            // }
+            // table += "</table>"
+            // document.write(table)
+            
+            //테이블 하나에 대한 원리 >>이
+            // let table = "<table border='1'>";
+            //     table += "<tr>";
+            //     table += "<td>1</td>";
+            //     table += "</tr>";    
+            //     table += "</table>";
+            // document.write(table);
+
+            
+            //
+                // let num = 0;
+                // for(let i=1; i<=25; i++){
+                //     document.write(i);
+                //     num++;
+                // }
+                // document.write("<br>");
+                // document.write(num);
+            //0224주말 숙제
+            //1-25까지 숫자 순서대로 표기되는 5*5 테이블 만들기
+            //짝수/홀수 색 다른 테이블 만들기        
+
+                // let table = "<table border='1'>";
+                //     for(let i=1; i<=25; i++){
+                //         if(i % 2 == 0){
+                //             document.write(i).style.color = "red";
+                //         }else{
+                //             document.write(i).style.color = "blue";
+                //         }
+                //         table += "<tr>";
+                //             for(let j=1; j<=25; j++){
+                //                 table += "<td>"+j+"</td>";     
+                //             }
+                //         table += "</tr>";    
+                //     }
+                //     table += "</table>";
+                // document.write(table);    
+
+
+                // let table = "<table border='1'>";
+
+                //     for(let i=1; i<=25; i++){
+                //         table += "<tr>";
+                //             for(let j=1; j<=25; j++){
+                //                 if( i % 2 == 0){
+                //                     table += "<td style='color:blue'>"+j+"</td>";
+
+                //                 }else {table += "<td style='color:red'>"+j+"</td>"}
+                                
+                //             }
+                //         table += "</tr>"    
+                //     }
+                //     document.write(table)
+
+   
+            // let table = "<table border='1'>";
+            //     table += "<tr>";
+            //     table += "<td>1</td>";
+            //     table += "<td>2</td>";
+            //     table += "<td>3</td>";
+            //     table += "<td>4</td>";
+            //     table += "<td>5</td>";
+            //     table += "</tr>";  
+            //     table += "<tr>";
+            //     table += "<td>1</td>";
+            //     table += "<td>1</td>";
+            //     table += "<td>1</td>";
+            //     table += "<td>1</td>";
+            //     table += "<td>1</td>";
+            //     table += "</tr>";    
+            //     table += "</table>";
+            // document.write(table);
+
+            //짝수 홀수 색 다른 테이블
+            let table = "<table border='1'>"
+                for(let i=1; i<=5; i++){
+                    if( i % 2 == 0){
+                        table += "<tr style='color:blue'>";
+                        }else {
+                        table += "<tr style='color:red'>";    
+                        } 
+                        for(let j=1; j<=5; j++){
+                            if( j % 2 == 0){
+                                table += "<td style='color:blue'>"+j+"</td>";
+                            }else{
+                            table += "<td style='color:red'>"+j+"</td>";
+                            }
+                        }
+                        table += "</tr>"                   
+                }
+             document.write(table);
+
+    </script>           
 </body>
 </html>
+<!-- for(let j=1; j<=5; j++){
+    table += "<td>"+j+"</td>" -->
