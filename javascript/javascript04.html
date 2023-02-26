@@ -298,9 +298,9 @@
 
             // let table = "<table border='1'>"
             
-            // for(let i=0; i<5; i++){
+            // for(let i=0; i<=5; i++){
             //     table += "<tr>";
-            //     for(let j=0; j<; j++){
+            //     for(let j=0; j<=5; j++){
             //         table += "<td>"+j+"</td>"
             //     }
             //     table += "</tr>"
@@ -371,36 +371,99 @@
             //     table += "<td>5</td>";
             //     table += "</tr>";  
             //     table += "<tr>";
-            //     table += "<td>1</td>";
-            //     table += "<td>1</td>";
-            //     table += "<td>1</td>";
-            //     table += "<td>1</td>";
-            //     table += "<td>1</td>";
+            //     table += "<td>6</td>";
+            //     table += "<td>7</td>";
+            //     table += "<td>8</td>";
+            //     table += "<td>9</td>";
+            //     table += "<td>10</td>";
             //     table += "</tr>";    
+            //     table += "<tr>";
+            //     table += "<td>11</td>";
+            //     table += "<td>12</td>";
+            //     table += "<td>13</td>";
+            //     table += "<td>14</td>";
+            //     table += "<td>15</td>";
+            //     table += "</tr>";    
+            //     table += "<tr>";
+            //     table += "<td>16</td>";
+            //     table += "<td>17</td>";
+            //     table += "<td>18</td>";
+            //     table += "<td>19</td>";
+            //     table += "<td>20</td>";
+            //     table += "</tr>";
+            //     table += "<tr>";
+            //     table += "<td>21</td>";
+            //     table += "<td>22</td>";
+            //     table += "<td>23</td>";
+            //     table += "<td>24</td>";
+            //     table += "<td>25</td>";
+            //     table += "</tr>";
             //     table += "</table>";
             // document.write(table);
 
-            //짝수 홀수 색 다른 테이블
+                // let table = "<table border='1'>";
+
+                //     for (let i=0; i<=25; i+=5){
+                //         table  += "<tr>";
+                //             for (let j=1; j<=5; j++){
+                //                 table += "<td>"+j+"</td>";
+
+                //             }
+                //         table += "</tr>";
+                //     }        
+                //     table += "</table>";
+                    
+                // document.write(table);   
+            
+            // let table = "<table border='1'>"
+            
+            // for(let i=1; i<=5; i++){
+            //     table += "<tr>" ;
+            //     for(let j=1; j<=5; j++){
+            //         table += "<td>"+j+"</td>"
+            //     }
+            //     table += "</tr>"
+            // }
+            // table += "</table>"
+            // document.write(table)
+            
+            // 짝수 홀수 색 다른 테이블
+            // let table = "<table border='1'>"
+            //     for(let i=1; i<=5; i++){
+            //         if( i % 2 == 0){
+            //             table += "<tr style='color:blue'>";
+            //             }else {
+            //             table += "<tr style='color:red'>";    
+            //             } 
+            //             for(let j=1; j<=5; j++){
+            //                 if( j % 2 == 0){
+            //                     table += "<td style='color:blue'>"+j+"</td>";
+            //                 }else{
+            //                 table += "<td style='color:red'>"+j+"</td>";
+            //                 }
+            //             }
+            //             table += "</tr>"                   
+            //     }
+            //   document.write(table);
+;
+
             let table = "<table border='1'>"
-                for(let i=1; i<=5; i++){
-                    if( i % 2 == 0){
-                        table += "<tr style='color:blue'>";
-                        }else {
-                        table += "<tr style='color:red'>";    
-                        } 
-                        for(let j=1; j<=5; j++){
-                            if( j % 2 == 0){
-                                table += "<td style='color:blue'>"+j+"</td>";
-                            }else{
-                            table += "<td style='color:red'>"+j+"</td>";
-                            }
+                for(let i=1; i<=25; i+=5){
+                    table += "<tr>";
+                        for(let j=0; j<=4; j++){
+                            
+                                table += "<td>"
+                                    if( j += i+j ){
+                                       table += +j+"</td>"
+                                    }   
                         }
-                        table += "</tr>"                   
+                    table += "</tr>"
                 }
-             document.write(table);
+                table += "</table>"
+            document.write(table)
+
+
 
     </script>           
 </body>
 </html>
-<!-- for(let j=1; j<=5; j++){
-    table += "<td>"+j+"</td>" -->
