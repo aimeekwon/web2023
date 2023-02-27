@@ -447,21 +447,33 @@
             //   document.write(table);
 
 
-            let table = "<table border='1'>"
+            // let table = "<table border='1'>"
+            //     for(let i=1; i<=25; i+=5){
+            //         table += "<tr>";
+            //             for(let j=0; j<=4; j++){
+                            
+            //                     table += "<td>"
+            //                         if( j += i+j ){
+            //                            table += +j+"</td>"
+            //                         }   
+            //             }
+            //         table += "</tr>"
+            //     }
+            //     table += "</table>"
+            // document.write(table)
+            
+            let result = 0;
+            let table = "<table border='1'>";
                 for(let i=1; i<=25; i+=5){
                     table += "<tr>";
-                        for(let j=0; j<=4; j++){
-                            
-                                table += "<td>"
-                                    if( j += i+j ){
-                                       table += +j+"</td>"
-                                    }   
+                        for(let j=0; j<=4; j++){ 
+                            result = j + i;                          
+                            table += "<td>"+result+"</td>";
                         }
-                    table += "</tr>"
+                    table += "</tr>";
                 }
-                table += "</table>"
+                table += "</table>";
             document.write(table)
-
 
 
     </script>           
