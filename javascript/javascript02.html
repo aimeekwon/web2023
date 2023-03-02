@@ -57,16 +57,16 @@
                     <li><a href="#">02. 상수 : 데이터 불러오기</a></li>
                     <li><a href="#">03. 배열 : 데이터 불러오기</a></li>
 
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : 2차 배열</a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : 갯수 구하기</a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : for()문 </a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : 중첩 for()문 </a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : forEace()</a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : for of</a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : for in</a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : map()</a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : 펼침연산자</a></li>
-                    <li><a href="#">03. 배열 : 데이터 불러오기 : 배열구조분해할당</a></li>
+                    <li><a href="#">04. 배열 : 데이터 불러오기 : 2차 배열</a></li>
+                    <li><a href="#">05. 배열 : 데이터 불러오기 : 갯수 구하기</a></li>
+                    <li><a href="#">06. 배열 : 데이터 불러오기 : for()문 </a></li>
+                    <li><a href="#">07. 배열 : 데이터 불러오기 : 중첩 for()문 </a></li>
+                    <li><a href="#">08. 배열 : 데이터 불러오기 : forEach()</a></li>
+                    <li><a href="#">09. 배열 : 데이터 불러오기 : for of</a></li>
+                    <li><a href="#">10. 배열 : 데이터 불러오기 : for in</a></li>
+                    <li><a href="#">11. 배열 : 데이터 불러오기 : map()</a></li>
+                    <li><a href="#">12. 배열 : 데이터 불러오기 : 펼침연산자</a></li>
+                    <li><a href="#">13. 배열 : 데이터 불러오기 : 배열구조분해할당</a></li>
 
                     <li><a href="#">04. 객체 : 데이터 불러오기</a></li>
                     
@@ -84,6 +84,10 @@
                     <li><a href="#">04. 객체 : 데이터 불러오기 : 비구조화 할당</a></li>
                     
                     <li><a href="#">04. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
+                </ul>
+
+                <ul>
+                    <li>형변화, typeof() </li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -189,7 +193,222 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample4 -->                                 
+                <!-- //sample4 -->
+                <div id="sample01" class="sample">
+                    <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
+                    <p>배열 안에 있는 데이터의 갯수를 구하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+
+    // for(초기값; 조건식; 증감식)
+    // 실행문
+    // 1)초기값을 넣었을 때 2)조건에 맞아 true이면 3)for식에 넣어 답이 나오고 4)증감식에 대입하여 다시 계산
+
+    for(let i = 0; i&lt9; i++){
+        console.log(arr[i]);
+    }
+    //위와 아래의 두 식은 같은 값이 나온다.
+</code></pre>
+                <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                300<br>
+                                400<br>
+
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample4 -->                         
+                <div id="sample01" class="sample">
+                    <h3>07. 배열 : 데이터 불러오기 : 중첩 for()문</h3>
+                    <p>배열 안에 있는 데이터의 갯수를 구하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+
+    // for(초기값; 조건식; 증감식)
+    // 실행문
+    // 1)초기값을 넣었을 때 2)조건에 맞아 true이면 3)for식에 넣어 답이 나오고 4)증감식에 대입하여 다시 계산
+
+    for(let i = 0; i&lt9; i++){
+        console.log(arr[i]);
+    }
+    //위와 아래의 두 식은 같은 값이 나온다.
+</code></pre>
+                <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                3                           
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample4 -->   
+                <div id="sample01" class="sample">
+                    <h3>08. 배열 : 데이터 불러오기 : forEach()</h3>
+                    <p>배열 안에 있는 데이터의 갯수를 구하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+
+    // for(초기값; 조건식; 증감식)
+    // 실행문
+    // 1)초기값을 넣었을 때 2)조건에 맞아 true이면 3)for식에 넣어 답이 나오고 4)증감식에 대입하여 다시 계산
+
+    for(let i = 0; i&lt9; i++){
+        console.log(arr[i]);
+    }
+    //위와 아래의 두 식은 같은 값이 나온다.
+</code></pre>
+                <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                3                           
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample4 -->   
+                <div id="sample01" class="sample">
+                    <h3>09. 배열 : 데이터 불러오기 : for of</h3>
+                    <p>배열 안에 있는 데이터의 갯수를 구하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+
+    // for(초기값; 조건식; 증감식)
+    // 실행문
+    // 1)초기값을 넣었을 때 2)조건에 맞아 true이면 3)for식에 넣어 답이 나오고 4)증감식에 대입하여 다시 계산
+
+    for(let i = 0; i&lt9; i++){
+        console.log(arr[i]);
+    }
+    //위와 아래의 두 식은 같은 값이 나온다.
+</code></pre>
+                <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                3                           
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample4 -->   
+                <div id="sample01" class="sample">
+                    <h3>10. 배열 : 데이터 불러오기 : for in</h3>
+                    <p>배열 안에 있는 데이터의 갯수를 구하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+
+    // for(초기값; 조건식; 증감식)
+    // 실행문
+    // 1)초기값을 넣었을 때 2)조건에 맞아 true이면 3)for식에 넣어 답이 나오고 4)증감식에 대입하여 다시 계산
+
+    for(let i = 0; i&lt9; i++){
+        console.log(arr[i]);
+    }
+    //위와 아래의 두 식은 같은 값이 나온다.
+</code></pre>
+                <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                3                           
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample4 -->   
+                <div id="sample01" class="sample">
+                    <h3>11. 배열 : 데이터 불러오기 : map()</h3>
+                    <p>배열 안에 있는 데이터의 갯수를 구하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+
+    // for(초기값; 조건식; 증감식)
+    // 실행문
+    // 1)초기값을 넣었을 때 2)조건에 맞아 true이면 3)for식에 넣어 답이 나오고 4)증감식에 대입하여 다시 계산
+
+    for(let i = 0; i&lt9; i++){
+        console.log(arr[i]);
+    }
+    //위와 아래의 두 식은 같은 값이 나온다.
+</code></pre>
+                <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                3                           
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample4 -->   
+                                                                                               
         </div>
     </main>
     <!-- //main -->
@@ -241,29 +460,29 @@
         // }
         // //06. 배열 : 데이터 불러오기 : for()문
         // {
-        //     //const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            // const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-        //     // console.log(arr[0]);
-        //     // console.log(arr[1]);
-        //     // console.log(arr[2]);
-        //     // console.log(arr[3]);
-        //     // console.log(arr[4]);
-        //     // console.log(arr[5]);
-        //     // console.log(arr[6]);
-        //     // console.log(arr[7]);
-        //     // console.log(arr[8]);
+            // console.log(arr[0]);
+            // console.log(arr[1]);
+            // console.log(arr[2]);
+            // console.log(arr[3]);
+            // console.log(arr[4]);
+            // console.log(arr[5]);
+            // console.log(arr[6]);
+            // console.log(arr[7]);
+            // console.log(arr[8]);
 
-        //     //for(초기값; 조건식; 증감식)
-        //     //실행문
-        //     //1)초기값을 넣었을 때 2)조건에 맞아 true이면 3)for식에 넣어 답이 나오고 4)증감식에 대입하여 다시 계산
+            // // for(초기값; 조건식; 증감식)
+            // // 실행문
+            // // 1)초기값을 넣었을 때 2)조건에 맞아 true이면 3)for식에 넣어 답이 나오고 4)증감식에 대입하여 다시 계산
 
-        //     // for(let i = 0; i<9; i++){
-        //     //     console.log(arr[i]);
-        //     // }
+            // for(let i = 0; i<9; i++){
+            //     console.log(arr[i]);
+            // }
 
-            for(let i = 0; i<3; i++){
-                console.log(arr[i]);
-            }
+            // for(let i = 0; i<3; i++){
+            //     console.log(arr[i]);
+            // }
             // for문은 식이 false일 때 까지 계산한다. 
             // for(초기값; 조건식; 증감식)
             // 1) 초기값을 넣었을 때 2) 조건에 맞아 true이면 3) for식에 넣어 답이 나오고       4) 증감식에 대입하여 다시 계산
@@ -295,21 +514,146 @@
         // }
         //07. 배열 : 데이터 불러오기 : 중첩 for()문
          //for문 안에 for문이 들어가 있는 구조       
-        {
-            for( let i = 0; i<=10; i++){
-                console.log("i :"+ i);
-                for( let j = 1; j<=10; j++){
-                    console.log("j:" +j);
-                }
-            }
-        }
+        // {
+        //     for( let i = 0; i<=10; i++){
+        //         console.log("i :"+ i);
+        //         for( let j = 1; j<=10; j++){
+        //             console.log("j:" +j);
+        //         }
+        //     }
+        // }
 
-        if (조건) {
-          // 조건이 참일 때 실행되는 코드
-        } else {
-          // 조건이 거짓일 때 실행되는 코드
-        }
- 
+        // if (조건) {
+        //   // 조건이 참일 때 실행되는 코드
+        // } else {
+        //   // 조건이 거짓일 때 실행되는 코드
+        // }
+//////////////////////230302//////////////////
+        //변수, 상수, 배열, 객체    
+        // {
+        //     let x = 100, y = "200", z = undefined;
+        //     const func = function(){}
+
+        //     // document.write(x);
+        //     // document.write(typrof(x)); //typeof 숫자인지 문자인지 자료형을 남겨 오류를 줄임
+        //     document.write(y);
+        //     document.write(typeof(y));
+        //     y = Number(y); // '=' 하나는 우변을 좌변으로 옮긴다. 형변환
+        //     document.write(typeof(y))
+
+
+        //     // document.write(z);
+        //     // document.write(typeof(z));
+        //     // document.write(func);
+        //     // document.write(typeof(func));
+        
+        // } 
+        // {
+        //     let arr = [10,20,30,40,50,60,70,80,90];
+
+        //     //for문 출력
+        //     for( let i=0; i<arr.length; i++){
+        //         document.write(arr[i]);
+        //     }
+        // }
+        // {
+        //     let a = [10,20,30,40,50,60,70,80,90];
+
+        //     //forEach : 매서드 > 자주쓰는 수식을 자바스크립트가 만들어놓은 식
+        //     arr.forEach(function(element){  //함수속에 함수가들어감 : 콜백함수(재귄함수 비슷)
+        //         document.write(element);
+        //     });
+
+        //     arr.forEach (element) => {  //함수속에 함수가들어감 : 콜백함수(재귄함수 비슷)
+        //         document.write(element);
+        //     });
+
+        //     arr.forEach  (el =>{  //함수속에 함수가들어감 : 콜백함수(재귄함수 비슷)
+        //         document.write(el);
+        //     });
+
+        //     arr.forEach(el => document.write(el));
+        // }
+        //08 . 배열 : 데이터불러오기 : forEach
+        // {
+        //     const num = [100, 200, 300, 400, 500];
+
+        //     document.write(num[0],"<br>");
+        //     document.write(num[1],"<br>");
+        //     document.write(num[2],"<br>");
+        //     document.write(num[3],"<br>");
+        //     document.write(num[4],"<br>");
+
+        //     //for문
+        //     for(let i=0; i<num.length; i++){
+        //         document.write(num[i],"<br>");
+        //     }
+        //     //forEach문
+        //     // num.forEach(function(){});  얘가 기본 한문장
+        //     num.forEach(function(el){
+        //         document.write(el,"<br>")
+        //     });
+            
+        //     //forEach : 화살표함수
+        //     // num.forEach(()=>{}) : 화살표함수로 바꾸는 기본형
+        //     num.forEach((el) => {
+        //         document.write(el,"<br>")
+        //     });
+
+        //     //forEach :화살표함수 : 괄호생략
+        //     num.forEach(el => {
+        //         document.write(el,"<br>")
+        //     });
+
+        //     //forEach :화살표함수 : 중괄호생략
+        //     num.forEach(el => document.write(el,"<br>"));
+        //     //forEach (값, 인덱스, 배열) 불러올수 있다
+        //     num.forEach(function(element, index, array){
+        //         document.write(element,"<br>");
+        //         document.write(index,"<br>");
+        //         document.write(array,"<br>");
+        //     })
+        // }
+        // //09. 배열 : 데이터 불러오기 : for of
+        // {
+        //     const arr = [100,200,300,400,500];
+
+        //     for(let i of arr){
+        //         document.write(i);
+
+        //     }
+
+        // }
+        // document.write("<br>")
+        // //10. 배열 : 데이터 불러오기 : for in
+        // //for in은 객체를 위한 문법, 
+        // {
+        //     const arr = [100,200,300,400,500];
+
+        //     for(let i in arr){ //in은 자릿수 값을 불러온다
+        //         document.write(arr[i],"<br>");                
+        //     }
+
+        // }
+        //11. 배열 : 데이터 불러오기 : map()
+        // {
+
+
+        //     const num = [100,200,300,400,500]
+
+        //     num.forEach(function(el, i, a){ //배열에 뿌리기: 값, 인덱스, 배열
+        //         console.log(el)
+        //         console.log(i)
+        //         console.log(a)
+        //     });
+        //     num.map(function(el, i, a){  //데이터로 뿌리기
+        //         console.log(el)
+        //         console.log(i)
+        //         console.log(a)
+
+        //     });
+
+        // }
 
     </script>           
 </body>

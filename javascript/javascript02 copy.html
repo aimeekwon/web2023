@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+    // 01. 선언
+    // {
+    //     function func(){
+    //         document.write("01. 함수가 실행되었습니다","<br>")
+    //     }
+    //     func();
+    // }
+
+    // //02. 익명
+    // {
+    //     const func = function(){
+    //         document.write("02. 함수가 실행되었습니다","<br>")
+    //     }
+    //     func();
+    // }
+    // //03. 
+    // {   
+    //     let a = "03. 함수가 실행되었습니다";
+        
+    //     function func(){
+    //         for(let i=1; i<=10; i++){
+    //             document.write(a,"<br>")
+    //         }
+    //     }
+    //     func();
+    // }    
+    //04. 리턴
+    //05. 매개변수함수
+    //10.
+
+
+    // 01. 선언적 함수
+    {
+        function func(){
+            document.write("01.함수실행","<br>");
+        }
+        func();
+    }
+
+    // 02. 익명함수
+    {
+        const func = function(){
+            document.write("02.함수실행","<br>")
+        }
+        func();
+    }
+
+    // 03. 함수가 실행되었습니다. 10번
+    {
+        let a = "03.함수실행";
+
+        function func(){
+            for(let i=1; i<=10; i++){
+                document.write(a,"<br>");
+            }
+        }
+        func();
+    }
+
+    // 04. 함수가 실행되었습니다.
+    {
+        function func(){
+            const str = "04.함수실행<br>";
+            return str;
+        }
+        document.write(func())
+    }
+    {
+        func = () =>{
+            const str = "04.함수실행 : 화살표<br>";
+            return str;
+        }
+        document.write(func())
+    }
+
+    // 05. 매개변수 함수
+    {
+        let str = "05.매개변수함수<br>"
+
+        function func(str){
+            document.write(str)
+        }
+        func(str)
+    }
+    {
+        let str = "05.매개변수함수 : 화살표<br>"
+
+        func = (str) =>{
+            document.write(str)
+        }
+        func(str)
+    }
+    // 선언적 함수 : 화살표
+    {
+        func = () =>{
+            document.write("06.선언적함수 : 화살표","<br>")
+        }
+        func()
+    }
+
+    // 10칸 테이블
+{
+    let result = 0;
+
+    let table = "<table border='1'>";
+        for(let i=1; i<=10; i++){
+            table += "<tr>";
+                for(let j=1; j<=10; j++){
+                    result += 3;
+                    table += "<td>"+result+ "</td>"
+                }
+                table += "</tr>"
+        }
+        table += "</table>"
+        document.write(table)
+    }       
+
+{
+    let result = 0;
+    function func(){
+        let table = "<table border='1'>";
+        for(let i=1; i<=10; i++){
+            table += "<tr>";
+                for(let j=1; j<=10; j++){
+                    result += 3;
+                    if( result % 5 ==0){
+                        table += "<td style='color:red'>"+result+ "</td>"
+                    } else{ table += "<td style='color:blue'>"+result+ "</td>"}  
+                }
+                table += "</tr>"
+        }
+        table += "</table>"
+        document.write(table)
+    }
+    func()
+}
+{
+    let result = 0;
+    func = () =>{
+        let table = "<table border='1'>";
+        for(let i=1; i<=10; i++){
+            table += "<tr>";
+                for(let j=1; j<=10; j++){
+                    result += 3;
+                    if( result % 5 ==0){
+                        table += "<td style='color:red'>"+result+ "</td>"
+                    } else{ table += "<td style='color:blue'>"+result+ "</td>"}  
+                }
+                table += "</tr>"
+        }
+        table += "</table>"
+        document.write(table)
+    }
+    func()
+}
+
+
+ 
+    </script>
+</body>
+</html>
