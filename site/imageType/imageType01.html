@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지유형 01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: normal;
+    }
+    .img {
+        vertical-align: top;
+
+    }
+    .container {
+        width: 1160px;
+        margin: 0 auto;
+        padding: 0 20px;
+        /* background-color: rgba(0,0,0,0.1); */
+    }
+    .nexon {
+        font-family: 'NexonLv1Gothic';
+        font-weight: 400;
+    }
+    .section {
+        padding: 120px 0;
+        text-align: center;
+    }
+    .section h2 {
+        font-size: 50px;
+        /* font-weight: 400; */
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+    .section p {
+        font-size: 22px;
+        color: #666;
+        margin-bottom: 70px;
+        font-weight: 300;
+
+    }    
+    .section_desc {
+        font-size: 22px;
+        color: #666;
+        margin-bottom: 70px;
+        font-weight: 300;
+    }
+    /* image wrap */
+    .image__wrap {
+        background-color: rgba(0,0,0,0.1);
+
+    }
+    .image__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .image__inner .image {
+        width: 570px;
+        height: 370px;
+        background-color: #ccc;
+        position: relative;
+    }
+
+
+    .image__body {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.1);
+        text-align: left;
+        padding: 30px;
+        color: #fff;
+    }
+    .image__body .title {
+        font-size: 32px;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+    .image__body .desc {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        padding-right: 20%;
+        color: #fff;
+
+    }
+    .image__body .btn {
+        color: #fff;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px 30px;
+        color: #fff;
+    }
+
+    
+</style>
+
+
+
+</head>
+<body>
+    <section class="image__wrap section nexon">
+        <div class="container">
+            <h2 class="section_h2">PLANT</h2>
+            <p class="section_desc">반려 식물 건강하게 키우기</p>
+            <div class="image__inner">
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="../asset/img/imageType01_01.jpg" alt="">
+                    </figure>
+                    <div class="image__body">
+                    <h3 class="title">품종에 맞는 흙과 비료</h3>
+                        <p class="desc">다양한 식물이 가지는 특성에 맞춰 잘 자랄 수 있도록 조건에 맞는 흙과 비료를 알아두세요.</p>
+                        <a href="">자세히보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="../asset/img/imageType01_02.jpg" alt="">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">적당한 빛과 바람, 물 </h3>
+                        <p class="desc">적당한 햇볕과 통풍이 잘되는 환경이 필요합니다.<br>
+                            때에 따라 일정한 주기로 물을 주시는 것도 중요합니다</p>
+                        <a href="">자세히보기</a>
+                    </div>    
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
