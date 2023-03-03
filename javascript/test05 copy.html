@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #E8F5E9;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "aside sec1 con"
+            "aside sec1 con"
+            "footer footer footer"
+            ;
+            grid-template-columns: 
+                300px 600px 300px
+            ;
+            grid-template-rows: 
+                100px 100px 390px 390px 100px
+            ;
+        }
+        #header{
+            grid-area: header;
+            background-color: #C8E6C9;
+        }
+        #nav {
+            grid-area: nav;
+            background-color: #A5D6A7;
+        }
+        #aside {
+            grid-area: aside;
+            background-color: #81C784;
+        }
+        #sec1{
+            grid-area: sec1;
+            background-color: #66BB6A;
+        }
+        #sec2{
+            grid-area: sec2;
+            background-color: #4CAF50;
+        }
+        #con{
+            grid-area: con;
+            background-color: #43A047;
+        }
+        #footer{
+            grid-area: footer;
+            background-color: #3CB641;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside"></div>
+        <div id="sec1"></div>
+        <div id="sec2"></div>
+        <div id="con"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

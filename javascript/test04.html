@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //01.
+        {
+            for(let i=1; i<=50; i++){
+                document.write(i);
+            }
+            document.write("<br>")
+        }
+        //02.
+        {
+            let num = 1;
+            while(num<=50){
+                document.write(num)
+                num++
+            } 
+            document.write("<br>")
+        }
+        //03.
+        {
+            for(let i=1; i<=100; i+=2){
+                document.write(i)
+            }
+            document.write("<br>")
+        }
+        //04.
+        {
+            for(let i=1; i<=100; i++){
+                if( i % 3 ==0){
+                    document.write(i)
+                }
+            }
+            document.write("<br>")
+        }
+        //05.
+        {
+            let table = "<table border='1'>";
+                for(let i=1; i<=10; i++){
+                    table += "<tr>";
+                        for(let j=1; j<=10; j++){
+                            table += "<td>"+j+"</td>"
+                        }
+                        table +="</tr>";
+                }
+                table += "</table>"
+                document.write(table)
+            document.write("<br>")
+        }
+        //06.
+        {
+            sum = 0;
+            for(let i=1; i<=10; i++){
+                sum += i;
+            }
+            document.write(sum)
+            document.write("<br>")
+        }
+        //07.
+        {
+            for(let i=1; i<10; i++){
+                document.write(i+"단"+"<br>");
+                for(let j=1; j<10; j++){
+                    document.write(i+"*"+j+"="+i*j+"<br>")
+                }
+            }
+            document.write("<br>")
+        }
+        //08.
+        {
+            {
+                function func(){
+                    document.write("선언함수")
+                }
+                func();
+            }
+            {
+                const func = function(){
+                    document.write("익명함수")
+                }
+                func();
+            }
+            {
+                let str = "매개변수함수";
+                function func(str){
+                    document.write(str)
+                }
+                func(str);
+            }
+            {
+                function func(){
+                    const str = "리턴함수";
+                    return str;
+                }
+                document.write(func())
+            }
+            document.write("<br>")
+        }
+
+        //09.
+        {
+            {
+                func = () => {
+                    document.write("선언함수")
+                }
+                func();
+            }
+            {
+                const func = () =>{
+                    document.write("익명함수")
+                }
+                func();
+            }
+            {
+                let str = "매개변수함수";
+                func = (str) =>{
+                    document.write(str)
+                }
+                func(str);
+            }
+            {
+                func = () =>{
+                    const str = "리턴함수";
+                    return str;
+                }
+                document.write(func())
+            }
+            document.write("<br>")
+        }
+        //01.
+        {
+            document.write("<br>")
+        }
+        
+    </script>
+</body>
+</html>
