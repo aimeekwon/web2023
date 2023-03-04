@@ -8,6 +8,17 @@
 </head>
 <body>
     <script>
+        //01 1-50까지 for문으로 출력
+        //02 1-50까지 while문으로 출력
+        //03 1-100까지 짝수로 출력(if문 사용X)
+        //04 1-100까지 홀수로 출력(if문 사용)
+        //05 테이블 50칸 출력(1-50숫자 출력)
+        //06 1-10까지 합 출력
+        //07 구구단 출력
+        //08 함수 유형 4가지 작성
+        //09 화살표 함수유형 4가지 작성
+        //10 스크립트하면서 제일 어려운 부분과 이해 안되는 부분 서술
+
         //01.
         {
             for(let i=1; i<=50; i++){
@@ -108,18 +119,18 @@
         {
             {
                 func = () => {
-                    document.write("선언함수")
+                    document.write("화살표 : 선언함수","<br>")
                 }
                 func();
             }
             {
                 const func = () =>{
-                    document.write("익명함수")
+                    document.write("화살표 : 익명함수","<br>")
                 }
                 func();
             }
             {
-                let str = "매개변수함수";
+                let str = "화살표 : 매개변수함수<br>";
                 func = (str) =>{
                     document.write(str)
                 }
@@ -127,7 +138,7 @@
             }
             {
                 func = () =>{
-                    const str = "리턴함수";
+                    const str = "화살표 : 리턴함수<br>";
                     return str;
                 }
                 document.write(func())
