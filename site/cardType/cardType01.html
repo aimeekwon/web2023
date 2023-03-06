@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드유형 01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+    /* reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: normal;
+    }
+    img {
+        vertical-align: top;
+        width: 100%;
+
+    }
+    /* common */
+    .container {
+        width: 1160px;
+        margin: 0 auto;
+        padding: 0 20px;
+        /* background-color: rgba(0,0,0,0.1); */
+    }
+    .nexon {
+        font-family: 'NexonLv1Gothic';
+        font-weight: 400;
+    }
+    .section {
+        padding: 120px 0;
+    }
+    .section.center {
+        text-align: center;
+    }
+    .section h2 {
+        font-size: 50px;
+        /* font-weight: 400; */
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+    .section p {
+        font-size: 22px;
+        color: #666;
+        margin-bottom: 70px;
+        font-weight: 300;
+
+    }    
+    .section_desc {
+        font-size: 22px;
+        color: #666;
+        margin-bottom: 70px;
+        font-weight: 300;
+        line-height: 1.5;
+
+    }
+    /* card type */
+    .card__wrap {
+        background-color: #ccc;
+    }
+    .card__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card__inner .card {
+        width: 32.3333%;
+        background-color: #f8f8f8;
+    }
+    .card__header {}
+    .card__body {
+        padding: 24px;
+    }
+    .card__body .title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .card__body .desc {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom:  15px;
+    }
+    .card__body .btn {
+        padding-right: 40px;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='32' height='8' viewBox='0 0 32 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM31.3536 4.35355C31.5488 4.15829 31.5488 3.84171 31.3536 3.64645L28.1716 0.464466C27.9763 0.269204 27.6597 0.269204 27.4645 0.464466C27.2692 0.659728 27.2692 0.976311 27.4645 1.17157L30.2929 4L27.4645 6.82843C27.2692 7.02369 27.2692 7.34027 27.4645 7.53553C27.6597 7.7308 27.9763 7.7308 28.1716 7.53553L31.3536 4.35355ZM1 4.5H31V3.5H1V4.5Z' fill='black'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    </style>
+</head>
+<body>
+    <section class="card__wrap section nexon">
+        <div class="container">
+            <h2 class="section_h2">반려 식물 건강하게 키우기</h2>
+            <p class="section_desc">적당한 햇볕과 통풍이 잘되는 환경이 필요합니다. 때에 따라 일정한 주기로 물을 주시는 것도 중요합니다.
+                다양한 식물이 가지는 특성에 맞춰 잘 자랄 수 있도록 조건에 맞는 흙과 비료를 알아두세요.</p>
+            <div class="card__inner">
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/cardType01_01.jpg" alt="물 줄 때 꼭 흙 상태 확인하세요">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">물 줄 때 꼭 흙 상태 확인하세요</h3>
+                        <p class="desc">보통 '겉흙이 젖으면 듬뿍' 이라는 표현을 많이 
+                            사용하는데, 겉의 흙 색깔만 보고 판단했다가는
+                            속의 흙이 젖어있는 것을 놓치고 물을 주게 될 
+                            수 있어요.이렇게 젖은 화분에 또 물을 주게 ...</p>
+                        <a href="#" class="btn">자세히보기
+                        </a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/cardType01_02.jpg" alt="'음지식물' 꽁꽁 숨겨두지 마세요">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">'음지식물' 꽁꽁 숨겨두지 마세요</h3>
+                        <p class="desc">흔히 '음지식물'이라고 부르는 빛 요구도가 낮은
+                            식물들이 있어요. 하지만 이런 음지식물들을 빛
+                            을 못 받는 어둠 속에서 키우면 식물의 성장이 
+                            더뎌지거나, 마디가 길어지거나, 쉽게 과습이 ...</p>
+                        <a href="#" class="btn">자세히보기
+                        </a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/cardType01_03.jpg" alt="가끔씩은 창을 활짝 열어주세요">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">가끔씩은 창을 활짝 열어주세요</h3>
+                        <p class="desc">"통풍을 꼭 해줘야 하나..?"
+                            싶겠지만, 실내 가드너라면 통풍을 잘 해주는것
+                            만으로도 식물의 해충 피해를 예방할 수 있어요.
+                            환기를 꾸준히 해 주면 식물 뿐만 아니라 가드 ...</p>
+                        <a href="#" class="btn">자세히보기
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>   
+</body>
+</html>

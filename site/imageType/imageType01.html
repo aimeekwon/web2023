@@ -7,20 +7,24 @@
     <title>이미지유형 01</title>
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
 <style>
+    /* reset */
     * {
         margin: 0;
         padding: 0;
     }
     a {
         text-decoration: none;
+        color: #000;
     }
     h1,h2,h3,h4,h5,h6 {
         font-weight: normal;
     }
-    .img {
+    img {
         vertical-align: top;
+        width: 100%;
 
     }
+    /* common */
     .container {
         width: 1160px;
         margin: 0 auto;
@@ -33,6 +37,8 @@
     }
     .section {
         padding: 120px 0;
+    }
+    .section.center {
         text-align: center;
     }
     .section h2 {
@@ -53,8 +59,9 @@
         color: #666;
         margin-bottom: 70px;
         font-weight: 300;
+        line-height: 1.5;
     }
-    /* image wrap */
+    /* image type */
     .image__wrap {
         background-color: rgba(0,0,0,0.1);
 
@@ -107,7 +114,7 @@
 
 </head>
 <body>
-    <section class="image__wrap section nexon">
+    <section class="image__wrap section center nexon">
         <div class="container">
             <h2 class="section_h2">PLANT</h2>
             <p class="section_desc">반려 식물 건강하게 키우기</p>
