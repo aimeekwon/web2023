@@ -52,273 +52,172 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <!-- <li><a href="#">01. if문</a></li>
-                    <li><a href="#">02. if문 생략</a></li>
-                    <li><a href="#">03. 삼항연산자 if</a></li>
-                    <li><a href="#">04. 다중 if</a></li>
-                    <li><a href="#">05. 중첩 if</a></li>
+                    <li><a href="#">01. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
+                    <li><a href="#">02. 데이터 이펙트 : 0부터 50까지 출력하기</a></li>
+                    <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</a></li>
+                    <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</a></li>
+                    <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 5의 배수(파란색) 7의 배수(빨간색) 출력하기</a></li>
+                    <li><a href="#">06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
+                    <li><a href="#">07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
+                    <li><a href="#">08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수/파란색)</a></li>
+                    <li><a href="#">09. 데이터 이펙트 : 테이블 25칸(3의배수:빨간색, 5의배수/파란색)</a></li>
+                    <li><a href="#">10. 데이터 이펙트 : 배열 데이터에서 10보다 큰수 찾기</a></li>
 
-                    <li><a href="#">06. switch문</a></li>
-                    <li><a href="#">07. while문</a></li>
-                    <li><a href="#">08. do while문</a></li>
-                    <li><a href="#">09. for문</a></li>
-                    <li><a href="#">10. 중첩for문</a></li>
-                    <li><a href="#">11. break문</a></li>
-                    <li><a href="#">12. continue문</a></li> -->
-                    <li><a href="#">01. 데이터 이펙트 : </a></li>
-                    <li><a href="#">02. 데이터 이펙트 : </a></li>
-                    <li><a href="#">03. 데이터 이펙트 : </a></li>
-                    <li><a href="#">04. 데이터 이펙트 : </a></li>
-                    <li><a href="#">05. 데이터 이펙트 : </a></li>
-                    <li><a href="#">06. 데이터 이펙트 : </a></li>
-                    <li><a href="#">07. 데이터 이펙트 : </a></li>
-                    <li><a href="#">08. 데이터 이펙트 : </a></li>
-                    <li><a href="#">09. 데이터 이펙트 : </a></li>
-                    <li><a href="#">10. 데이터 이펙트 : </a></li>
-
-                    
                 </ul>
             </div>
             <div class="main__sample">    
                 <div id="sample01" class="sample">
-                    <h3>001. 데이터 이펙트 :</h3>
-                    <p>if문은 가장 간단한 조건문이다.<br>주어진 조건이 참이면 실행되는 코드 블록을 만든다.</p>
+                    <h3>01. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
+                    <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
-    // false : 0, null, undefined, false, ""(빈문자열) 
-    // true : 1, 2, "0", "1", "ABC", [], {}, true              
-    if(0){
-       document.write("실행되었습니다. (true)")
-    } else {
-       document.write( "실행되었습니다.(false)")
-    } 
+    for(let i=1; i&lt=100; i++){
+        document.write(i);
+    }
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample01 -->      
                 <div id="sample02" class="sample">
-                    <h3>02. if문 생략</h3>
+                    <h3>02. 데이터 이펙트 : 0부터 50까지 출력하기</h3>
                     <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
-    const num = 100;
-    // if(num){
-    //     document.write("실행되었습니다.(true)")
-    // } else {
-    //     document.write("실행되었습니다.(true)")
-    // }
-
-    if(num) document.write ("실행되었습니다.(true)")
-    else document.write ("실행되었습니다.(false)") 
+    for(let i=0; i&lt=50; i++){
+        document.write(i);
+    }
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample02 -->         
                 <div id="sample01" class="sample">
-                    <h3>03. 삼항 연산자</h3>
-                    <p>if-else문을 간단하게 표현하는 효율적인 방법이다. <br>삼항연산자는 물음표(?)와 콜론(:)을 사용하여 구성된다.</p>
+                    <h3>03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</h3>
+                    <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
-    const num = 100;
-    // 원본
-    // if(num == 100){
-    //     document.write("true")
-    // } else {
-    //     document.write("false")
-    // }
-
-    (num == 100) ? document.write("true") : document.write("false");  
+    for(let i=1; i&lt=100; i+=2){
+        document.write(i)
+    }
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample03 -->        
                 <div id="sample01" class="sample">
-                    <h3>04. 다중 if</h3>
-                    <p>여러 개의 if문을 연속해서 사용하는 것이다. <br>각 문은 독립적으로 실행된다.</p>
+                    <h3>04. 데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</h3>
+                    <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">   
-    const num = 100;
-    
-    if(num == 90){
-        document.write("실행되었습니다(num == 90)");
-    }else if(num == 100){
-        document.write("실행되었습니다(num == 100)");
-    }else if(num == 110){
-        document.write("실행되었습니다(num == 110)");
-    }else if(num == 120){
-        document.write("실행되었습니다(num == 120)");
-    }else {
-        document.write("실행되었습니다");
+    for(let i=1; i&lt=100; i++){
+        if(i % 5 == 0){
+            document.write(i)
+        }
     }
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample04 -->  
-                <div id="sample01" class="sample">
-                    <h3>05. 중첩 if</h3>
-                    <p>중첩 if문은 if문 안에 또 다른 if문을 사용하는 것이다. <br>이렇게 중첩된 if문은 복잡한 조건문을 작성할 때 사용된다.</p>
+                <div id="sample05" class="sample">
+                    <h3>05. 데이터 이펙트 : 1부터 100까지 5의 배수(파란색) 7의 배수(빨간색) 출력하기</h3>
+                    <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
-    const num = 100;
-
-    if( num == 100){
-        document.write("실행되었습니다.(1)");
-        if(num == 100){
-            document.write("실행되었습니다.(2)");
-            if(num == 100){
-                document.write("실행되었습니다.(3)");
-            }
-        }
-    
-    } else {
-        document.write("실행되었습니다.(4)")
+    for(let i=1; i&lt=100; i++){
+        if(i % 5 == 0){
+            document.write("<span style='color:red'>"+i+"</span>")
+        }if(i % 7 == 0){
+            document.write("<span style='color:blue'>"+i+"</span>")
+        }else {document.write(i)}
     }
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample05 -->      
                 <div id="sample01" class="sample">
-                    <h3>06. switch문</h3>
+                    <h3>06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</h3>
                     <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
-    const num = 100;
-
-    switch(num){
-        case 90:
-            document.write("실행 90");
-            break; //생략가능하나 중간에 답이 나오는 경우 멈추면 에너지를 아낄 수 있음.(리액트방식)
-        case 80:
-            document.write("실행 80");   
-            break; 
-        case 70:
-            document.write("실행 70");
-            break;
-        case 60:
-            document.write("실행 60");
-            break;
-        case 50:
-            document.write("실행 50");
-            break;
-        default:
-            document.write("실행 0");
-    }
+    let result = 0;
+    let table = "&lttable border='1'&gt"
+        for(let i=1; i&lt=10; i++){
+            table += "&lttr&gt";
+                for(let j=1; j&lt=10; j++){
+                    result += 1
+                    table += "&lttd&gt"+result+"&lt/td&gt"
+                }
+                table += "&lt/tr&gt"
+        }
+        table += "&lt/table&gt"
+        document.write(table)
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample06 -->
-                <div id="sample01" class="sample">
-                    <h3>07. while문</h3>
+                <div id="sample07" class="sample">
+                    <h3>07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
                     <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
-    for(let i=0; i&lt5; i++){
-        document.write(i);
-    }
-    let num = 0;
-    while(num&lt5){
-        document.write(num);
-        num++;
+    for(let i=1; i&lt10; i++){
+        document.write(i+"단","&ltbr&gt")
+        for(let j=1; j&lt10; j++){
+            document.write(i+"*"+j+"="+i*j,"&ltbr&gt")
+        }
     }
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample07 -->     
-                <div id="sample01" class="sample">
-                    <h3>08. do while문</h3>
+                <div id="sample08" class="sample">
+                    <h3>08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수/파란색)</h3>
                     <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
-    let num2 = 0;
-    do {
-        document.write(num2);
-        num2++;
-    }while (num2&lt5);
+    let result = 0;
+    let table = "&lttable border ='1'&gt"
+        for(let i=1; i&lt=5; i++){
+            table += "&lttr&gt";
+                for(let j=1; j&lt=5; j++){
+                    result += 1;
+                    if(result % 2 == 0){
+                        table += "&lttd style='color:red'&gt"+result+"&lt/td&gt" 
+                    }else {table += "&lttd style='color:blue'&gt"+result+"&lt/td&gt"}
+                }
+                table += "&lt/tr&gt"            
+        }
+        table += "&lt/table&gt"
+        document.write(table)
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample08 --> 
                 <div id="sample01" class="sample">
-                    <h3>09. for문</h3>
+                    <h3>09. 데이터 이펙트 : 테이블 25칸(3의배수:빨간색, 5의배수/파란색)</h3>
                     <p></p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
-    for(let i=1; i&lt=100; i++){
-        document.write(i)
-    }
+    let result = 0;
 
-    let num = [1,2,3,4,5,6,7,8,9];
-
-    for(let i=0; i&ltnum.length; i++){
-        document.write(num[i]);
-        sum = sum + num[i];
-    //  sum += num[i];
-    }
-
-    document.write(sum)
+    let table = "&lttable border ='1'&gt";
+        for(let i=1; i&lt=5; i++){
+            table += "&lttr&gt";
+                for(let j=1; j&lt=5; j++){
+                    result += 1;
+                    if(result % 3 == 0){
+                        table += "&lttd style='color:red'&gt"+result+"&lt/td&gt";
+                    }else if(result % 5 == 0){
+                        table += "&lttd style='color:blue'&gt"+result+"&lt/td&gt";
+                    }else { table += "&lttd&gt"+result+"&lt/td&gt" }
+                }
+                table += "&lt/tr&gt"
+        }
+        table += "&lt/table&gt"
+        document.write(table)
 </code></pre>
                     </div>
                 </div>
                 <!-- //sample09 -->
-                <div id="sample01" class="sample">
-                    <h3>10. 중첩for문</h3>
-                    <p></p>
-                    <div class="script">
-<pre class="line-numbers"><code class="language-js">                      
-    for(let i=1; i&lt=10; i++){
-        document.write(i,"&ltbr&gt")
-        for(let j=1; j&lt=10; j++){
-            document.write(j)
-        }
-    }
-</code></pre>
-                    </div>
-                </div>
-                <!-- //sample10 -->
-                <div id="sample01" class="sample">
-                    <h3>11. break문</h3>
-                    <p></p>
-                    <div class="script">
-<pre class="line-numbers"><code class="language-js">                      
-    for(let i=1; i&lt20; i++){
-        document.write(i);
-        if(i ==10){
-            break;
-        }
-    }
-    // 둘이 값이 다름
-    for(let i=1; i&lt20; i++){ 
-        if(i == 10){
-            break;
-        }
-        document.write(i);
-    }
-</code></pre>
-                    </div>
-                </div>
-                <!-- //sample11 -->  
-                <div id="sample01" class="sample">
-                    <h3>12. continue문</h3>
-                    <p></p>
-                    <div class="script">
-<pre class="line-numbers"><code class="language-js">                      
-    for(let i=1; i&lt20; i++){
-        if(i == 10){
-            continue;
-        }
-        document.write(i)
-    }
-    //둘이 값이 다름
-    for(let i=1; i&lt20; i++){
-        document.write(i);
-        if(i == 10){
-            continue;
-        }
-    }
-</code></pre>
-                    </div>
-                </div>
-                <!-- //sample12 -->                        
+
         </div>
     </main>
     <!-- //main -->

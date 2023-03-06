@@ -21,7 +21,7 @@
 
         //01.
         {
-            for(let i=1; i<=50; i++){
+            for(let i=1; i<=100; i++){
                 document.write(i);
             }
             document.write("<br>")
@@ -39,6 +39,74 @@
         {
             for(let i=1; i<=100; i+=2){
                 document.write(i)
+            }
+            document.write("<br>")
+        }
+        {
+            for(let i=1; i<=100; i++){
+                if(i % 5 == 0){
+                    document.write("<span style='color:red'>"+i+"</span>")
+                }if(i % 7 == 0){
+                    document.write("<span style='color:blue'>"+i+"</span>")
+                }else {document.write(i)}
+            }
+        }
+        {
+            let result = 0;
+            let table = "<table border='1'>"
+                for(let i=1; i<=10; i++){
+                    table += "<tr>";
+                        for(let j=1; j<=10; j++){
+                            result += 1
+                            table += "<td>"+result+"</td>"
+                        }
+                        table += "</tr>"
+                }
+                table += "</table>"
+                document.write(table)
+        }
+
+        {
+            let result = 0;
+            let table = "<table border ='1'>"
+                for(let i=1; i<=5; i++){
+                    table += "<tr>";
+                        for(let j=1; j<=5; j++){
+                            result += 1;
+                            if(result % 2 == 0){
+                                table += "<td style='color:red'>"+result+"</td>" 
+                            }else {table += "<td style='color:blue'>"+result+"</td>"}
+                        }
+                        table += "</tr>"            
+                }
+                table += "</table>"
+                document.write(table)
+        }
+        {
+            let result = 0;
+
+            let table = "<table border ='1'>";
+                for(let i=1; i<=5; i++){
+                    table += "<tr>";
+                        for(let j=1; j<=5; j++){
+                            result += 1;
+                            if(result % 3 == 0){
+                                table += "<td style='color:red'>"+result+"</td>";
+                            }else if(result % 5 == 0){
+                                table += "<td style='color:blue'>"+result+"</td>";
+                            }else { table += "<td>"+result+"</td>" }
+                        }
+                        table += "</tr>"
+                }
+                table += "</table>"
+                document.write(table)
+        }
+        {
+            for(let i=1; i<10; i++){
+                document.write(i+"단"+"<br>");
+                for(let j=1; j<10; j++){
+                    document.write(i+"*"+j+"="+i*j+"<br>")
+                }
             }
             document.write("<br>")
         }
