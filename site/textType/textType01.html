@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+            /* reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: normal;
+    }
+    img {
+        vertical-align: top;
+        width: 100%;
+
+    }
+    .mt0 {margin-top: 0!important;}
+    .mt10 {margin-top: 10px!important;}
+    .mt20 {margin-top: 20px!important;}
+    .mt30 {margin-top: 30px!important;}
+    .mt40 {margin-top: 40px!important;}
+    .mt50 {margin-top: 50px!important;}
+    .mt60 {margin-top: 60px!important;}
+    .mt70 {margin-top: 70px!important;}
+
+    .mb10{margin-bottom: 10px!important;}
+    .mb20{margin-bottom: 20px!important;}
+    .mb30{margin-bottom: 30px!important;}
+    .mb40{margin-bottom: 40px!important;}
+    .mb50{margin-bottom: 50px!important;}
+    .mb60{margin-bottom: 60px!important;}
+    .mb70{margin-bottom: 70px!important;}
+    
+    /* common */
+    .container {
+        width: 1160px;
+        margin: 0 auto;
+        padding: 0 20px;
+        /* background-color: rgba(0,0,0,0.1); */
+    }
+    .nexon {
+        font-family: 'NexonLv1Gothic';
+        font-weight: 400;
+    }
+    .section {
+        padding: 120px 0;
+    }
+    .section.center {
+        text-align: center;
+    }
+    .section__small {
+        font-size: 14px;
+        border-radius: 50px;
+        background-color: #0c3934;
+        color: #fff;
+        padding: 1px 23px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    .section h2 {
+        font-size: 50px;
+        /* font-weight: 400; */
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+    .section p {
+        font-size: 22px;
+        color: #666;
+        margin-bottom: 70px;
+        font-weight: 300;
+    }
+        
+    .section_desc {
+        font-size: 22px;
+        color: #666;
+        margin-bottom: 70px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    /* text__wrap */
+    .text__wrap {
+    }
+    .text__inner {
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .text__inner .text {
+        position: relative;
+        width: 32.3333%;
+        border: solid 1px #f5f5f5;
+        border-radius: 10px;
+        padding: 90px 20px 20px 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .text__inner .text:hover {
+        background-color: #f5f5f5;
+    }
+    .text__inner .text::before {
+        content: '';
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        border-radius: 50%;
+        background-color: rgba(12, 57, 52, 0.7);
+        background-image: url(../asset/img/textType01_01.svg);
+        background-repeat: no-repeat;
+        background-position: center;    
+    }
+    .text__inner .text.t1::before {
+        background-image: url(../asset/img/textType01_01.svg);
+    }
+    .text__inner .text.t2::before {
+        background-image: url(../asset/img/textType01_02.svg);
+    }
+    .text__inner .text.t3::before {
+        background-image: url(../asset/img/textType01_03.svg);
+    }
+    .text__inner .text.t4::before {
+        background-image: url(../asset/img/textType01_04.svg);
+    }
+    .text__inner .text.t5::before {
+        background-image: url(../asset/img/textType01_05.svg);
+    }
+    .text__inner .text.t6::before {
+        background-image: url(../asset/img/textType01_06.svg);
+    }
+
+    .text__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .text__desc {
+        font-size: 16px!important;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    .text__btn {
+        text-align: right;
+        position: relative;
+        padding-right: 20px;
+    }
+    .text__btn::before {
+        content: '';
+        background-image: url(../asset/img/textType01_07.svg);
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 15px;
+        height: 15px;
+        transition: all 0.3s;
+    }
+    .text__btn:hover::before {
+        transform : rotate(360deg);
+    }
+    .text > a {
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <section class="text__wrap section nexon center">
+        <div class="container">
+            <span class="section__small">NOTICE</span>
+            <h2 class="section__h2 mb70">나에게 맞는 반려식물 고르기</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">건강 관심형</h3>
+                    <p class="text__desc">반려식물은 식물을 인생의 동반자로 생각해 붙여
+                        진 이름입니다. 반려동물을 키우는 것과 비교해 
+                        상대적으로 비용과 노력이 적게 들지만 비슷한 효
+                        과를 가져온다고 해요. 전국 만 19~59세...</p>
+                     <a class="text__btn" href="#">더보기</a>   
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">깜빡깜빡형</h3>
+                    <p class="text__desc">반려식물은 식물을 인생의 동반자로 생각해 붙여
+                        진 이름입니다. 반려동물을 키우는 것과 비교해 
+                        상대적으로 비용과 노력이 적게 들지만 비슷한 효
+                        과를 가져온다고 해요. 전국 만 19~59세...</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">훌쩍훌쩍형</h3>
+                    <p class="text__desc">반려식물은 식물을 인생의 동반자로 생각해 붙여
+                        진 이름입니다. 반려동물을 키우는 것과 비교해 
+                        상대적으로 비용과 노력이 적게 들지만 비슷한 효
+                        과를 가져온다고 해요. 전국 만 19~59세...</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">호기심가득형</h3>
+                    <p class="text__desc">반려식물은 식물을 인생의 동반자로 생각해 붙여
+                        진 이름입니다. 반려동물을 키우는 것과 비교해 
+                        상대적으로 비용과 노력이 적게 들지만 비슷한 효
+                        과를 가져온다고 해요. 전국 만 19~59세...</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">통통튀는 예술가형</h3>
+                    <p class="text__desc">반려식물은 식물을 인생의 동반자로 생각해 붙여
+                        진 이름입니다. 반려동물을 키우는 것과 비교해 
+                        상대적으로 비용과 노력이 적게 들지만 비슷한 효
+                        과를 가져온다고 해요. 전국 만 19~59세...</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">건강 관심형</h3>
+                    <p class="text__desc">반려식물은 식물을 인생의 동반자로 생각해 붙여
+                        진 이름입니다. 반려동물을 키우는 것과 비교해 
+                        상대적으로 비용과 노력이 적게 들지만 비슷한 효
+                        과를 가져온다고 해요. 전국 만 19~59세...</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>            
+            </div>
+
+        </div>
+    </section>
+    
+</body>
+</html>
