@@ -7,11 +7,13 @@
     left: 0;
     top: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 
 }
 #header::before {
     content: '';
-    border: 4px ridge #333;
+    border: 4px ridge #ccc;
     position: absolute;
     left: 5px;
     top: 5px;
@@ -20,7 +22,7 @@
 }
 #header h1{
     font-size: 28px;
-    padding: 0px 5px 5px 10px;
+    padding: 5px 5px 5px 10px;
     font-family: 'DungGeunMo';
     z-index: 10;
     position: relative;
@@ -31,7 +33,26 @@
 #header h1 em{
     font-size: 0.5em;
 }
-
+#header ul {
+  padding: 5px;
+}
+#header li {
+  display: inline;
+  z-index: 10;
+  position: relative;;
+}
+#header li a {
+    color: #fff;
+    font-family: 'DungGeunMo';
+    border: 1px dashed #fff;
+    display: inline-block;
+    padding: 5px;
+}
+#header li.active a,
+#header li a:hover {
+    background-color: #fff;
+    color: #666;
+} 
 
 
 
@@ -73,8 +94,7 @@
     flex-wrap: wrap;
 }
 .quiz__wrap .quiz{
-    margin-top: 50px;
-    max-width: 500px;
+    width: 500px;
     background-color: #fff;
     border: 8px ridge #d3d3d3;
 
@@ -134,10 +154,29 @@
     padding: 10px 20px;
     font-size: 22px;
 }
+.quiz__answer .input {
+  /* display: none; */
+    background-color: #fff;
+    border: 3px groove #ccc;
+    width: 100%;
+    font-family: 'NanumSquareNeo';
+    padding: 10px 20px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 .quiz__view {
     border-bottom: 6px ridge #cacaca;
 }
-.quiz__footer{}
+.quiz__footer{
+    border-top: 6px ridge #cacaca;
+    padding: 20px;
+    font-family: 'NanumSquareNeo';
+}
+.quiz__footer::before {
+  content:'🎁Tip';
+  color: #ff3c3c;
+  font-weight: blod;
+}
 
 /* dog__wrap */
 .dog .tail, 
