@@ -70,13 +70,9 @@
         <div class="main__sample">    
             <div id="sample01" class="sample">
                 <h3>01. if문</h3>
-                <p>if문은 가장 간단한 조건문이다.<br>주어진 조건이 참이면 true, 아니면 false를 출력한다. <br>
-                    1, true, "0","1", 0&lt10(비교연산자), [](배열), {}(객체)를 쓰면 true, <br>
-                    o, false, ""(문자열 안이 빈칸인 경우), undefined, null을 쓰면 false를 출력한다.</p>
+                <p>if문은 가장 간단한 조건문이다.<br>주어진 조건이 참이면 true, 아니면 false를 출력한다.</p>
                     <div class="script">
-<pre class="line-numbers"><code class="language-js">                          
-    // true : 1, 2, "0", "1", "ABC", [], {}, true  
-    // false : 0, null, undefined, false, ""(빈문자열)            
+<pre class="line-numbers"><code class="language-js">                                     
     if(0){
        document.write("실행되었습니다. (true)"); 
     } else {
@@ -92,30 +88,39 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p>true조건 : 1, 2, "0"(문자), "1"(문자), "ABC"(문자), 0&lt10(비교연산자), [](배열), {}(객체), true<br>  
+                           false조건 : 0, null, undefined, false, ""(문자열 안이 빈칸인 경우:빈문자열) </p>
+                    </div>
                 </div>
                 <!-- //sample01 -->
-                <div class="main__sample">
-                    <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다-->             
-                    <div id="sample01" class="sample">
-                        <h3>02. if문 생략</h3>
-                        <p>위의 if문에서 {}(중괄호)를 생략하는 방법이다.</p>
-                        <div class="script">
-    <pre class="line-numbers"><code class="language-js">                      
-        const num = 100; //100을 num에 넣는다.
-    
-        if(num) document.write ("실행되었습니다.(true)"); //숫자 100은 true 이므로 얘가 출력됨
-        else document.write ("실행되었습니다.(false)");
-    </code></pre>
-                        </div>
-                        <div class="result">
-                            <details>
-                                <summary>결과확인하기</summary>
-                                <div>
-                                    실행되었습니다(true)
-                                </div>
-                            </details>
-                        </div>
+            <div class="main__sample">
+                <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다-->             
+                <div id="sample02" class="sample">
+                    <h3>02. if문 생략</h3>
+                    <p>위의 if문에서 {}(중괄호)를 생략하는 방법이다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">                      
+    const num = 100; //100을 num에 넣는다.
+
+    if(num) document.write ("실행되었습니다.(true)"); //숫자 100은 true 이므로 얘가 출력됨
+    else document.write ("실행되었습니다.(false)");
+</code></pre>
                     </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                실행되었습니다(false)
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                </div>
                     <!-- //sample02 -->
                 <div id="sample01" class="sample">
                     <h3>03. 삼항 연산자</h3>
@@ -123,7 +128,7 @@
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">                      
     const num = 100;
-    // 변형 전 if-else문
+    // 생략 전 if-else문
     // if(num == 100){
     //     document.write("true")
     // } else {
@@ -140,6 +145,10 @@
                                 true
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
                     </div>
                 </div>
                 <!-- //sample03 -->        
@@ -171,6 +180,10 @@
                                 실행되었습니다.(num==100)
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
                     </div>
                 </div>
                 <!-- //sample04 -->  
@@ -206,6 +219,10 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
+                    </div>
                 </div>
                 <!-- //sample05 -->      
                 <div id="sample01" class="sample">
@@ -235,7 +252,7 @@
             break;
         default:
             document.write("실행 0"); // 답이 없으므로 기본값이 출력된다.
-
+    }
 </code></pre>
                     </div>
                     <div class="result">
@@ -245,6 +262,10 @@
                                 실행 0
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
                     </div>
                 </div>
                 <!-- //sample06 -->
@@ -273,6 +294,10 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
+                    </div>
                 </div>
                 <!-- //sample07 -->     
                 <div id="sample01" class="sample">
@@ -295,6 +320,10 @@
                                 0 1 2 3 4
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
                     </div>
                 </div>
                 <!-- //sample08 --> 
@@ -320,6 +349,10 @@
                                 0+1+2+3+4+5+6+7+8+9+=45
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
                     </div>
                 </div>
                 <!-- //sample09 -->
@@ -356,9 +389,13 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
+                    </div>
                 </div>
                 <!-- //sample10 -->
-                <div id="sample01" class="sample">
+                <div id="sample11" class="sample">
                     <h3>11. break문</h3>
                     <p>조건식이 맞을 경우 더 반복할 수 있음에도 불구하고 미리 중단(break)시켜주는 실행문으로<br>
                          무한 반복문에서 유용하게 사용할 수 있다.</p>
@@ -408,9 +445,13 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
+                    </div>
                 </div>
                 <!-- //sample11 -->  
-                <div id="sample01" class="sample">
+                <div id="sample12" class="sample">
                     <h3>12. continue문</h3>
                     <p>실행해야 할 명령문을 실행하지 않고 다음 명령문으로 건너뛰어 실행하는 명령문으로<br>
                         for문에 중첩된 if문 괄호 안의 조건식이 참일 경우 해당 값을 건너뛰고 다음 값을<br>
@@ -458,6 +499,10 @@
                                             20
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p></p>
                     </div>
                 </div>
                 <!-- //sample12 -->                        
