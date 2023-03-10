@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0310_test04</title>
+</head>
+<body>
+    <script>
+        //01. 0~100
+        {
+            for(let i=0; i<=100; i++){
+                document.write(i);
+            }
+        }
+        {
+            let table = "<table border='1'>"
+                for(let i=1; i<=10; i++){
+                    table += "<tr>";
+                        for(let j=1; j<=10; j++){
+                            table += "<td>"+j+"</td>";
+                        }
+                        table += "</tr>"
+                }
+                table += "</table>";
+                document.write(table)
+        }
+        //구구단 20단
+        {
+            for(let i=20; i<21; i++){
+                document.write(i,"<br>")
+                for(let j=1; j<10; j++){
+                    document.write(i +"*"+j+"="+i*j,"<br>")
+                }
+            }
+        }
+        //4. 1-100까지 짝수의 합
+        { 
+            let sum=0;
+            for(let i=0; i<=100; i+=2){
+                sum +=i
+            }
+            document.write(sum,"<br>")
+        } 
+        {
+            let sum=0;
+            for(let i=0; i<=100; i++){
+                if(i%2==0){
+                    document.write
+                }
+            }
+        }
+        //5. 1-100까지 출력(짝수는 파란색 홀수는 빨간색)
+        {
+            for(let i=1; i<=100; i++){
+                if(i %2 ==0){
+                    document.write("<span style='color:red'>"+i+"</span>")
+                }else {document.write("<span style='color:blue'>"+i+"</span>")}
+            }
+        }   
+        document.write("<br>");
+        //6. 배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
+        {
+            let arr = [1,2,3,4,5,6,7,8,9,10];
+            arr.forEach(aa =>{
+                document.write(aa);
+            })
+
+           
+        }
+        document.write("<br>")
+        {
+        //배열 : 데이터 불러오기
+            let arr = [1,2,3,4,5,6,7,8,9]
+            arr.forEach(function(el){
+                document.write(el)
+            })
+        }
+        document.write("<br>");
+        //7. 함수의 유형 4가지
+        {
+            function func(){
+                document.write("선언함수","<br>")
+            }
+            func()
+        }
+        {
+            const func = function(){
+                document.write("익명함수","<br>")
+            }
+            func()
+        }
+        {
+            function func(str){
+                document.write(str)
+            }
+            func("매개변수","<br>")
+        }
+        {
+            function func(){
+               
+                return document.write("리턴함수","<br>");
+            }
+            func();
+        }
+        //8. 7번을 화살표 함수로
+        {
+            function func(){
+                document.write("선언함수","<br>")
+            }
+            func()
+        }
+        {
+            const func = function(){
+                document.write("익명함수","<br>")
+            }
+            func()
+        }
+        {
+            function func(str){
+                document.write(str)
+            }
+            func("매개변수","<br>")
+        }
+        {
+            function func(){
+               
+                return document.write("리턴함수","<br>");
+            }
+            func();
+        }
+        {
+            function func(){
+                document.write("선언")
+            }
+            func()
+        }
+        {
+            const func = function(){
+                document.write("익명")
+            }
+            func()
+        }
+        {
+            function func(str){
+                document.write(str)
+            }
+            func("매개변수")
+        }
+        {
+            function func(){
+                const str = "리턴";
+                return str;
+            }
+            document.write(func())
+
+        }
+        {
+            func= () => {
+                document.write("선언")
+            }
+            func()
+        }
+        {
+            const func = () =>{
+                document.write("익명")
+            }
+            func()
+        }
+        {
+            func = (str) =>{
+                document.write(str)
+            }
+            func("매개변수")
+        }
+        {
+            func = () =>{
+                const str = "리턴";
+                return str;
+            }
+            document.write(func())
+
+        }
+    </script>
+</body>
+</html>
