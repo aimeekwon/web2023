@@ -12,7 +12,10 @@
 <body>
     <header id="header">
         <h1><a href="../javascript14.html">Quiz</a><em> 정답 확인하기 유형</em></h1>
-             
+        <ul>
+            <li class="active"><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+        </ul>    
     </header> 
     <!-- //header -->
     <main id="main">
@@ -74,7 +77,7 @@
         const quizQuestionNum = quizWrap.querySelector(".quiz__question em");
         const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
         const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
-
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
 
         // 문제 정보
         const infoType = "웹디자인 기능사";
@@ -97,7 +100,10 @@
         quizAnswerConfirm.addEventListener("click", function(){
             quizAnswerResult.style.display = "block"; 
             quizAnswerConfirm.style.display = "none"; 
+            dogWrap.classList.add("like");
         });
-   </script>
+
+
+    </script>
 </body>
 </html>

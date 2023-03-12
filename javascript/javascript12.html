@@ -23,7 +23,7 @@
                 <li><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
             
             <ul>
@@ -37,7 +37,7 @@
                 <li><a href="javascript11.html">이벤트객체</a></li>
             </ul>
             <ul class="last">
-                <li><a href="javascript12.html">데이터 효과</a></li>
+                <li class="active"><a href="javascript12.html">데이터 효과</a></li>
                 <li><a href="javascript13.html">검색 효과</a></li>
                 <li><a href="javascript14.html">퀴즈 효과</a></li>
                 <li><a href="javascript15.html">마우스 효과</a></li>
@@ -75,6 +75,16 @@
         document.write(i);
     }
 </code></pre>
+                    <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                javascript
+                            </div>
+                        </details>
+                    </div>    
                     </div>
                 </div>
                 <!-- //sample01 -->      
@@ -139,16 +149,16 @@
 <pre class="line-numbers"><code class="language-js">                      
     let result = 0;
     let table = "&lttable border='1'&gt"
-        for(let i=1; i&lt=10; i++){
-            table += "&lttr&gt";
-                for(let j=1; j&lt=10; j++){
-                    result += 1
-                    table += "&lttd&gt"+result+"&lt/td&gt"
-                }
-                table += "&lt/tr&gt"
-        }
-        table += "&lt/table&gt"
-        document.write(table)
+    for(let i=1; i&lt=10; i++){
+        table += "&lttr&gt";
+            for(let j=1; j&lt=10; j++){
+                result += 1
+                table += "&lttd&gt"+result+"&lt/td&gt"
+            }
+        table += "&lt/tr&gt"
+    }
+    table += "&lt/table&gt"
+    document.write(table)
 </code></pre>
                     </div>
                 </div>
