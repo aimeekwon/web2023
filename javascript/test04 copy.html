@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 10px solid powderblue;
+            height: 100px;
+        }        
+        .box1 {
+            border: 10px solid powderblue;
+            height: 100px;
+        }
+        .box2 {
+            border: 10px solid powderblue;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script>
+        const num = [
+            {
+                a: "1",
+                b: "2",
+                c: "3"
+            },{
+                a: "1",
+                b: "2",
+                c: "3"
+            }
+        ]
+        document.querySelector(".box").innerHTML = num
+        document.querySelectorAll(".box").forEach(function(el){
+            el.innerHTML = num[0].c
+        })
+
+
+
+        document.querySelector(".box").innerHTML = num[0].c;
+        document.querySelectorAll(".box").forEach(function(el){
+            el.innerHTML = num[0].c
+        })
+
+        document.querySelector(".box").innerHTML = num[0].c;
+        document.querySelectorAll(".box").forEach(function(el){
+            el.innerHTML = num[0].c
+        })
+
+        document.querySelector(".box").innerHTML = num[0].c;
+        document.querySelectorAll(".box").forEach(function(){
+            el.innerHTML = num[0].c
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
