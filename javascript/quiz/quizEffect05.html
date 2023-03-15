@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트05</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz</a><em> 주관식 확인하기 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li class="active"><a href="quizEffect05.html">5</a></li>
+        </ul>     
+    </header> 
+    <!-- //header -->
+    <main id="main">
+        <div class="quiz__wrap">
+           <!-- <div class="quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title"></h2>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                        <em></em>                       
+                    </div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                            <div class="true">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                      <div class="tail"></div>
+                                      <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>                        
+                    </div>
+                    <div class="quiz__choice">                       
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" value="1">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" value="2">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" value="3">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" value="4">
+                            <span class="choice"></span>
+                        </label>
+                    </div>
+                    <div class="quiz__answer">
+                        <button class="confirm" >정답확인하기</button>              
+                    </div>
+                    <div class="quiz__desc">설명</div>
+                </div>
+            </div> -->
+              
+        </div>
+        <!--모달창 쓰지않음220315 
+        <div class="quiz__modal">
+            <div class="modal">
+                <h3>축하합니다. or 다시공부하세요.</h3>
+                <p>총 [60]문제 중에 [10]문제 맞추었습니다.</p>
+                <p>40점 입니다. 공부하세요!</p>
+            </div>
+        </div> -->
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:aimee00418@gmail.com">aimee00418@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        //문제정보 //<br><img style='width:300px' src=''> 이렇게 이미지 넣기
+        const quizInfo = [
+            {
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090501",
+                infoQuestion: "다음 불대수(Boolean algebra)의 기본법칙을 바르게 표현한 것은?<br>A+(B+C) = (A+B)+C",
+                infoChoice: {
+                    1: "교환법칙",
+                    2: "분배법칙",
+                    3: "흡수법칙",
+                    4: "결합법칙",
+                },
+                infoAnswer: "4",
+                infoDesc: "연산자가 모두 동일할 경우 앞으로 괄호로 결합하거나 뒤로 괄호로 결합하거나 하는 것은 결국 같다는 것이 결합 법칙 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090502",
+                infoQuestion: "0-주소 명령은 연산 시 어떤 자료 구조를 이용하는가?",
+                infoChoice: {
+                    1: "STACK",
+                    2: "TREE",
+                    3: "QUEUE",
+                    4: "DEQUE",
+                },
+                infoAnswer: "1",
+                infoDesc: "명령어 형식, 0주소 : 스택(Stack), 1주소 : 누산기(ACC), 2주소 : 일반적,범용, 기억불능,자료보존 불능, 3주소 : 특수, 기억가능, 자료보존 가능"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090503",
+                infoQuestion: "중앙처리장치의 제어 부분에 의해서 해독되어 현재 실행중인 명령어를 기억하는 레지스터는?",
+                infoChoice: {
+                    1: "PC(Program Counter)",
+                    2: "IR(Instruction Register)",
+                    3: "MAR(Memory Address Register)",
+                    4: "MBR(Memory Buffer Register)",
+                },
+                infoAnswer: "2",
+                infoDesc: "레지스터, MAR : 번지(주소)기억, MBR : 버퍼(임시기억),IR : 명령어레지스터(명령어를 읽어서 저장), PC : 프로그램카운터(다음수행 명령번지 기억), 명령어해독기 : IR 내용 해독, ACC : 누산기(연산결과 일시(임시)저장), 데이터레지스터 : 데이터 임시저장, 상태 레지스터 : CPU상태 저장(PSW), 보수기 : 보수로 바꾸는 장치 물리적인 디스크를 논리적으로 2개 이상으로 분할하는 것을 '파티션'을 나눈다 라고 합니다.따라서 FDISK 입니다. chkdsk : 디스크 오류검사, attrib : 파일 속성 변경, format : 포맷(디스크 초기화)"
+            },
+            {
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090504",
+                infoQuestion: "다음 SQL 검색문의 의미로 옳은 것은?<br>SELECT * FROM 학생;",
+                infoChoice: {
+                    1: "학생 테이블에서 첫 번째 레코드의 모든 필드를 검색하라",
+                    2: "학생 테이블에서 마지막 레코드의 모든 필드를 검색하라.",
+                    3: "학생 테이블에서 전체 레코드의 모든 필드를 검색하라.",
+                    4: "학생 테이블에서 “*” 값이 포함된 레코드의 모든 필드를 검색하라",
+                },
+                infoAnswer: "3",
+                infoDesc: "SELECT : 검색하시오, * : 모든 필드 즉 모든 항목을 검색 하라는 뜻, FROM 학생 : 어디서 부터라는 뜻으로 뒤에는 테이블 명이온다, 즉 학생 테이블로부터 종합해보면 학생테이블로부터 모든 필드를 검색하여라는 뜻이다. WHERE 이라는 구문을 이용한 조건이 없으므로 모든 레코드를 대상으로 검색하라는 뜻"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090505",
+                infoQuestion: "컴퓨터에게는 효율적인 자원 관리를, 사용자에게는 편리한 사용을 제공하기 위한 목적을 가진 소프트웨어를 무엇이라고 하는가?",
+                infoChoice: {
+                    1: "컴파일러",
+                    2: "인터프리터",
+                    3: "운영체제",
+                    4: "워드프로세서",
+                },
+                infoAnswer: "3",
+                infoDesc: "컴파일러 : 원시프로그램을 목적프로그램으로 변환(프로그램번역기), 인터프리터 : 원시프로그램을 목적프로그램으로 변환하지 않고 바로 실행하는것. 운영체제 : 컴퓨터의 자원을 효과적으로 관리하여 사용자에게 편의를 제공하는 프로그램 , 워드프로세서 : 문서를 작성하기 위한 프로그램"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090506",
+                infoQuestion: "다음 중 정보통신시스템에서 최종적으로 데이터를 보내거나 받는 기능을 수행하는 것은?",
+                infoChoice: {
+                    1: "데이터 단말장치",
+                    2: "데이터 회선 종단장치",
+                    3: "데이터 전송장치",
+                    4: "데이터 교환장치",
+                },
+                infoAnswer: "1",
+                infoDesc: "최종적이란 말은 마지막 끝이라는 뜻입니다..단말기 등이 이에 해당됩니다. 참고 : 버스가 출발한후 도착하여 그 운행이 끝나는 곳을 터미널이라고 합니다..단말이란 뜻은 터미널과 같은 뜻입니다."
+            }
+        ]
+        //선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        // const quizTitle = quizWrap.querySelector(".quiz__title");
+        // quizTitle.innerHTML = quizInfo[0].infoQuestion; //선택자 quizTitle안에html넣기
+        // console.log(quizInfo[2].infoChoice[1])
+        let quizScore = 0;
+
+
+        //문제출력
+        const updateQuiz = () => {
+            const exam = []; //exam은 배열이다 : 선언
+
+            quizInfo.forEach((question, number) => { //quizInfo == question : forEach함수
+                //exam배열에 객체를 push한다. 방법은 백틱(``)태그 안에 넣는 것 =>템플릿 리터럴 (리터럴 : 데이터 그자체)
+                //템플릿 리터럴 (리터럴 : 데이터 그자체)
+                exam.push(`
+                    <div class="quiz">
+                    <div class="quiz__header">
+                        <h2 class="quiz__title">${question.infoType} ${question.infoTime}</h2>
+                    </div>
+                    <div class="quiz__main">
+                        <div class="quiz__question">
+                            <em>${number+1}.</em>
+                            ${question.infoQuestion}
+                        </div>
+                        <div class="quiz__view">
+                            <div class="dog__wrap">
+                                <div class="true">정답입니다!</div>
+                                <div class="false">틀렸습니다!</div>
+                                <div class="card-container">
+                                    <div class="dog">
+                                        <div class="head">
+                                            <div class="ears"></div>
+                                            <div class="face"></div>
+                                            <div class="eyes">
+                                                <div class="teardrop"></div>
+                                            </div>
+                                            <div class="nose"></div>
+                                            <div class="mouth">
+                                                <div class="tongue"></div>
+                                            </div>
+                                            <div class="chin"></div>
+                                        </div>
+                                        <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="quiz__choice">                           
+                            <label for="choice1${number}">
+                                <input type="radio" id="choice1${number}" name="choice${number}" value="1">
+                                <span class="choice">${question.infoChoice[1]}</span>
+                            </label>
+                            <label for="choice2${number}">
+                                <input type="radio" id="choice2${number}" name="choice${number}" value="2">
+                                <span class="choice">${question.infoChoice[2]}</span>
+                            </label>
+                            <label for="choice3${number}">
+                                <input type="radio" id="choice3${number}" name="choice${number}" value="3">
+                                <span class="choice">${question.infoChoice[3]}</span>
+                            </label>
+                            <label for="choice4${number}">
+                                <input type="radio" id="choice4${number}" name="choice${number}" value="4">
+                                <span class="choice">${question.infoChoice[4]}</span>
+                            </label>
+                        </div>                       
+                        <div class="quiz__desc">정답은<em>${question.infoAnswer}</em>번 입니다<br> ${question.infoDesc}</div>
+                    </div>
+                </div>
+                `);
+            });
+
+            // console.log(exam)
+            exam.push(`
+                <div class="quiz__info">??</div>
+                <div class="quiz__check">정답확인하기</div> 
+            `);
+
+            quizWrap.innerHTML = exam.join('');
+
+            //설명숨기기 : 선택자 쓸수 없음
+            // document.querySelectorAll(".quiz__desc").forEach(function(el){
+            //     el.style.display = "none"
+            // })
+            //화살표함수
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
+
+
+        }
+        updateQuiz();
+        //정답확인
+        const answerQuiz = () => {
+            const quizChoices = document.querySelectorAll(".quiz__choice");
+           //
+            quizScore = 0;
+            //사용자가 체크한 답 == 문제 정답
+            quizInfo.forEach((question, number) => { //속성선택자 :input[name=choice${number}] 
+                const userSelector = `input[name=choice${number}]:checked`;//사용자가 체크한 답 6개 찾기
+                const quizSelectorWrap = quizChoices[number];//quizChoice를 번호대로 묶은 것
+                const userAnswer = (quizSelectorWrap.querySelector(userSelector) || {}).value;//||(or)을 넣어 빈답안에도 
+                const dogWrap = quizWrap.querySelectorAll(".dog__wrap");
+
+                if(userAnswer == question.infoAnswer){
+                    alert("정답");
+                    dogWrap[number].classList.remove("dislike");
+                    dogWrap[number].classList.add("like");
+                    quizScore++;
+                }else {
+                    alert("오답");
+                    dogWrap[number].classList.remove("like");
+                    dogWrap[number].classList.add("dislike");
+                    //
+                }
+            });
+            alert(quizScore)
+        //설명 보이기
+        document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
+
+        //점수보이기
+        document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+        document.querySelector(".quiz__info").style.display = "block";
+        }
+
+        
+        //정답클릭
+        document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
