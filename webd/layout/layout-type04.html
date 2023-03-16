@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 타입 (B-1)
+    </title>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+
+    }
+   #header{
+        height: 100px;
+        
+   }
+   #header .container {
+        height: 100px;
+        display: flex;
+   }
+   #header .container .logo {
+        width: 20%;
+        height: 100px;
+        background-color: #528137;
+   }
+   #header .container .nav {
+        width: 80%;
+        height: 100px;
+        background-color: #243918;
+   }
+
+   #slider{
+        height: 300px;    
+   }
+   #slider .container {
+        background-color: #497231;
+        height: 300px;
+   }
+   #contents .container{ 
+        display: flex;
+   }
+   #contents .container .con1{
+        width: 33.333%;
+        background-color: #40642b;
+        height: 200px;
+   }
+   #contents .container .con2{
+    width: 33.333%;
+    background-color: #375625;
+    height: 200px;
+   }
+   #contents .container .con3{
+    width: 33.333%;
+    background-color: #2e471f;
+    height: 200px;
+   }
+
+   #footer{
+    height: 100px;
+   } 
+   #footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100px;
+   } 
+   #footer .container .foot1{
+    width: 20%;
+    height: 100px;
+    background-color: #243918;
+   } 
+   #footer .container .foot2{
+    width: 80%;
+    height: 50px;
+    background-color: #1b2b12;
+   } 
+   #footer .container .foot3{
+        width: 80%;
+        height: 50px;
+        background-color: #121d0c;
+   } 
+
+   .container {
+        width: 1200px;
+        margin: 0 auto;
+   }
+</style>
+</head>
+<body>
+    
+        <header id="header">
+            <div class="container">
+                <div class="logo">logo</div>
+                <nav class="nav">매뉴</nav>
+            </div>
+        </header>
+        <!-- //header -->
+        <article id="slider">
+            <div class="container">
+                이미지슬라이드
+            </div>
+        </article>
+        <!-- //slider -->
+        <section id="contents">
+            <div class="container">
+                <article class="con1">공지사항</article>
+                <article class="con2">갤러리</article>
+                <article class="con3">바로가기</article>
+            </div>
+        </section>
+        <!-- //contents-->
+        <footer id="footer">
+            <div class="container">
+                <div class="foot1">하단메뉴</div>
+                <div class="foot2">COPYRIGHT</div>
+                <div class="foot3">패밀리사이트</div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    
+
+</body>
+</html>

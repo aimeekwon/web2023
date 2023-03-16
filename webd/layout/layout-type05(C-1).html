@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 타입 (c-1)
+    </title>
+
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font: bold;
+    color: #fff;
+    font-size: 20px;
+    line-height: inherit;
+}
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+
+}
+#header {
+    width: 200px;
+    background-color: #497231;
+    height: 650px;
+}
+#header h1 {
+    height: 150px;
+    background-color: #1b2b12;
+}
+.container {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#slider {
+    width: 100%;
+    height: 350px;
+    background-color: #40642b;
+}
+#contents {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#contents .con1 {
+    width: 33.333%;
+    height: 200px;
+    background-color: #375625;
+}
+#contents .con2 {
+    width: 33.333%;
+    height: 200px;
+    background-color: #2e471f;
+}
+#contents .con3 {
+    width: 33.333%;
+    height: 200px;
+    background-color: #243918;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#footer .foot1 {
+    width: 20%;
+    height: 100px;
+    background-color: #1b2b12;
+}
+#footer .foot2 {
+    width: 80%;
+    height: 50px;
+    background-color: #121d0c;
+}
+
+#footer .foot3 {
+    width: 80%;
+    height: 50px;
+    background-color: #090e06;
+}
+
+</style>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <h1>LOGO</h1>
+        <nav>MENU</nav>
+    </header>
+    <!-- //header -->
+    <div class="container">
+        <article id="slider">IMG_SLIDER</article>
+        <!-- //slider -->
+        <section id="contents">
+            <div class="con1">공지사항</div>
+            <div class="con2">배너</div>
+            <div class="con3">바로가기</div>
+        </section>
+        <!-- //contents -->
+        <footer id="footer">
+            <div class="foot1">로고</div>
+            <div class="foot2">하단메뉴</div>
+            <div class="foot3">COPYRIGHT</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    
+</div>    
+
+</body>
+</html>

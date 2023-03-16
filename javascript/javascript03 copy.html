@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //01
+        {
+            function func(){
+                document.write("선언적함수<br>")
+            }
+            func()
+        }
+        //02
+        {
+            const func = function(){
+                document.write("익명함수<br>")
+            }
+            func()
+        }
+        //03
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("매개변수함수<br>")
+        }
+        //04
+        {
+            function func(){
+                const str = "리턴함수<br>";
+                return str;
+            }
+            document.write(func())
+        }
+        //05
+        {
+            func = () =>{
+                document.write("화살표: 선언적함수<br>")
+            }
+            func();
+        }
+        //06
+        {
+            const func = () => {
+                document.write("화살표 : 익명함수<br>")
+            }
+            func();
+        }
+        //07
+        {
+            func = (str) => {
+                document.write(str);
+            }
+            func("화살표 : 매개변수함수<br>")
+        }
+        //08
+        {
+            func = () => {
+                const str = "화살표 : 리턴함수<br>"
+                return str;
+            }
+            document.write(func());
+        }
+        //09
+        {
+            const func = (str) => {
+                return str;
+            }
+            document.write(func("09.화살표함수:익명함수+매개변수함수+리턴함수<br>"))
+        }
+        //10
+        {
+            const func = str => {
+                return str;
+            }
+            document.write(func("10.화살표함수:익명함수 +매개변수+리턴+괄호생략<br>"))
+        }
+        //11
+        {
+            const func = str => str;
+            document.write(func("11.화살표함수:익명함수+매개변수+리턴+괄호생략+리턴생략<br>"))
+        }
+        //12
+        {
+            func =str => str;
+            document.write(func("12.화살표함수:선언함수+매개변수+리턴+괄호생략+리턴생략<br>"))
+        }
+    </script>
+</body>
+</html>
