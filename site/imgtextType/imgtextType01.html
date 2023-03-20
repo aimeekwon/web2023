@@ -104,14 +104,14 @@ img {
 }
 .imgtext__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .imgtext__inner article {
     width: 32.3333%;
     /* height: 500px; */
     /* background-color: #f8f8f8; */
-    overflow: hidden;
-}
+} 
 
 .imgtext__text h2 {
     text-align: left;
@@ -140,6 +140,33 @@ img {
     padding: 1px;
     margin-bottom: 20px;
 }
+.imgtext__img .img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+.imgtext__img .i1 {
+    background-image: url(../asset/img/imgtextType01_01.jpg);
+
+}
+.imgtext__img .img a {
+    background-color: #0C3934;
+    border-radius: 15px 15px 15px 15px;
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+    line-height: 30px;
+
+
+}
+.imgtext__img .i2{
+    background-image: url(../asset/img/imgtextType01_02.jpg);
+}
 </style>
 </head>
 <body>
@@ -165,14 +192,10 @@ img {
                 </p>
             </article>
             <article class="imgtext__img">
-                <figure>
-                    <img src="../asset/img/imgtextType01_01.jpg" alt="플랜테리어 이미지">
-                </figure>
+                <div class="img i1"><a href="#">플랜테리어</a></div>
             </article>
             <article class="imgtext__img">
-                <figure>
-                    <img src="../asset/img/imgtextType01_02.jpg" alt="플랜테리어 이미지">
-                </figure>
+                <div class="img i2"><a href="#">홈가드닝</a></div>
             </article>
         </div>
     </div>
