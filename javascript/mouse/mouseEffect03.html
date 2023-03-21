@@ -34,10 +34,10 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
-        border: 5px solid #fff;
+        border: 1px solid #fff;
         background-color: rgba(255,255,255,0.5);
         background-image: url(asset/img/mouseEffect03-min.jpg);
         background-size: cover;
@@ -111,10 +111,6 @@
         //         top: e.pageY- cursor.offsetHeight
         //     })
         // })
-       
-
-
-
         window.addEventListener("mousemove", e => {
             gsap.to(cursor, {duration: 0.5, left: e.pageX, top: e.pageY});
         })
