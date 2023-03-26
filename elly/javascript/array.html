@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+
+        //Array
+        //1. Declaration
+        const arr1 = new Array();
+        const arr2 = [1, 2];
+
+        //2. Index position
+        const fruits = ['🍎', '🍌'];
+        console.log(fruits);
+        console.log(fruits.length);
+        console.log(fruits[0]);
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+        console.log(fruits[fruits.length -1]);//배열의 마지막 요소를 도출할 때 쓰는 식. 인덱스가 0부터 시작하기 때문에
+
+        console.clear();//그전의 로그들 지우기
+        //3. Looping over an array 
+        //print all fruits
+        console.log(fruits[0],fruits[1]);
+        
+        //a. for
+        for (let i=0; i<fruits.length; i++){
+            console.log(fruits[i]);
+        }
+        //b. for of
+        for(let fruit of fruits){
+            console.log(fruit);
+        }
+        //c. forEach 배열안에 들어있는 value들 마다 내가 전달한 함수를 출력한다
+        //forEach(callbackfn: (value: T, index: number, array : T []) => void, thisArg?: any : void;)
+        //Performs the specified action for each element in an array. 배열의 각 요소가 각각 콜백함수를 수행한다. 
+        //@param callbackfn A function that accepts up to three arguments. forEach calls the callbackfn
+        fruits.forEach((fruits) => console.log(fruits));
+
+
+        //배열에 쓰이는 필수 APIs  
+
+        //d. Addition, deletion, copy
+        //push: add an item to the end 
+        fruits.push('🍓','🍑');
+        console.log(fruits);
+        
+        //pop: remove an item from the end
+        fruits.pop();
+        fruits.pop();
+        console.log(fruits);
+        //unshift: add an item to the begining
+        fruits.unshift('🍊','🥝');
+        console.log(fruits);
+
+        //shift : remove an item from the begining
+        fruits.shift()
+        console.log(fruits)
+
+        // note!! shift, unshift are slower than pop, push
+        // remove an item by index position 
+        fruits.push('🍋','🥕','🍔')
+        console.log(fruits)
+        //(method) Array<string>.splice(start: number, deleteCount?: number): string[] (+1 overload)
+        fruits.splice(0, 1); //배열 넘버, 삭제할 배열 개수 
+        console.log(fruits)
+        fruits.splice(0, 3, '🍖','🍟');//지우고 데이터 넣기
+        console.log(fruits)
+
+        //combine two arrays
+        //(method) Array<string>.concat(...items: ConcatArray<string>[]): string[] (+1 overload)
+        const fruits2 = ['🍳', '🧇'];
+        const newFruits = fruits.concat(fruits2); //배열 합치기
+        console.log(newFruits);
+
+        //5. Searching 
+        //find the index
+        // console.clear();
+        console.log(fruits);
+        //indexOf
+        console.log(fruits.indexOf('🍖'));//0 : 배열이 위치한 배열넘버 도출
+        console.log(fruits.indexOf('🍟'));//1
+        console.log(fruits.indexOf('🥖'))//-1 : 배열에 속해있지 않으면 -1
+
+        //include
+        console.log(fruits.includes('🥖'))//false : 불리언 도출
+        console.log(fruits.includes('🍟'))//true
+
+
+        //lastIndexOf
+        // console.clear();
+        fruits.push('🍖');
+        console.log(fruits)
+        console.log(fruits.indexOf('🍖')) //앞에서부터 몇번째에 첫 닭다리가 있는지
+        console.log(fruits.lastIndexOf('🍖')) //뒤에서부터 몇번째에 첫 닭다리가 있는지
+
+
+
+</script>
+</body>
+</html>
+
