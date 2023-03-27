@@ -142,8 +142,23 @@
     text-shadow: 1px 1px 0 #c2c2c2;
     font-weight: 700;
 }
+.quiz__answer .next {
+    cursor: pointer;
+    background-color: #ffdada;
+    border: 3px ridge #ccc;
+    width: 100%;
+    font-family: 'NanumSquareNeo';
+    padding: 10px 20px;
+    font-size: 22px;
+    transition: all 0.3s;
+    text-shadow: 1px 1px 0 #c2c2c2;
+    font-weight: 700;
+}
 .quiz__answer .confirm:hover{
     background-color: #e2e2e2;
+}
+.quiz__answer .next:hover{
+    background-color: #ffbbbb;
 }
 .quiz__answer .result {
     /* display: none; */

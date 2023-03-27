@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트06</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz</a><em> 객관식 확인(슬라이드)하기(여러문제) 유형 : 슬라이드</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li><a href="quizEffect05.html">5</a></li>
+            <li class="active"><a href="quizEffect06.html">6</a></li>
+        </ul>     
+    </header> 
+    <!-- //header -->
+    <main id="main">
+        <div class="quiz__wrap">
+           <div class="quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title"></h2>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                                               
+                    </div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                            <div class="true">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                      <div class="tail"></div>
+                                      <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>                        
+                    </div>
+                    <div class="quiz__choice">                       
+                        <!-- <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" value="1">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" value="2">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" value="3">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" value="4">
+                            <span class="choice"></span>
+                        </label>  -->
+                    </div>
+                    <div class="quiz__answer">
+                        <!-- <button class="confirm" >정답확인하기</button>      -->
+                        <button class="next" >다음문제</button>     
+
+                    </div>
+                    <div class="quiz__desc">설명</div>
+                </div>
+            </div>
+              
+        </div>
+
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:aimee00418@gmail.com">aimee00418@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+
+        //문제정보 //<br><img style='width:300px' src=''> 이렇게 이미지 넣기
+        const quizInfo = [
+            {
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090501",
+                infoQuestion: "명령어(Instruction)형식에서 첫 번째 바이트의 기능이 아닌 것은?",
+                infoChoice: ["자료의 주소지정 기능", "제어 기능","자료 전달 기능","함수 연산 기능",],
+                infoAnswer: "자료의 주소지정 기능",
+                infoDesc: "명령어 = 명령어 코드부 + 명령어 주소부 Instruction = Op_Code + Operand 연산자의(명령어 코드) 4가지 기능 1.제어기능 2.입출력기능 3.전달기능 4.함수연산기능"            
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090502",
+                infoQuestion: "다음 불대수(Boolean algebra)의 기본법칙을 바르게 표현한 것은?<br>A+(B+C) = (A+B)+C",
+                infoChoice: ["교환법칙", "분배법칙", "흡수법칙", "결합법칙",],
+                infoAnswer: "결합법칙",
+                infoDesc: "연산자가 모두 동일할 경우 앞으로 괄호로 결합하거나 뒤로 괄호로 결합하거나 하는 것은 결국 같다는 것이 결합 법칙 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090503",
+                infoQuestion: "명령어 형식(Instruction Format)에서 첫 번째 바이트에 기억되는 것은?",
+                infoChoice: ["Operand ", "Length", "Question Mark", "OP Code",],
+                infoAnswer: "OP Code",
+                infoDesc: "명령어 = 명령어 코드부 + 명령어 주소부 Instruction = Op_Code + Operand"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090504",
+                infoQuestion: "EBCDIC 코드는 몇 개의 Zone Bit를 갖는가?",
+                infoChoice: ["1",  "2", "3", "4",],
+                infoAnswer: "4",
+                infoDesc: "코드 비트수 BCD 코드(6) ASCII 코드(7) EBCDIC 코드(8) 모든 코드의 디지트 비트는 4임따라서 각 코드의 존비트는 코드총비트 - 4 임"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090505",
+                infoQuestion: "주소지정방식 중 처리 속도가 가장 빠르며, 명령의 피연산자부에 피연산자의 주소가 있는 것이 아니라 피연산자의 값 그 자체를 포함하고 있는 주소지정방식은?",
+                infoChoice: ["레지스터 지정(Register Addressing)", "직접주소 지정(Direct Addressing)", "즉시주소 지정(Immediate Addressing)", "간접주소 지정(Indirect Addressing)",],
+                infoAnswer: "간접주소 지정(Indirect Addressing)",
+                infoDesc: "주소가 있는 것이 아니고 피연산자의 값 그 자체를 포함하고 있다고 하였으므로메모리 참조회수가 0인 이미 데이타(?) 방식인 즉시주소 지정(Immediate Addressing) 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 7월 12일 5회",
+                infoNumber: "20090506",
+                infoQuestion: "다음 그림의 논리회로에서 입력 A, B, C에 대한 출력 Y의 값은?<br><img src='asset/img/img01.jpg'>",
+                infoChoice: ["Y = AB + B'C","Y = A + B + C", "Y = AB + BC", "Y = A'B + B'C",],
+                infoAnswer: "Y = AB + B'C",
+                infoDesc: "A*B =AB . B'*C =B'C , =AB + B'C"
+            }
+        ];
+        //실행, 재활용, 그룹화
+        //선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizTitle = quizWrap.querySelector(".quiz__title");
+        const quizQuestion = quizWrap.querySelector(".quiz__question");
+        const quizChoice = quizWrap.querySelector(".quiz__choice");
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");
+        const quizNext = quizWrap.querySelector(".quiz__answer .next");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        
+
+        let quizCount = 0;
+        let quizScore = 0;
+
+        //quizTitle.innerHtml = quizInfo[0].infoType;
+        //문제출력
+        //function updateQuiz(){};
+        
+        const updateQuiz = (index) => {
+
+            let typeTag = `
+                <span>${quizInfo[index].infoType}</span>
+                <em>${quizInfo[index].infoTime}</em>
+            `;
+            let questionTag = `
+                <em>${index+1} </em>.
+                <span>${quizInfo[index].infoQuestion}</span>
+            `;
+            let choiceTag = `                     
+                <label for="choice1">
+                    <input type="radio" id="choice1" name="choice" value="1">
+                    <span>${quizInfo[index].infoChoice[0]}</span>
+                </label>
+                <label for="choice2">
+                    <input type="radio" id="choice2" name="choice" value="2">
+                    <span>${quizInfo[index].infoChoice[1]}</span>
+                </label>
+                <label for="choice3">
+                    <input type="radio" id="choice3" name="choice" value="3">
+                    <span>${quizInfo[index].infoChoice[2]}</span>
+                </label>
+                <label for="choice4">
+                    <input type="radio" id="choice4" name="choice" value="4">
+                    <span>${quizInfo[index].infoChoice[3]}</span>
+                </label>      
+            `;
+
+
+            let descTag = `
+                정답은 ${quizInfo[index].infoAnswer}입니다<br>
+                ${quizInfo[index].infoDesc}
+            `;
+
+            quizTitle.innerHTML = typeTag;
+            quizQuestion.innerHTML = questionTag;
+            quizChoice.innerHTML = choiceTag;
+            quizDesc.innerHTML = descTag;
+
+            //보기 선택자
+            const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
+            const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice input");
+           
+            // quizChoiceSpan.forEach((span, num) => {
+            //     span.setAttribute("onclick", "choiceSelected(this)");//setAttribute:속성주기/ getAttribute:속성가져오기
+            // });
+
+            for(let i=0; i<quizChoiceSpan.length; i++){
+                quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
+               // quizChoiceInput[i].disabled = "true";
+            }
+
+            //다음버튼, 해설 숨기기
+            quizAnswer.style.display = "none";
+            quizDesc.style.display = "none";
+            
+        };
+         updateQuiz(quizCount);
+            //사용자정답
+            function choiceSelected(answer){
+                let userAnswer = answer.textContent; //사용자정답
+                let currentAnswer = quizInfo[quizCount].infoAnswer;
+                
+                
+                if(userAnswer == currentAnswer){
+                    console.log("정답");
+                    dogWrap.classList.add("like");
+                }else {
+                    console.log("오답");
+                    dogWrap.classList.add("dislike")
+                }
+            
+            //다음버튼, 해설 나타내기
+            quizAnswer.style.display = "block";
+            quizDesc.style.display = "block";
+
+            }
+
+
+
+
+            //정답 확인
+            quizNext.addEventListener("click", () =>{
+                quizCount++;
+                updateQuiz(quizCount);
+
+                dogWrap.classList.remove("like", "dislike");
+            })
+
+            //설명
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
