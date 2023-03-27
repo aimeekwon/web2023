@@ -33,7 +33,9 @@
                                                
                     </div>
                     <div class="quiz__view">
+                        
                         <div class="dog__wrap">
+                            <div class="quiz__count"></div>
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
                             <div class="card-container">
@@ -158,6 +160,7 @@
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizCnt = quizWrap.querySelector(".quiz__count");
         
 
         let quizCount = 0;
@@ -202,10 +205,20 @@
                 ${quizInfo[index].infoDesc}
             `;
 
+
+            let countTag = `
+                현재 총 ${quizInfo.length}문제 중 ${index+1}번째 문제 입니다.
+            `;
+
+
             quizTitle.innerHTML = typeTag;
             quizQuestion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
+            quizCnt.innerHTML = countTag;
+
+
+
 
             //보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -244,6 +257,8 @@
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
 
+
+
             }
 
 
@@ -251,11 +266,12 @@
             quizNext.addEventListener("click", () =>{
                 quizCount++;
                 updateQuiz(quizCount);
+                
 
                 dogWrap.classList.remove("like", "dislike");
+
             })
 
-            //설명
 
     </script>
 </body>

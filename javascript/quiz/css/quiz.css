@@ -179,6 +179,16 @@
     font-size: 22px;
     margin-bottom: 10px;
 }
+.quiz__count {
+  font-family: 'NanumSquareNeo';
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px auto;    
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;   
+}
+
 .quiz__view {
     border-bottom: 6px ridge #cacaca;
 }
