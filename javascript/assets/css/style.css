@@ -36,21 +36,21 @@
         #header h1 a {
             font-size: 80px;
             font-weight: 800;
-            color: #0243f1;
+            color: #006f3f;
         }
         #header nav ul li {
             display: inline;
         }
         #header nav ul li a {
-            border: 1px dashed #0243f1;
-            color: #0243f1;
+            border: 1px dashed #006f3f;
+            color: #006f3f;
             margin: 6px 3px;
             padding: 10px 20px;
             display: inline-block;
 
         }
         #header nav ul li a:hover {
-            background-color: #0243f1;
+            background-color: #006f3f;
             color: #fff;
              /* inline속성을 가져가면서 padding값도 먹히도록 */
             transition: background-color 0.5s, color 0.5s;
@@ -58,7 +58,7 @@
             
         }
         #header nav ul li.active a {
-            background-color: #0243f1;
+            background-color: #006f3f;
             color: #fff;
         }
         
@@ -113,7 +113,7 @@
         }
         .main__desc p {
             margin-bottom: 15px;
-            border-left: 5px solid #0243f1;
+            border-left: 5px solid #006f3f;
             padding: 12px 10px 10px 20px;
             background-color: #ececec;
 
@@ -165,7 +165,8 @@
         }
 
         .main__sample .notice {
-            border-left: 3px solid #0243f1 ;
+            border-left: 3px solid #006f3f ;
+            /* border-left: 3px solid #006f3f ; */
             padding: 10px 10px 10px 15px;
             background-color: #f6f6f6;
         }
@@ -187,7 +188,7 @@
             content: '';
             width: 3px;
             height: 3px;
-            background-color: #0243f1;
+            background-color: #006f3f;
             position: absolute;
             left: 0;
             top: 9px;
