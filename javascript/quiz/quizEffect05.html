@@ -899,7 +899,6 @@
 
             quizInfo.forEach((question, number) => { //quizInfo == question : forEach함수
                 //exam배열에 객체를 push한다. 방법은 백틱(``)태그 안에 넣는 것 =>템플릿 리터럴 (리터럴 : 데이터 그자체)
-                //템플릿 리터럴 (리터럴 : 데이터 그자체)
                 exam.push(`
                     <div class="quiz">
                     <div class="quiz__header">
@@ -991,12 +990,12 @@
                 const dogWrap = quizWrap.querySelectorAll(".dog__wrap");
 
                 if(userAnswer == question.infoAnswer){
-                    alert("정답");
+         //           alert("정답");
                     dogWrap[number].classList.remove("dislike");
                     dogWrap[number].classList.add("like");
                     quizScore++;
                 }else {
-                    alert("오답");
+         //           alert("오답");
                     dogWrap[number].classList.remove("like");
                     dogWrap[number].classList.add("dislike");
                     //
