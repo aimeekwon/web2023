@@ -35,7 +35,7 @@
                     <div class="quiz__view">
                         
                         <div class="dog__wrap">
-                            <div class="quiz__count"></div>
+                            <div class="quiz__count">총 5문제 중에 3문제 남았습니다</div>
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
                             <div class="card-container">
@@ -165,6 +165,9 @@
 
         let quizCount = 0;
         let quizScore = 0;
+        //let quizLength = quizInfo.length;
+
+
 
         //quizTitle.innerHtml = quizInfo[0].infoType;
         //문제출력
@@ -216,7 +219,7 @@
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
             quizCnt.innerHTML = countTag;
-
+            // quizCnt.innerHTML = 총 + quizLength + "문제 중에" +quizLength-1+ "문제 남았습니다";
 
 
 
@@ -252,7 +255,28 @@
                     console.log("오답");
                     dogWrap.classList.add("dislike")
                 }
+
+            let countLast = Math.ceil((quizScore/quizInfo.length)*100);    
+            let countResult = (countLast > 60) ? "합격" : "불합격"    
+
+            //마지막문제 일 때
+            if(quizCount == quizInfo.length-1){
+                quizAnswer.style.display = "none";
+                quizCnt.innerHTML = "총"+ quizScore+"문제를 맞추었습니다.<br>점수는"+countLast+ "점 입니다.<br>"+countResult+"입니다."
+
+                // if(countLast>60){
+                //     quizCnt.innerHTML = "총"+ quizScore+"문제를 맞추었습니다.<br>점수는"+countLast+ "점 입니다. <br> 축하합니다."
+                // }else{
+                //     quizCnt.innerHTML = "총"+ quizScore+"문제를 맞추었습니다.<br>점수는"+countLast+ "점 입니다.."
+                // }
+                
+                
+            }
+            // console.log("quizCount :" +quizCount)
+            // console.log("quizInfo.length : " + quizInfo.length)
+
             
+
             //다음버튼, 해설 나타내기
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
@@ -266,7 +290,6 @@
             quizNext.addEventListener("click", () =>{
                 quizCount++;
                 updateQuiz(quizCount);
-                
 
                 dogWrap.classList.remove("like", "dislike");
 
