@@ -37,7 +37,7 @@
                     <div class="quiz__view">
                         
                         <div class="dog__wrap">
-                            <div class="quiz__count">총 5문제 중에 3문제 남았습니다</div>
+                            <div class="quiz__cnt">총 5문제 중에 3문제 남았습니다</div>
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
                             <div class="card-container">
@@ -162,7 +162,7 @@
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
-        const quizCnt = quizWrap.querySelector(".quiz__count");
+        const quizCnt = quizWrap.querySelector(".quiz__cnt");
         
 
         let quizCount = 0;
@@ -253,6 +253,7 @@
                 if(userAnswer == currentAnswer){
                     console.log("정답");
                     dogWrap.classList.add("like");
+                    quizScore++
                 }else {
                     console.log("오답");
                     dogWrap.classList.add("dislike")
@@ -264,7 +265,7 @@
             //마지막문제 일 때
             if(quizCount == quizInfo.length-1){
                 quizAnswer.style.display = "none";
-                quizCnt.innerHTML = "총"+ quizScore+"문제를 맞추었습니다.<br>점수는"+countLast+ "점 입니다.<br>"+countResult+"입니다."
+                quizCnt.innerHTML = "총"+ quizScore +"문제를 맞추었습니다.<br>점수는"+countLast+ "점 입니다.<br>"+countResult+"입니다."
 
                 // if(countLast>60){
                 //     quizCnt.innerHTML = "총"+ quizScore+"문제를 맞추었습니다.<br>점수는"+countLast+ "점 입니다. <br> 축하합니다."
