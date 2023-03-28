@@ -1,0 +1,72 @@
+    /* image type */
+    .image__wrap {
+        background-color: rgba(0,0,0,0.1);
+
+    }
+    .image__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .image__inner .image {
+        width: 49%;
+        height: 370px;
+        background-color: #ccc;
+        position: relative;
+    }
+    .image__body {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.1);
+        text-align: left;
+        padding: 30px;
+        color: #fff;
+    }
+    .image__body .title {
+        font-size: 32px;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+    .image__body .desc {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        padding-right: 20%;
+        color: #fff;
+    }
+    .image__body .btn {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+    .image__body .btn_1 {
+        color: #fff;
+        background: none!important;
+        border: 1px solid #fff;
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    /* 미디어쿼리 */
+    @media (max-width: 960px){
+        .image__body .desc{
+            display: none;
+        }
+    }
+    @media (max-width: 600px){
+        .image__inner{
+            flex-direction: column;
+        }
+        .image__inner .image {
+            width: 100%;
+            margin-bottom: 3%;
+        }
+        .image__body .title {
+            font-size:22px;
+            margin: 10px; 
+        }
+        .image__body .btn {
+            padding: 10px 20px;
+        }
+    }

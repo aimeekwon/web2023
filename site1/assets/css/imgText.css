@@ -1,0 +1,110 @@
+/* imgtext */
+.imgtext__wrap {
+    background-color: #fff;    
+}
+.imgtext__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.imgtext__inner article {
+    width: 32.3333%;
+    /* height: 500px; */
+    /* background-color: #f8f8f8; */
+} 
+
+.imgtext__text h2 {
+    text-align: left;
+    line-height: 1.2!important;
+    margin-bottom: 25px;
+    letter-spacing: -3px;
+}
+.imgtext__text {
+    text-align: left;
+    line-height: 1.5;
+}
+.imgtext__text > p {
+    font-size: 16px;
+}
+.imgtext__text .desc {
+    margin-bottom: 25px;
+}
+.notice {
+    background-color: #0C3934;
+    width: 100px;
+    height: 16px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+    color: #fff;
+    line-height: 16px;
+    padding: 1px;
+    margin-bottom: 20px;
+}
+.imgtext__img .img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+.imgtext__img .i1 {
+    background-image: url(../img/imgtextType01_01.jpg);
+
+}
+.imgtext__img .img a {
+    background-color: #0C3934;
+    border-radius: 15px 15px 15px 15px;
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+    line-height: 30px;
+
+
+}
+.imgtext__img .i2{
+    background-image: url(../img/imgtextType01_02.jpg);
+}
+
+@media (max-width:960px ){
+    .imgtext__inner .imgtext__text{
+        width: 100%;
+        text-align: center;
+    }
+    .imgtext__inner .imgtext__img {
+        width: 49%;
+
+    }
+    .imgtext__inner .imgtext__text h3 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        
+    }
+    .imgtext__inner .imgtext__text p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        font-weight: 300;
+    }
+    .imgtext__inner .imgtext__text .desc_p {
+        display: none;
+
+    }
+    
+}
+@media (max-width:600px){
+    .imgtext__inner .imgtext__img {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .imgtext__inner .imgtext__text h3 {
+        font-size: 30px;
+    }
+    .imgtext__inner .imgtext__text p {
+        font-size: 16px;
+
+
+    }
+}
