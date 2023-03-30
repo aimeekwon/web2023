@@ -95,6 +95,7 @@
                     <li><a href="#sample17">17. <strong>string.prototype.replaceAll()       </strong> 메서드는 문자열에서 특정 문자열을 모두 교체하여, 새로은 문자열을 반환합니다.</a></li>
                     <li><a href="#sample18">18. <strong>string.prototype.search()           </strong> 메서드는 문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</a></li>
                     <li><a href="#sample19">19. <strong>string.prototype.slice()            </strong> 메서드는 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</a></li>
+                   
                     <li><a href="#sample20">20. <strong>string.prototype.substring()        </strong> 메서드는 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample21">21. <strong>string.prototype.substr()           </strong> 메서드는 문자열에서 시작 위치에서 길이 값을 추출하여, 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample22">22. <strong>string.prototype.split()       🚗🚗</strong> 메서드는 문자열을 구분자로 구분하고, 여러 개의 문자열(배열)을 반환합니다.</a></li>
@@ -265,6 +266,89 @@
                     </div>
                 </div>
                 <!-- //sample18 -->
+          
+                 <div id="sample21" class="sample">
+                    <h3>21. split()</h3>
+                    <div class="notice">문자열, split(구분자, [제한])</div>
+                    <ul>
+                        <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">
+javascript".split(""); //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+java script".split(""); //
+java scr ipt".split(""); //
+javascript".split("", 1); //['j']
+javascript".split("", 2); //['j','a']
+javascript".split("", 3); //['j','a','v']
+
+javas cript".split("", 1); //['java']
+javas cript".split("", 2); //['java', 'script']
+  
+javascript".split("j"); //['','ascript']
+javascript".split("a"); //['j','v','script']
+java/scr/ipt".split("/"); //['java', 'scr', 'ipt']
+java&script".split("&"); //['java', 'script']
+java&scr!ipt".split("!"); //['java', 'script']
+java&scr!ipt".split(/&|\!/); //['java', 'scr', 'ipt'] >정규식표현
+javascript".split("").join(""); //j,a,v,a,s,c,r,i,p,t
+javascript".split("").join("*"); //j*a*v*a*s*c*r*i*p*t
+javascript".split("").reverse("").join("*"); //t*p*i*r*c*s*a*v*a*j: reverse는 문자열에서만 가능(배열에서 사용불가)
+javascript".split("").reverse("").join("/"); //t/p/i/r/c/s/a/v/a/j
+
+
+</code></pre>
+<div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample21 -->
+                <div id="sample30" class="sample">
+                    <h3>30. trim()</h3>
+                    <div class="notice">문자열, trim()</div>
+                    <ul>
+                        <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">
+"javascritp".trim(""); //javascritp
+"javascritp".trimStart(""); //javascritp
+"javascritp".trimEnd(""); //javascritp
+</code></pre>
+                </div>
+                <!-- //sample21 -->    
+                                 <div id="sample21" class="sample">
+                    <h3>31. trimEnd()</h3>
+                    <div class="notice">문자열, trimEnd()</div>
+                    <ul>
+                        <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">
+
+</code></pre>
+<div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample31 -->
+                <div id="sample21" class="sample">
+                    <h3>32. trimStart()</h3>
+                    <div class="notice">문자열, split(구분자, [제한])</div>
+                    <ul>
+                        <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">
+
+</code></pre>
+                </div>
+                <!-- //sample21 -->
+              
 
 
         </div>
@@ -278,13 +362,37 @@
     <script>hljs.highlightAll();</script>
     <script src="assets/js/prism.js"></script>
     <script>
+        //split
+        // "javascript".split(""); //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+        // "java script".split(""); //
+        // "java scr ipt".split(""); //
         
+        // "javascript".split("", 1); //['j']
+        // "javascript".split("", 2); //['j','a']
+        // "javascript".split("", 3); //['j','a','v']
 
-                
-
-        console.log("reference".lastIndexOf("e",5)); //0
+        // "javas cript".split("", 1); //['java']
+        // "javas cript".split("", 2); //['java', 'script']
+      
+        // "javascript".split("j"); //['','ascript']
+        // "javascript".split("a"); //['j','v','script']
         
+        // "java/scr/ipt".split("/"); //['java', 'scr', 'ipt']
+        // "java&script".split("&"); //['java', 'script']
+        // "java&scr!ipt".split("!"); //['java', 'script']
+        // "java&scr!ipt".split(/&|\!/); //['java', 'scr', 'ipt'] >정규식표현
+        // "javascript".split("").join(""); //j,a,v,a,s,c,r,i,p,t
+        // "javascript".split("").join("*"); //j*a*v*a*s*c*r*i*p*t
+        // "javascript".split("").reverse("").join("*"); //t*p*i*r*c*s*a*v*a*j: reverse는 문자열에서만 가능(배열에서 사용불가)
+        // "javascript".split("").reverse("").join("/"); //t/p/i/r/c/s/a/v/a/j
+        
+        // console.log("javascript".split("").reverse().join("/")); 
 
+        "javascritp".trim(""); //javascritp
+        "javascritp".trimStart(""); //javascritp
+        "javascritp".trimEnd(""); //javascritp
+
+        console.log("javascritp".trimEnd(""))
 
     </script>  
 </body>

@@ -236,7 +236,19 @@ create table member (
     regTime int(20) NOT NULL,
     PRIMARY KEY (memberID)
 ) charset=utf8;
-</code></pre>                    
+</code></pre>   
+<pre><code class="language-js">
+    create table reviews(
+        reviewsID int(10) unsigned auto_increment,
+        memberID int(10) unsigned,
+        youEmail varchar(40) NOT NULL,
+        youText tinytext NOT NULL,
+        regTime int(30) NOT NULL,
+        PRIMARY KEY(reviewsID)
+    ) charset=utf8;
+</code></pre> 
+
+
                     <h4 id="intro5-2" class="page-header">테이블전체보기</h4>
                     <div class="bs-callout bs-callout-info">show tables;</div>
 <pre><code class="language-js">
@@ -316,7 +328,37 @@ INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUE
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dripidea77@gmail.com","김시연","1234","19930313","31","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("itshena01@gmail.com","조한미","1234","19930211","31","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("aimee00418@gmail.com","권현정","1234","19830211","39","03140316");
-</code></pre>             
+</code></pre>   
+
+<div class="bs-docs-section">
+    <h3 id="intro6" class="page-header">테이블 데이터</h3>
+
+    <h4 id="intro6-1" class="page-header">테이블 입력하기</h4>
+    <div class="bs-callout bs-callout-info"><code>INSERT</code> <code>INTO</code> 테이블명(필드명) <code>VALUE</code></div>
+<pre><code class="language-js">
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("4","정말감사합니다","1234567")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("14","별로네요, 잘 봤어요","4544567")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("2","이건 정말 사야합니다","456456")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("5","이거 사기에 가까워요","1234567")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "내용이 좋네요","1234567")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("1","멋진 내용입니다","1234567")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("9","이건 별루","123467")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("4","절대사지마세요","567567")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("2","정말감사합니다","1234567")
+    INSERT INTO reviews(memberID, youText, regTime) VALUES("7","사기꾼","1234567")
+</code></pre>   
+INSERT INTO reviews(memberID, youText, regTime) VALUES("4","정말 감사합니다. 잘 봤어요","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("14","잘 봤어요","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("2","좋은 정보감사합니다","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("5","정말 감사합니다. 잘 봤어요","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("6","이건 사야합니다.","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("7","정말 감사합니다. 너무좋아요","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("8","정말 감사합니다. 잘 봤어요","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("9","잘 봤어요","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("10","정말 감사합니다.","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("4","정말 별로네요. 다시는 안살듯?","1234567");
+
+
 
 
                     <h4 id="intro6-2" class="page-header">테이블 불러오기</h4>
