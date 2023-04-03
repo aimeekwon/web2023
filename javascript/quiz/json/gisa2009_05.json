@@ -26,7 +26,7 @@
         "desc": "주소가 있는 것이 아니고 피연산자의 값 그 자체를 포함하고 있다고 하였으므로메모리 참조회수가 0인 이미 데이타(?) 방식인 즉시주소 지정(Immediate Addressing) 입니다."
     },{
         "subject": "정보처리 기능사",
-        "question": "다음 그림의 논리회로에서 입력 A, B, C에 대한 출력 Y의 값은?<br><img src='asset/img/img01.jpg'>",
+        "question": "다음 그림의 논리회로에서 입력 A, B, C에 대한 출력 Y의 값은? <br><img src='asset/img/img01.jpg'>",
         "incorrect_answers": ["Y = A + B + C","Y = AB + BC","Y = A'B + B'C"],
         "correct_answer": "Y = AB + B'C",
         "desc": "A*B =AB . B'*C =B'C , =AB + B'C"
