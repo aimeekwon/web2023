@@ -1,6 +1,6 @@
 /* header */
 #header {
-    background-color: #d3d3d3;
+    background-color: #222222;
     color: #fff;
     padding: 10px;
     position: fixed;
@@ -9,6 +9,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    z-index: 999;
 
 }
 #header::before {
@@ -107,7 +108,7 @@
 .cbt__header h2 {
   font-weight: 700!important;
 }
-.cbt__time {
+/* .cbt__time {
   position: relative;
   padding-left: 40px !important;
   margin-bottom: 3px 0;
@@ -121,12 +122,13 @@
   width: 22px;
   height: 22px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E ");
-}
+} */
 .cbt__submit {
   position: relative;
   padding-left: 40px !important;
   float: right;
   margin: 3px 0;
+  cursor: pointer;
 
 }
 .cbt__submit::before {
@@ -139,9 +141,9 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5' /%3E%3C/svg%3E ");
 }
 .cbt__header > div > div {
-  background-color: #87a19c;
+  background-color: #006ccb;
   display: inline-block;
-  margin-left: 5px;
+  margin: 5px;
   color: #fff;
   padding: 5px 15px; 
   border-radius: 20px;
@@ -152,14 +154,21 @@
     margin: 20px 0;
    
 }
+.cbt__tap {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+}
 .cbt__aside {
-    position: absolute;
+    position: fixed;
     right: 20px;
-    top: 100px;
+    top: 150px;
     width: 280px;
-    height: 800px;
-    background-color: #ccc;
+    height: calc(100vh - 140px);
+    background-color: #fff;
     border: 8px ridge #ccc;
+    overflow-y: auto;
+    
 }
 
 .cbt__quiz {
@@ -208,6 +217,24 @@
   border-bottom: 8px ridge #cacaca;
   padding: 20px;
   text-align: center;
+  position: fixed;
+  width: 266px;
+  z-index: 999;
+}
+.cbt__time {
+  position: relative;
+  padding-left: 40px !important;
+  margin-bottom: 3px 0;
+  /* float: right; */
+}
+.cbt__time::before {
+  content:'';
+  position:absolute;
+  left: 10px;
+  top: 3px;
+  width: 22px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E ");
 }
 .cbt__info .title {
   text-decoration: underline;
@@ -217,11 +244,14 @@
 .cbt__info span {
   display: inline-block;
 }
+.cbt__omr  {
+  margin-top: 110px;
+}
 .cbt__omr .omr {
   margin: 5px 0;
   display: grid;
-  padding: 2px;
-  grid-template-columns: 50px 28px 28px 28px 28px; 
+  padding: 5px 10px 3px 20px;
+  grid-template-columns: 50px 30px 30px 30px 30px; 
   grid-template-rows: 20px;
   align-items: center;
 }
@@ -239,6 +269,7 @@
   color: #fff;
   font-family: 'Helvetica Neue';
   font-weight: bold;
+  margin-right: 5px;
 }
 
 .cbt__omr .omr label {
@@ -246,7 +277,8 @@
   cursor: pointer;
   line-height: 0.4;
   text-align: center;
-  width: 28px;
+  /* width: 28px; */
+  width: 25px;
   height: 8px;
   position: relative;
   font-family: 'Helvetica Neue';
@@ -269,8 +301,8 @@
 }
 .cbt__omr .omr .label-inner {
   background-color: #fff;
-  width: 20px;
-  /* padding: 0.25em 0.13em; */
+  /* width: 20px; */
+  padding: 0.25em 0.13em;
   transform: translateY(-0.25em);
   color: #313e55;
 }
@@ -582,6 +614,9 @@
   padding: 10px 20px 10px 40px;
   margin-bottom: 5px;
   position: relative;
+}
+.cbt__desc .hide {
+  display: none;
 }
 .cbt__desc::before {
   content: '';
@@ -1059,7 +1094,7 @@
 /* 미디어쿼리 */
 @media(min-width: 1400px){
     .cbt__quiz .cbt {
-      width: 32.333%
+      width: 32.333%;
     }
 }
 
@@ -1082,7 +1117,13 @@
   .cbt__conts {
     width: 100%;
   }
-
+.cbt__selects label.correct span::before {
+    border-color: red;
+    box-shadow: inset 0 0 0 10px red;
+    color: #fff;
+}
 
 
 }
+
+
