@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //1. Use strict
+    //added in ES 5
+    //use this for Vanila Javascript
+
+    'use strict';
+    //2. Variable
+    //let (added in ES6)
+    //mutable type
+    // let globalName = 'global name';
+    
+    // {
+    //     let name = 'aimee';
+    //     name = 'hello';
+    //     console.log(name);
+    //     console.log(globalName);
+
+    // }
+    // console.log(name);
+    // console.log(globalName);
+
+    // //var (don't ever use this!)
+    // //var hoisting (move declaration from bottom to top)
+    // //has no block scope
+    
+    // console.log(age);
+    // age = 4;
+    // var age;
+    // //3. Constans
+    // //favor immutable data type always for a few reasons;
+    // // - security
+    // // - thread saffety
+    // // - reduce human mistakes
+    // const dayInWeek = 7;
+    // const maxNumber = 5;
+
+
+    //4. Variable types
+    //primitive, single item : number, string, boolean, null, undefined, symbol
+    //object; box container
+    //function , first-class function
+    // {
+    //     let a = 12;
+    //     let b = 1.2;
+    //     //for typeScript
+    //     let a: number = 12;
+    //     let b: number = 1.2;
+    // }
+
+    {
+        const count = 17;
+        const size = 17.1;
+        console.log(`value: ${count}, type: ${typeof count}`);
+        console.log((`value: ${size}, type: ${typeof size}`));
+    }
+    // {
+    //     //c : data types for number
+    //     int main() {
+    //         short a = 12;       //4bytes
+    //         int a = 12;
+    //         long b = 1234;
+    //         float d = 1.2f;
+    //         double e = 8.2;
+    //         return 0;
+    //     }
+    // }
+    // string
+    // const char = 'c';
+    // const brendan = 'brendan';
+    // const greeting = 'hello' + brendan;
+    // console.log(`value: ${greeting}, type: ${typeof greeting}`);
+    // const helloBob = `hi ${brendan}!`;//template literals (string)
+    // console.log(`value: ${helloBob}, type: ${typeof helloBob}`);
+
+    //boolean
+    //false: 0, null, nudefined, NaN, ''
+    //true: any other value
+    const canRead = true;
+    const test = 3 < 1;//false
+    console.log(`value: ${canRead}, type: ${typeof canRead}`);
+    console.log(`value:  ${test}, type: ${typeof test}`)
+
+    //primitive type
+
+    //null : 아무것도 없다고 지정함
+    let nothing = null;
+    console.log(`value: ${nothing},  type: ${typeof nothing}`);
+
+    //undefined : 무엇이 있는지 없는지 모르는 상태
+    let x;
+    console.log(`value: ${x}, type: ${typeof x}`);
+
+    //symbol, create unique identifiers for objects  :동일한 스트링으로 작성해도 다르게 인식하는 유형으로 고유의 식별자를 만들때 사용한다 
+    const symbol1 = Symbol('ed');
+    const symbol2 = Symbol('id');
+
+    console.log(symbol1 === symbol2);
+
+    const gSymbol1 = Symbol.for('id');//for을 쓰면 스트링이 같은애를 트루로 반환해 줌
+    const gSymbol2 = Symbol.for('id');
+    console.log(gSymbol1 === gSymbol2);
+    console.log(`value: ${gSymbol1.description}, type: ${typeof gSymbol1}`)//value: id, type: symbol
+    console.log(`value: ${symbol1.description}, type: ${typeof gSymbol1}`)//value: ed, type: symbol
+
+
+    //boject, real-life object, data structure]
+    const aimee = {name : 'aimee' , age: 20};
+    aimee.age= 21;
+    console.log(`value : ${aimee.name},${aimee.age}, type: ${typeof aimee.name}`)
+
+    //5. Dynamic typing : dynamically typed language
+
+    let text  = 'hello';
+    console.log(`value : ${text}, type: ${typeof text}`);//value : hello, type: string
+    text = 1;
+    console.log(`value : ${text}, type: ${typeof text}`); //value : 1, type: number
+    text = '12' +5;
+    console.log(`value: ${text}, type: ${typeof text}`)//value: 125, type: string
+    text = '8' / '2';
+    console.log(`value: ${text}, type: ${typeof text}`)//value: 4, type: number
+    text = 'hello';
+    console.log( text.charAt(0),` value: ${text}, type: ${typeof text}`)
+
+;
+
+</script>
+</body>
+</html>
