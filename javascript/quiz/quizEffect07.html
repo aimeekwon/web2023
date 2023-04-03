@@ -68,10 +68,11 @@
 
                 <div class="cbt__info">
                     <div class="title">수험자 : </div>
-                    <div class="score">
+                    <div class="cbt__score">
                         <span>전체 문제수 : 60문항</span>
                         <span>남은 문제수 : 59문항</span>
                     </div>
+                    <div class="score"></div>
                 </div>
                 <div class="cbt__omr">
                     <!-- <div class="omr">
@@ -138,6 +139,8 @@
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
+        const cbtScore = document.querySelector(".cbt__score");
+        let quizScore = 0;
 
         let questionAll = []; //모든 퀴즈 정보
   
@@ -152,17 +155,14 @@
                     const formattedQuestion ={
                         question: item.question,
                         number: index + 1
-                        // choice1: "정답",
-                        // choice2: "오답",
-                        // choice3: "오답",
-                        // choice4: "오답",
                     }
                     const answerChoices = [...item.incorrect_answers];//오답 불러오기
                     // formattedQuestion.answer = Math.ceil(Math.random() * answerChoices.length +1); //정답을 랜턴으로 불러오기
-                    formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length +1); //정답을 랜턴으로 불러오기
+                    formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) +1; //정답을 랜턴으로 불러오기
                     answerChoices.splice(formattedQuestion.answer ,0,item.correct_answer) // 정답을 랜덤으로 추가
-                    //answerChoices.splice(formattedQuestion.answer - 1,0,item.correct_answer)
-                    //보기를 추가,
+                   
+                    
+                    //보기를 추가
                     answerChoices.forEach((choice, index) =>{
                         formattedQuestion["choice"+ (index+1)] = choice;
                     });
@@ -171,7 +171,7 @@
                     if(item.hasOwnProperty("question_desc")){
                         formattedQuestion.questionDesc = item.question_desc;
                     }
-                    //문제에 대한 해설이 있으면 출력
+                    //문제에 대한 이미지가 있으면 출력
                     if(item.hasOwnProperty("question_img")){
                         formattedQuestion.questionImg = item.question_img;
                     }
@@ -179,10 +179,7 @@
                     if(item.hasOwnProperty("desc")){
                         formattedQuestion.desc = item.desc;
                     }
-                    //키워드가 있으면 출력
-                    // if(item.hasOwnProperty("keyword")){
-                    //     formattedQuestion.keyword = item.keyword;
-                    // }
+
                     // console.log(formattedQuestion);
                     return formattedQuestion; 
                 });
@@ -245,9 +242,14 @@
                 `)
             });
 
+            let score = `
+                전체 문제 수 : ${questionAll.length}문항<br>
+                남은 문제 수 : 59문항
+            `;
+
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
-            
+            cbtScore.innerHTML= score;
         }
         //정답확인
         const answerQuiz = () => {
@@ -262,13 +264,14 @@
                  if(numberAnswer == question.answer){
                     console.log("정답입니다")
                     cbtSelects[number].parentElement.classList.add("good");
+                    quizScore++;
                  }else {
                     console.log("오답입니다")
                     cbtSelects[number].parentElement.classList.add("bad");
 
                     const label = cbtSelects[number].querySelectorAll("label");
                     label[question.answer-1].classList.add(".correct");
-                }//label[question.answer-1].classList.add("correct");
+                }
                 const quizDesc = document.querySelectorAll(".cbt__desc");
 
                 if(quizDesc[number].innerText == "undefined"){
@@ -279,6 +282,7 @@
                 }
 
             });
+            document.querySelector(".score").innerHTML=`총 점수는 ${Math.ceil((quizScore/questionAll.length)*100)}점 입니다.`
         }
 
             const answerSelect = () =>{
