@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="asset/img/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="asset/img/favicon.png"/> 
+    <link rel="apple-touch-icon" href="asset/img/favicon.png"/> 
+
 </head>
 <body>
     <header id="header">
@@ -39,7 +44,7 @@
                     <div class="cbt good">
                         
                         <div class="cbt__question"><span>1. </span>객체지향 프로그램에서 데이터를 추상화하는 단위는?</div>
-                        <div class="cbt__question__img"><img src ="asset/img/2020-01-01.jpg"></div>
+                        <div class="cbt__question__img"><img src ="asset/img/gineungsaJC2023_01_01.jpg"></div>
                        
                         <div class="cbt__selects">
                                 <input type="radio" id="select1">
@@ -132,32 +137,62 @@
         <a href="mailto:aimee00418@gmail.com">aimee00418@gmail.com</a>
     </footer> -->
     <!-- //footer -->
+    <!-- let questionAll = []; //모든 퀴즈 정보
 
+    // const dataQuestion = () => {
+    //     fetch("json/gisa2020_01.json")  //데이터 가져오기
+    //     .then(res => res.json()) //res : 내가 지정한 이름(response), 형식지정
+    //     .then(items => {
+    //         // console.log(item);
+    //         questionAll = items.map((item, index)=> { //배열에 저장할거랑 map씀
+    //             const formattedQuestion = {  //이름은 길어도 의미있게
+    //                 question: item.question,//question : 내가 지정한 이름
+    //                 num: index + 1,
+    //             }
+
+    //             console.log(formattedQuestion)
+    //             const answerChoices = [...item.incorrect_answers];//틀린답불러오기(...spray쉼표없이 내용만불러오기, )
+    //             formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1; //정답 랜덤으로 불러오기
+    //             answerChoices.splice(formattedQuestion.answer -1, 0, item.correct_answers); //정답이랑 오답이랑 합치기
+    //             answerChoices.forEach((choice, index) => {
+    //                 formattedQuestion["choice" + (index +1)] = choice;
+    //             });
+
+    //         });
+    //     });
+    // }
+    dataQuestion(); -->
     <script>
         let questionAll = []; //모든 퀴즈 정보
-
-        const dataQuestion = () => {
-            fetch("json/gisa2020_01.json")  //데이터 가져오기
-            .then(res => res.json()) //res : 내가 지정한 이름(response), 형식지정
+        
+        const dataQuestion= () =>{
+            fetch("json/gisa2020_01.json")
+            .then(res => res.json())
             .then(items => {
-                // console.log(item);
-                questionAll = items.map((item, index)=> { //배열에 저장할거랑 map씀
-                    const formattedQuestion = {  //이름은 길어도 의미있게
-                        question: item.question,//question : 내가 지정한 이름
-                        num: index + 1,
+                //console.log(items)
+                questionAll = items.map((item, index) => {
+                    
+                    const formattedQuestion ={
+                        infoQuestion: item.question,
+                        infoNumber: index + 1
+                        // choice1: "정답",
+                        // choice2: "오답",
+                        // choice3: "오답",
+                        // choice4: "오답",
                     }
+                    const answerChoices = [...item.incorrect_answers];
+                    formattedQuestion.infoAnswer = 4         
 
-                    console.log(formattedQuestion)
-                    const answerChoices = [...item.incorrect_answers];//틀린답불러오기(...spray쉼표없이 내용만불러오기, )
-                    formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1; //정답 랜덤으로 불러오기
-                    answerChoices.splice(formattedQuestion.answer -1, 0, item.correct_answers); //정답이랑 오답이랑 합치기
-                    answerChoices.forEach((choice, index) => {
-                        formattedQuestion["choice" + (index +1)] = choice;
+                    answerChoices.forEach((choice, index) =>{
+                        formattedQuestion["choice"+ (index+1)] = choice;
                     });
+                    console.log(formattedQuestion);
+                    return formattedQuestion; 
+                })
 
-                });
-            });
-        }
+
+            })
+        } 
         dataQuestion();
     </script>
 </body>
