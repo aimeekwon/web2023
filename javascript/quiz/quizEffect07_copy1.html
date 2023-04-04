@@ -7,7 +7,7 @@
     <title>퀴즈 이펙트07</title>
 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/quiz_copy.css">
+    <link rel="stylesheet" href="css/quiz_copy1.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>  
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png"/> 
@@ -167,6 +167,7 @@
         const cbtIn = document.querySelector(".cbt__in");
 
 
+
         let questionAll = [];  //모든 퀴즈 정보
 
         let questionLength = 0; //전체 문제 수
@@ -175,7 +176,7 @@
 
         //데이터 가져오기
         const dataQuestion = () => {
-            fetch("https://ture403.github.io/web2023/javascript/quiz/json/gineungsajcWD2023_01.json")
+            fetch("gisa2009_05.json")
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {

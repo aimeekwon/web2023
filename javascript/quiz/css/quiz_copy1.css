@@ -578,7 +578,7 @@
 .cbt__start > div{
   margin: 200px auto;
   width: 30%;
-  height: 30vh;
+  height: 50vh;
   background-color: #ffffff;
   border: 8px ridge #cacaca;
 }
@@ -605,10 +605,11 @@
   padding: 10px 20px;
   display: block;
   margin: 0 auto;
-  width: 200px;
-  height: 50px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
   border: none;
-  font-family: 'PyeongChang';
+  font-family: PyeongChang;
   cursor: pointer;
   box-shadow:inset 0px 0px 5px #ccc; 
 }
