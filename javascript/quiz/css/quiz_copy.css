@@ -1,4 +1,7 @@
 /* header */
+.hide{
+  display: none!important;
+}
 #header {
   position: fixed;
   left: 0;
@@ -566,19 +569,20 @@
 
 
 .cbt__start {
+
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
   z-index: 10000;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(0,0,0,0.4);
   backdrop-filter: blur(10px);
 }
 .cbt__start > div{
   margin: 200px auto;
   width: 30%;
-  height: 30vh;
+  height: 38vh;
   background-color: #ffffff;
   border: 8px ridge #cacaca;
 }
@@ -612,6 +616,51 @@
   cursor: pointer;
   box-shadow:inset 0px 0px 5px #ccc; 
 }
+.cbt__start__btn {
+  width: 350px;
+  border-radius: 200px;
+  padding: 15px;
+  border: 0;
+  border: 1px solid #E0E0FF;
+  background-color: #F0F0FF;
+  font-family: 'PyeongChang';
+  font-size: 25px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+.cbt__start__btn:hover {
+  background-color: #D2D2FF;
+}
+.cbt__view {
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
+  line-height: 1.8;
+  text-align: center;
+}
+.cbt__view input {
+  border: 1px solid #D2D2FF;
+  padding: 2px 10px;
+  font-family: 'PyeongChang';
+  border-radius: 20px;
+}
+.cbt__view span {
+  position: relative;
+}
+.cbt__view span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  z-index: -1;
+  border-radius: 20px;
+  background-color: #e0e0fff0;
+}
+
+
 /* dog__wrap */
 .dog .tail, 
 .dog .chin, 
