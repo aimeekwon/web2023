@@ -227,7 +227,7 @@ mysql> show databases;
                     <div class="bs-callout bs-callout-info">create table 테이블이름;</div>
 <pre><code class="language-js">
 create table member (
-    memberID int(10) unsigned auto_increment,
+    memberID int(10)  auto_increment,
     youEmail varchar(40) NOT NULL,
     youName varchar(20) NOT NULL,
     youPass varchar(20) NOT NULL,
@@ -239,8 +239,8 @@ create table member (
 </code></pre>   
 <pre><code class="language-js">
     create table reviews(
-        reviewsID int(10) unsigned auto_increment,
-        memberID int(10) unsigned,
+        reviewsID int(10)  auto_increment,
+        memberID int(10) ,
         youEmail varchar(40) NOT NULL,
         youText tinytext NOT NULL,
         regTime int(30) NOT NULL,
@@ -267,7 +267,7 @@ mysql> desc member;
 +------------+------------------+------+-----+---------+----------------+
 | Field      | Type             | Null | Key | Default | Extra          |
 +------------+------------------+------+-----+---------+----------------+
-| memberID   | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| memberID   | int(10)  | NO   | PRI | NULL    | auto_increment |
 | youEmail   | varchar(40)      | NO   |     | NULL    |                |
 | youName    | varchar(20)      | NO   |     | NULL    |                |
 | youPass    | varchar(20)      | NO   |     | NULL    |                |
@@ -437,6 +437,101 @@ SELECT * FROM member WHERE youAge >=25 AND memberID IN(2,9);
 </code></pre>       
                 </div>             
                 <!-- //intro6 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro7" class="page-header">테이블 수정</h3>
+                    <h4 id="intro7-1" class="page-header">필드 추가하기</h4>
+                    <div class="bs-callout bs-callout-info">ALTER TABLE [테이블명] ADD [추가할 필드명] AFTER [필드 위치]</div>
+                    <h4>멤버 테이블에 핸드폰 번호 필드를 추가</h4>
+<pre><code class="language-js">ALTER TABLE members ADD youPhone varchar(20) NOT NULL;</code></pre>
+<h4>멤버 테이블에 핸드폰 번호 필드를 youAge 추가</h4>
+<pre><code class="language-js">ALTER TABLE members ADD youPhone varchar(20) NOT NULL AFTER youAge;</code></pre>
+                    <h4 id="intro7-2" class="page-header">필드 수정하기</h4>
+                    <div class="bs-callout bs-callout-info">ALTER TABLE [테이블명] MODIFY [수정할 필드명]</div>
+<pre><code class="language-js">ALTER TABLE members MODIFY youPhone int(20) DEFAULT "000-0000-0000"</code></pre>
+ALTER TABLE members MODIFY youPhone int(20);
+                    <h4 id="intro7-3" class="page-header">필드 삭제</h4>
+                    <div class="bs-callout bs-callout-info">ALTER TABLE [테이블명] DROP [삭제할 필드명]</div>
+<pre><code class="language-js"> ALTER TABLE members DROP youPhone;</code></pre>
+                </div>
+                <!-- //intro7 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro8" class="page-header">테이블 합치기(JOIN)</h3>
+                    <h4>두개의 테이블(members, review) 합치기</h4>
+                    <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명 앨리어스] JOIN [테이블명 앨리어스] ON [기준이 되는 조건문]</div>
+<pre><code class="language-js">SELECT m.youEmail, m.youName, r.youText, r.regTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);</code></pre>
+                   <h4>두개의 테이블(members, review) 합치기: 필드명 변경하기(AS)</h4>
+<pre><code class="language-js">SELECT m.youEmail, m.youName, r.youText, r.regTime AS reviewRegTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);</code></pre>
+                    <h4>두개의 테이블(members, review) 합치기 : 왼쪽 테이블 기준</h4>
+<pre><code class="language-js">SELECT m.youEmail, m.youName, r.youText, r.regTime reviewRegTime FROM members m LEFT JOIN reviews r ON (m.memberID = r.memberID);></code></pre>
+</div>
+                <!-- //intro8 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro9" class="page-header">집계 함수</h3>
+                    <pre><code class="language-js">
+                        CREATE TABLE schoolRecode (
+                            studentID int(10) unsigned NOT NULL AUTO_INCREMENT comment "학생번호",
+                            class tinytext comment "소속클래스(반)",
+                            english tinytext NOT NULL comment "영어점수",
+                            math tinytext NOT NULL comment "수학점수",
+                            science tinytext NOT NULL comment "과학점수",
+                            coding tinytext NOT NULL comment "코딩점수",
+                            PRIMARY KEY(studentID)
+                        ) charset=utf8;
+                        INSERT INTO schoolRecode(english, math, science, coding) VALUES(50, 10, 20, 100);
+                        INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(1, 50, 10, 20, 100);
+                        INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(2, 40, 30, 22, 90);
+                        INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(2, 50, 40, 23, 80);
+                        INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(3, 60, 50, 24, 70);
+                        INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(4, 70, 60, 25, 60);
+                        INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(5, 80, 70, 26, 50);
+                    </code></pre>
+                    <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명 앨리어스] JOIN [테이블명 앨리어스] ON [기준이 되는 조건문]</div>
+                    <h4></h4>
+<pre><code class="language-js">SELECT m.youEmail, m.youName, r.youText, r.regTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);</code></pre>
+               
+                    <h4>레코드 갯수 구하기</h4>
+<pre><code class="language-js">SELECT count(class) FROM schoolRecode</code></pre>
+<pre><code class="language-js">SELECT count(*) FROM schoolRecode</code></pre>
+                    
+                    <h4>레코드 합계 구하기</h4>
+<pre><code class="language-js">SELECT sum(cording) FROM schoolRecode</code></pre>
+                    
+                    <h4>레코드 합계 구하기 (학생 아이디가 1~4)</h4>
+<pre><code class="language-js">SELECT sum(cording) FROM schoolRecode studentID >=1 AND studentID <=4;</code></pre>
+
+                    <h4>가장 높은 코딩 점수 구하기</h4>
+<pre><code class="language-js">SELECT max(cording) FROM schoolRecode </code></pre>
+
+                    <h4>가장 낮은 코딩 점수 구하기</h4>
+<pre><code class="language-js">SELECT min(cording) FROM schoolRecode </code></pre>
+
+                    <h4>가장 높은 코딩 점수 구하기</h4>
+<pre><code class="language-js">SELECT avg(cording) FROM schoolRecode </code></pre>
+                    
+                    <h4>그룹별 집계</h4>
+                    <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [필드명]GROUP BY [필드명]</div>
+
+                        <h4>반별로 학생들의 영어 점수 평균값 구하기</h4>
+<pre><code class="language-js">SELECT class, avg(english) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class;</code></pre>
+
+                        <h4>반별로 학생들의 수학 점수 합계 구하기</h4>
+<pre><code class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class;</code></pre>
+
+                        <h4>반별로 학생들의 수학 점수 합계 점수가 70점 이상</h4>
+<pre><code class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class HAVING sum(math) >= 70;</code></pre>
+
+                        <h4>출력 결과의 정렬</h4>
+<pre><code class="language-js">SELECT [필드명] FROM [필드명]ORDER BY [필드명] DESC 또는 ASC</code></pre>
+
+                        <h4>영어점수를 낮은 순에서 높은 순으로 표시</h4>
+<pre><code class="language-js">SELECT studentID, english FROM schoolRecode ORDER BY english DESC</code></pre>
+
+
+                        <h4>수학점수를 높은 순에서 낮은 순으로 표시</h4>
+<pre><code class="language-js">SELECT studentID, math FROM schoolRecode ORDER BY math ASC</code></pre>
+<pre><code class="language-js">SELECT sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) ORDER BY class ORDER BY sum(math) DESC</code></pre>
+
+                <!-- //intro9 -->
             </div>
 
 
@@ -473,7 +568,34 @@ SELECT * FROM member WHERE youAge >=25 AND memberID IN(2,9);
                                 <li><a href="intro6-4">테이블 삭제하기</a></li>
                             </ul>
                         </li>
-                    </ul>
+                        <li><a href="#intro6">테이블 데이터</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="intro6-1">테이블 입력하기</a></li>
+                                <li><a href="intro6-2">테이블 불러오기</a></li>
+                                <li><a href="intro6-3">테이블 수정하기</a></li>
+                                <li><a href="intro6-4">테이블 삭제</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro7">테이블 수정</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="intro7-1">필드 입력하기</a></li>
+                                <li><a href="intro7-2">필드 불러오기</a></li>
+                                <li><a href="intro7-3">필드 수정하기</a></li>
+                            </ul>    
+                        </li>
+                        <li><a href="#intro8">테이블 합치기</a></li>
+                        <li><a href="#intro8">집계 함수</a></li>
+
+
+
+
+
+
+
+
+
+
+                   
                 </div>                
             </div>
 
@@ -498,3 +620,4 @@ SELECT * FROM member WHERE youAge >=25 AND memberID IN(2,9);
     <script src="../assets/js/prism.js"></script>
 </body>
 </html>
+ <div class=""></div>
