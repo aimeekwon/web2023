@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. 마우스이펙트</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slide.css">
+<style>
+.slider__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.slider__img {
+    /* 이미지가 보이는 영역 */
+    position: relative;
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+
+}
+.slider__inner {
+    /* 이미지가 움직이는 영역 */
+    display: flex;
+    flex-wrap: wrap;
+    width: 4800px;  
+    height: 450px;
+}
+
+.slider {
+    /* 개별적인 이미지 */
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+.slider::before { 
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background-color: rgba(0,0,0,0.4);
+        color: #fff;
+        padding: 5px 10px;
+    }
+.slider:nth-child(1)::before {content : '이미지1';}
+.slider:nth-child(2)::before {content : '이미지2';}
+.slider:nth-child(3)::before {content : '이미지3';}
+.slider:nth-child(4)::before {content : '이미지4';}
+.slider:nth-child(5)::before {content : '이미지5';}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+.slider:nth-child(4) {z-index: 2;}
+.slider:nth-child(5) {z-index: 1;}
+</style>
+</head>
+<body class="img01 bg01 font01">
+    <header id="header">
+        <h1>Javascript Slide Effect03</h1>
+        <p>슬라이드이펙트</p>
+        <ul>
+            <li><a  href="slideEffect01.html">1</a></li>
+            <li><a href="slideEffect02.html">2</a></li>
+            <li><a href="slideEffect03.html">3</a></li>
+            <li  class="active"><a href="slideEffect04.html">4</a></li>
+            <li><a href="slideEffect05.html">5</a></li>
+            <li><a href="slideEffect06.html">6</a></li>
+  
+        </ul>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="slider__wrap">
+            <div class="slider__img">
+                <div class="slider__inner">
+                    <div class="slider s1"><img src="assets/img/slideEffect06-min.jpg" alt="이미지6"></div>
+                    <div class="slider s2"><img src="assets/img/slideEffect07-min.jpg" alt="이미지7"></div>
+                    <div class="slider s3"><img src="assets/img/slideEffect08-min.jpg" alt="이미지8"></div>
+                    <div class="slider s4"><img src="assets/img/slideEffect09-min.jpg" alt="이미지9"></div>
+                    <div class="slider s5"><img src="assets/img/slideEffect10-min.jpg" alt="이미지10"></div> 
+                </div>
+            
+
+            </div>
+
+        </div>
+
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:aimee00418@gmail.com">aimee00418@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+        
+        
+    <!--선택자  -->
+    <script>
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img");     //보여지는 영역
+        const sliderInner = sliderWrap.querySelector(".slider__inner"); //움직이는 영역
+        const slider = sliderWrap.querySelectorAll(".slider");          //개별이미지
+       
+        let currentIndex = 0;                               //현재 보이는 이미지
+        let sliderCount = slider.length;                    //이미지 갯수
+        let sliderWidth = slider[0].clientWidth;            //이미지 가로값
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);  //첫번째 이미지 복사
+        let sliderInterval = 3000;                          //이미지 변경 간격 시간
+
+        //복사한 첫 번째 이미지 마지막에 붙여넣기
+        sliderInner.appendChild(sliderClone);
+
+
+        function sliderEffect(){
+            currentIndex++;
+
+            sliderInner.style.transition = "all 0.6s";
+            sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex + "px)";
+            
+
+            //마지막이미지에 위치했을 때
+            if(currentIndex == sliderCount){
+                setTimeout(()=>{
+                    sliderInner.style.transition = "0s";
+                    sliderInner.style.transform = "translateX(0px)";
+                }, 700);
+                currentIndex = 0;
+            }
+        }
+
+        setInterval(sliderEffect, sliderInterval);        
+
+    </script>
+        
+
+    <script>
+
+    </script>
+        
+    
+
+
+</body>
+</html>
+</html>
+</html>
+</html>

@@ -149,9 +149,6 @@
             $(slider[currentIndex]).css("opacity", "0");
             $(slider[nextIndex]).css("opacity", "1");
             $(".slider").animate({currentIndex}, 1000, "easeInOutQuint")
-           // $(".slider").animate({currentIndex}, 500, "easeInOutQuint")
-           // $(".slider").eq(currentIndex).animate({ opacity: 0 },);
-           // $(".slider").eq(nextIndex).animate({ opacity: 1 },);
 
             currentIndex = nextIndex;
         }, sliderInterval);
