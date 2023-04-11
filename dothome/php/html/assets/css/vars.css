@@ -1,0 +1,19 @@
+:root {
+    --main__font : "GmarketSans";
+
+    --font__size: "16 px";
+
+    --color__black: #000;
+    --color__white: #fff;
+
+    --bg__gray: #eee;
+    --bg__black: #000;
+
+}
+
+
+@media (max-width : 800px){
+    :root {
+        --font__size: "14px";
+    }
+}

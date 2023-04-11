@@ -1,0 +1,33 @@
+/* skip */
+#skip {
+    position:relative;
+    z-index: 100000;
+
+}
+#skip a {
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    left: -400px;
+    top: 0;
+    padding: 20px 40px;
+}
+
+#skip a:active,
+#skip a:focus {
+    left: 0;
+}
+/* bg */
+.gray {
+    background-color: var(--bg__gray);
+}
+.black {
+    background-color: var(--bg__black);
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+}
