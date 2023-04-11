@@ -109,10 +109,12 @@
         let sliderWidth = slider[0].clientWidth;            //이미지 가로값
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);  //첫번째 이미지 복사
         let sliderInterval = 3000;                          //이미지 변경 간격 시간
+        </script>
 
+        <!-- javascript -->
+        <script>
         //복사한 첫 번째 이미지 마지막에 붙여넣기
         sliderInner.appendChild(sliderClone);
-
 
         function sliderEffect(){
             currentIndex++;
