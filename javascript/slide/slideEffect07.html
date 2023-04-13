@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07. 슬라이드이펙트</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slide.css">
+<style>
+.slider__wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 450px;
+    box-shadow: 0 50px 100px rgba(0,0, 0, 0.4);
+}
+.slider__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider__thumb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 140px);
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.slider__thumb img {
+    cursor: pointer;
+    border: solid 1px transparent;
+}
+.slider__thumb img.active {
+    border: solid 1px #fff;
+}
+.slider__btn a{
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    top:0;
+    background:rgba(0,0, 0, 0.4);
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: rgba(0,0, 0, 0.2);
+}
+.slider__btn a:hover{
+    background:rgba(0,0, 0, 0.4);
+}
+.slider__btn a.next{
+    right:0;
+}
+
+.slider__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 500ms ease-in-out;
+}
+.slider__img img.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+</style>
+</head>
+<body class="img01 bg01 font01">
+    <header id="header">
+        <h1>Javascript Slide Effect06</h1>
+        <p>슬라이드 이펙트 :  썸네일 슬라이드</p>
+        <ul>
+            <li><a href="slideEffect01.html">1</a></li>
+            <li><a href="slideEffect02.html">2</a></li>
+            <li><a href="slideEffect03.html">3</a></li>
+            <li><a href="slideEffect04.html">4</a></li>
+            <li><a href="slideEffect05.html">5</a></li>
+            <li><a href="slideEffect06.html">6</a></li>
+            <li class="active"><a href="slideEffect07.html">7</a></li>
+  
+        </ul>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="slider__wrap">
+            <div class="slider__img"></div>
+            <div class="slider__thumb"></div>
+            <div class="slider__btn">
+                <a href="#" class="prev" title="이전이미지">prev</a>
+                <a href="#" class="next" title="다음이미지">next</a>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:aimee00418@gmail.com">aimee00418@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+        
+        
+    <!--선택자  -->
+    <script>
+
+
+
+        let images = [
+            "assets/img/sliderEffect13.jpg",
+            "assets/img/sliderEffect14.jpg",
+            "assets/img/sliderEffect15.jpg",
+            "assets/img/sliderEffect16.jpg",
+            "assets/img/sliderEffect17.jpg"
+            ];
+
+            function imageSlider(parent, images){
+                let currentIndex = 0;
+
+                //선택자
+                let slider = {
+                    parent : parent,
+                    images : parent.querySelector(".slider__img"),
+                    thumbnails: parent.querySelector(".slider__thumb"),
+                    prevBtn: parent.querySelector(".slider__btn .prev"),
+                    nextBtn: parent.querySelector(".slider__btn .next")
+                }
+
+             //이미지 출력하기
+             slider.images.innerHTML = images.map((image, index) => {
+                return `<img src="${image}" alt="${index}">`;
+             }).join("");
+
+             // 이미지 활성화하기
+             let imageNodes = slider.images.querySelectorAll("img");
+             imageNodes[currentIndex].classList.add("active");
+
+
+             //썸네일이미지출력하기
+             slider.thumbnails.innerHTML = slider.images.innerHTML;
+
+            //  //썸네일이미지출력하기
+            //  slider.thumbnails.firstChild.classList.add("active");
+
+             //썸네일 클릭하기
+             let thumbnailNodes = slider.thumbnails.querySelectorAll("img");
+             thumbnailNodes[currentIndex].classList.add("active");
+
+
+
+             //썸네일 이미지 클릭하기
+            //  for(let i=0; i<thumbnailNodes.length; i++){
+            //     thumbnailNodes[i].addEventListener("click", function(){
+            //         slider.thumbnails.querySelector("img.active").classList.remove("active")
+            //         thumbnailNodes[i].classList.add("active");
+
+
+            //         imageNodes[currentIndex].classList.remove("active");
+            //         currentIndex = i;
+            //         imageNodes[currentIndex].classList.add("active")
+            //     })
+            //  }
+
+        //      sliderBtn.forEach((btn, index) => {
+        //     btn.addEventListener("click", () => {
+        //         let prevIndex = (currentIndex + (sliderCount-1)) % sliderCount;
+        //         let nextIndex = (currentIndex + 1) % sliderCount;
+
+        //         if(btn.classList.contains("prev")){
+        //             gotoSlider(prevIndex);
+        //         } else {
+        //             gotoSlider(nextIndex);
+        //         }
+        //     });
+        // });             
+            
+             //forEach문으로 바꾸기
+            thumbnailNodes.forEach((slider, index) => {
+                slider.addEventListener("click", function(){
+                    slider.thumbnails.querySelector("img.active").classList.remove("active")
+                    thumbnailNodes.classList.add("active");
+
+
+                    imageNodes[currentIndex].classList.remove("active");
+                    currentIndex = i;
+                    imageNodes[currentIndex].classList.add("active")
+            });
+        });
+
+
+
+
+             // 왼쪽 버튼 클릭하기
+            slider.prevBtn.addEventListener("click", function(){
+                imageNodes[currentIndex].classList.remove("active");
+                currentIndex--;
+                // 0 4 3 2 1 0 4 3 2 . . .
+                if(currentIndex < 0) currentIndex = images.length - 1;
+                imageNodes[currentIndex].classList.add("active");
+                // 썸네일
+                slider.thumbnails.querySelector("img.active").classList.remove("active");
+                thumbnailNodes[currentIndex].classList.add("active");
+            });
+            // 오른쪽 버튼 클릭하기
+            slider.nextBtn.addEventListener("click", function(){
+                imageNodes[currentIndex].classList.remove("active");
+                // 1 2 3 4 0 1 2 3 4 . . .
+                currentIndex = (currentIndex + 1) % images.length;
+                imageNodes[currentIndex].classList.add("active");
+                // 썸네일
+                slider.thumbnails.querySelector("img.active").classList.remove("active");
+                thumbnailNodes[currentIndex].classList.add("active");
+            });
+        }
+
+        imageSlider(document.querySelector(".slider__wrap"), images);
+
+
+        
+    </script>
+        
+    
+
+
+</body>
+</html>
