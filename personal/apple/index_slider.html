@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_slider">
+    <script src="js/script_slider.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            
+        }
+        #slider {
+            /* width: 100%; */
+            height: 500px;
+        }
+        .slider__wrap {
+            background-color: #333;
+        }
+        .slider__inner {
+            height: 500px;
+            width: 5780px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            float: left;
+        }
+        .slide__img {
+            height: 500px;
+            width: 700px;
+            background-color: #444;
+            overflow: hidden;
+        
+        }
+        .slide {
+            height: 500px;
+            width: 1920px;
+            
+
+        }
+        /* .slide:nth-child(1) {
+            height: 500px;
+            background-image: url(assets/banner01.jpg);
+            background-repeat: no-repeat;
+            display: inline;
+        }
+        .slide:nth-child(2) {
+            height: 500px;
+            background-image: url(assets/banner02.jpg);
+            background-repeat: no-repeat;
+        }
+        .slide:nth-child(1) {
+            height: 500px;
+            background-image: url(assets/banner03.jpg);
+            background-repeat: no-repeat;
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <div class="slider__wrap">
+            <div class="slider__inner">
+                <div class="slide__img">
+                    <div class="slide"><a href="#"><img src="assets/banner01.jpg" alt=""></a></div>
+                    <div class="slide"><a href="#"><img src="assets/banner02.jpg" alt=""></a></div>
+                    <div class="slide"><a href="#"><img src="assets/banner03.jpg" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const sliderWrap = document.querySelector(".slider__wrap")
+    const sliderInner = sliderWrap.querySelector(".slider__inner")
+    const sliderImg = sliderWrap.querySelector(".slide__img")
+    const slide = sliderWrap.querySelectorAll(".slide")
+
+    let currentIndex = 0 ;
+    let slideCount = slide.length;
+    let slideInterval = 3000;
+
+    sliderInner.style.transition = "all 1s";
+    setInterval(()=> {
+        currentIndex = (currentIndex + 1) % slideCount ; 
+        sliderInner.style.transform = "translateX("+ -1920 * currentIndex + "px)";
+    })
+</script>
+</html>
