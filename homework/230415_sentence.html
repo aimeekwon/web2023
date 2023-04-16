@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명언 랜덤 추출기</title>
+    <!-- 모던자바스크립트책  -->
+
+<style>
+    @font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Shiningstar';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    color: #34190e;
+    background-color: #9fb6be;
+}
+.wrap {
+    width:100%;
+    margin: 100px auto;
+
+}
+.container {
+    width:1000px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.sentence {
+    width: 900px;
+    margin: 60px auto;
+    font-size: 60px;
+    font-family: 'Cafe24Shiningstar';
+}
+.speaker {
+    font-size: 50px;
+    font-family: 'Cafe24Shiningstar';
+}
+.speaker::before {
+    content:' - ';
+}
+    
+</style>    
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <p class="sentence"></p>
+            <p class="speaker"></p>
+        </div>
+    </div>
+    
+    <script>
+        let order = 0
+        const dataQuestion = () => {
+            const random = Math.floor(Math.random()*30)
+            order = random 
+            fetch("json/dummy01.json")
+            .then(res => res.json())
+            .then(items => {
+                document.querySelector(".container .sentence").innerHTML=items.quotes[order].quote
+                document.querySelector(".container .speaker").innerHTML=items.quotes[order].author
+            });
+        };
+        dataQuestion()
+        setInterval(dataQuestion,15000)
+    </script>
+</body>
+</html>
