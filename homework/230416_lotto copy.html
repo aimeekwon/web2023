@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto 생성기</title>
+    <!-- 모던자바스크립트책  -->
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #wrap {
+        width: 100%;
+        height: 100vh;
+        background-color: #d6d7d3;
+        padding-top: 100px;
+
+    }
+    .container {
+        margin: 0 auto;
+        border : dotted 10px #c4a43f;
+        width: 1000px;
+        height: 350px;
+    }
+    h1 {
+        font-size: 50px;
+        font-weight: bold;
+        color: #ce0919;
+        font-family: ;
+    }
+    p {
+        font-size: 24px;
+        font-weight: bold;
+        color: #105bb9;
+    }
+    button { 
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+    .number {
+        width: 200px; 
+        height: 50px;
+        border: solid 1px #333;
+        border-radius: 50px; 
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 5px;
+    }
+    
+</style>    
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <h1>LOTTO</h1> 
+            <p>LUCKY NUMBERS COMING</p>
+            <button>CLICK</button>
+            <div class="number"></div>
+
+
+        </div>
+    </div>
+    
+    <script>
+        const numberLotto = document.querySelector(".number")
+        const buttonClick = document.querySelector("button")
+
+        function getRandomNumbers() {
+             let numbers = [];
+             while (numbers.length < 6) {
+               let randomNum = Math.floor(Math.random() * 45) + 1;
+               if (!numbers.includes(randomNum)) {
+                 numbers.push(randomNum);
+               }
+             }
+             button.addEven
+             return numbers;
+        }          
+
+    </script>
+</body>
+</html>
