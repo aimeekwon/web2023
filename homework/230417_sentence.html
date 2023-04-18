@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docsdfsfument</title>
+    <style>
+        @import url('https://webfontworld.github.io/score/SCoreDream.css');
+        @import url('https://webfontworld.github.io/Poppins/Poppins.css');
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            /* background-color: #ccc; */
+            /* background-image: url(https://source.unsplash.com/movie/?forest); */
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            transition: background-image 1s ease-in-out;
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(14, 14, 14, 0.292);
+            z-index: -1;
+        }
+        #result {
+            /* border: 1px solid #fff; */
+            background-color: #1a0c0cac;
+            padding: 30px;
+            width: 700px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            line-height: 70px;
+            font-family: 'Poppins';
+            color: #B7BD07;
+        }
+        .quote {
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 35px;
+            font-family: 'Poppins';
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+        <div class="quote"></div>
+        <div class="author"></div>
+    </div>
+    <script>
+        const Result = document.querySelector("#result");
+        const Quote = result.querySelector(".quote");
+        const Author = result.querySelector(".author");
+        const dataresult = () => {
+            fetch('json/dummy01.json')
+                .then(res => res.json())
+                .then(items => {
+                    const randomIndex = Math.floor(Math.random() * items.length);
+                    Quote.textContent = items[randomIndex].quote;
+                    Author.textContent = "- " + items[randomIndex].author;
+                    const img = new Image();
+                    img.onload = function () {
+                        const newBgUrl = `url(${img.src})`;
+                        document.body.style.backgroundImage = newBgUrl;
+                    }
+                    img.src = `https://source.unsplash.com/random/?forest=${Date.now()}`;
+                })
+                .catch((err) => console.log(err));
+        }
+        dataresult();
+        setInterval(dataresult, 10000);
+    </script>
+</body>
+</html>
