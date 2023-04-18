@@ -1,0 +1,76 @@
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+@import url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css');
+@import url('https://webfontworld.github.io/Rebecca/Rebecca.css');
+@import url('https://webfontworld.github.io/Montserrat/Montserrat.css');
+@import url('https://webfontworld.github.io/suseong/SuseongHyejeong.css');
+@import url('https://webfontworld.github.io/Healthset/HealthsetGothic.css');
+@import url('https://webfontworld.github.io/BMJua/BMJua.css');
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+li, ol, ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.font01 {
+    font-family: 'TheJamsil';
+}
+.font02 {
+    font-family: 'SCoreDream';
+}
+.font03 {
+    font-family: 'NexonLv1Gothic';
+}
+.font04 {
+    font-family: 'NanumSquareNeo';
+}
+.font05 {
+    font-family: 'Rebecca';
+}
+.font06 {
+    font-family: 'Montserrat';
+}
+.font07 {
+    font-family: 'SuseongHyejeong';
+}
+.font08 {
+    font-family: 'HealthsetGothic';
+}
+.font09 {
+    font-family: 'BMJua';
+}
+.font10 {
+    font-family: 'GmarketSans';
+}
+
+
+/*body*/
+body {
+    background-color: #222;
+    }
+
