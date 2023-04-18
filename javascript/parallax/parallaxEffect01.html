@@ -108,7 +108,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc">시간은 금이다</p>
+                <p class="parallax__item__desc">아는 것을 안다고 하고 모르는 것을 모른다고 하는 것, 이것이 아는 것이다.</p>
             </section><!--//section8-->
             <section id="section9" class="parallax__item">
                 <span class="parallax__item__num">09</span>
@@ -116,7 +116,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc">시간은 금이다</p>
+                <p class="parallax__item__desc">군자는 말에 앞서 행동하고, 그 다음에 그에 따라 말을 해야 한다</p>
             </section><!--//section9-->
         </div>
     
@@ -174,34 +174,52 @@
             })
 
 
-
-
-
-
-
         //info
-        document.querySelector(".scroll span").innerText = parseInt(scrollTop);
+        // document.querySelector(".scroll span").innerText = parseInt(scrollTop);
 
-        document.querySelector(".info .offset1").innerText =document.getElementById("section1").offsetTop;
-        document.querySelector(".info .offset2").innerText =document.getElementById("section2").offsetTop;
-        document.querySelector(".info .offset3").innerText =document.getElementById("section3").offsetTop;
-        document.querySelector(".info .offset4").innerText =document.getElementById("section4").offsetTop;
-        document.querySelector(".info .offset5").innerText =document.getElementById("section5").offsetTop;
-        document.querySelector(".info .offset6").innerText =document.getElementById("section6").offsetTop;
-        document.querySelector(".info .offset7").innerText =document.getElementById("section7").offsetTop;
-        document.querySelector(".info .offset8").innerText =document.getElementById("section8").offsetTop;
-        document.querySelector(".info .offset9").innerText =document.getElementById("section9").offsetTop;
-        })
+        // document.querySelector(".info .offset1").innerText =document.getElementById("section1").offsetTop;
+        // document.querySelector(".info .offset2").innerText =document.getElementById("section2").offsetTop;
+        // document.querySelector(".info .offset3").innerText =document.getElementById("section3").offsetTop;
+        // document.querySelector(".info .offset4").innerText =document.getElementById("section4").offsetTop;
+        // document.querySelector(".info .offset5").innerText =document.getElementById("section5").offsetTop;
+        // document.querySelector(".info .offset6").innerText =document.getElementById("section6").offsetTop;
+        // document.querySelector(".info .offset7").innerText =document.getElementById("section7").offsetTop;
+        // document.querySelector(".info .offset8").innerText =document.getElementById("section8").offsetTop;
+        // document.querySelector(".info .offset9").innerText =document.getElementById("section9").offsetTop;
+        // 
+    })
 
         //for
-        //forEach
-        //for in
+        
+        
         //for of
         // const scroll = document.querySelector(".scroll span");
         // const sectionNum = document.querySelector(".parallax__item");
           
-        
-        
+
+        //forEach
+        // const sections = ["section1", "section2", "section3", "section4", "section5", "section6", "section7", "section8", "section9"];
+
+        // sections.forEach((section, index) => {
+        //   document.querySelector(`.info .offset${index+1}`).innerText = document.getElementById(section).offsetTop;
+        // });
+
+        // document.addEventListener("scroll", () => {
+        //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        //   document.querySelector(".scroll span").innerText = parseInt(scrollTop);
+        // });
+
+        //for of
+        const sectionIds = ["section1", "section2", "section3", "section4", "section5", "section6", "section7", "section8", "section9"];
+
+        for (const sectionId of sectionIds) {
+          document.querySelector(`.info .offset${sectionIds.indexOf(sectionId) + 1}`).innerText = document.getElementById(sectionId).offsetTop;
+        }
+
+        document.addEventListener("scroll", () => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          document.querySelector(".scroll span").innerText = parseInt(scrollTop);
+        });
         // scroll.forEach(()=> {
 
         // })

@@ -101,7 +101,7 @@
     text-align: right;
 }
 .parallax__item__num {
-    font-size: 35vw;
+    font-size: 30vw;
     font-weight: 100;
     font-family: Lato;
     position: absolute;
@@ -161,7 +161,7 @@
     background-image: url(../img/parallaxEffect09.jpg);
 }
 .parallax__item__desc {
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 1.4;
   margin-top: -5vw;
   margin-left: -4vw;  
