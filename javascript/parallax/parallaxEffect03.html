@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://webfontworld.github.io/recia/ReciaSerifDisplay.css" rel="stylesheet">
+    <title>패럴랙스 효과</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&family=Yeseva+One&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            /* font-family: 'ReciaSerifDisplay'; */
+            font-family: 'Shrikhand', cursive;
+            box-sizing: border-box;
+        }
+        body {
+            height: 10000px;
+            /* background-color: #d0ae80; */
+            background-color: #f4f4f4;
+            /* background-color: #e9dea3; */
+        }
+        .scrollTop{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            background-color: rgba(0,0,0,0.4);
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1 {
+            letter-spacing: 0.5;
+            font-size: 30vw;
+            line-height: 1;
+            color: #174b5c;
+            text-shadow:10px 10px 10px #d0ae80;
+            opacity: 0.9;
+
+        }
+        .s1-text2 {
+            font-size: 0vw;
+            line-height: 0.9;
+            color: #cb392f;
+            text-shadow:10px 10px 10px #d0ae80;
+            opacity: 0.9;
+            z-index: 7;
+        }
+        .s1-img1 {
+            width: 30vw;
+            height: 100vh;
+        }
+        .s1-img1 > div {
+            height: 25vh;
+            display: flex;
+            justify-content: space-between;
+        }
+        .s1-img1 > div > div {
+            width: 24vh;
+            height: 24vh;
+            background-position: center ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: solid 5px rgba(0,0,0,0.5);
+            filter: saturate(0%);
+        }
+
+        .s1-img1-1 > div:nth-child(1) {background-image: url(https://source.unsplash.com/500x500/?dream);}
+        .s1-img1-1 > div:nth-child(2) {background-image: url(https://source.unsplash.com/500x500/?forest);}
+        .s1-img1-1 > div:nth-child(3) {background-image: url(https://source.unsplash.com/500x500/?beach);}
+        .s1-img1-1 > div:nth-child(4) {background-image: url(https://source.unsplash.com/500x500/?city);}
+
+        .s1-img1-2 > div:nth-child(1) {background-image: url(https://source.unsplash.com/500x500/?surf);}
+        .s1-img1-2 > div:nth-child(2) {background-image: url(https://source.unsplash.com/500x500/?book);}
+        .s1-img1-2 > div:nth-child(3) {background-image: url(https://source.unsplash.com/500x500/?sky);}
+        .s1-img1-2 > div:nth-child(4) {background-image: url(https://source.unsplash.com/500x500/?car);}
+
+        .s1-img1-3 > div:nth-child(1) {background-image: url(https://source.unsplash.com/500x500/?classic);}
+        .s1-img1-3 > div:nth-child(2) {background-image: url(https://source.unsplash.com/500x500/?sea);}
+        .s1-img1-3 > div:nth-child(3) {background-image: url(https://source.unsplash.com/500x500/?tree);}
+        .s1-img1-3 > div:nth-child(4) {background-image: url(https://source.unsplash.com/500x500/?summer);}
+
+        .s1-img1-4 > div:nth-child(1) {background-image: url(https://source.unsplash.com/500x500/?waterfall);}
+        .s1-img1-4 > div:nth-child(2) {background-image: url(https://source.unsplash.com/500x500/?waterdrop);}
+        .s1-img1-4 > div:nth-child(3) {background-image: url(https://source.unsplash.com/500x500/?vintage);}
+        .s1-img1-4 > div:nth-child(4) {background-image: url(https://source.unsplash.com/500x500/?water);}
+
+        /* .s1-img1-5 > div:nth-child(1) {background-image: url(https://source.unsplash.com/500x500/?car);}
+        .s1-img1-5 > div:nth-child(2) {background-image: url(https://source.unsplash.com/500x500/?summer);}
+        .s1-img1-5 > div:nth-child(3) {background-image: url(https://source.unsplash.com/500x500/?water);} */
+    </style>
+</head>
+<body>
+    <div class="scrollTop"></div>
+
+    <div id="section1">
+        <div class="s1-text1 fixed"
+        data-0="font-size: 0vw; opacity: 1"
+        data-1000="font-size: 9vw; opacity: 1; z-index: 7;"
+        data-2000="font-size: 9vw; opacity: 1"
+        data-3000="font-size: 0vw; opacity: 0"
+        >Come-in!</div>
+        <div class="s1-text2 fixed"
+        data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg);"
+        data-3000="font-size: 13vw; transform: translate(-50%, -50%) rotate(720deg)"
+        >Welcome</div>
+        <div class="s1-img1 fixed"
+        data-2500="width:300vw;" 
+        data-4000="width:50vw;"   
+        >
+
+            <div class="s1-img1-1"
+            data-1000="opacity: 0;"
+            data-2000="transform: scale(1) rotate(0deg);opacity: 0.5;"
+            data-4000="transform: scale(3) rotate(360deg);opacity: 1;"
+            data-6000="transform: scale(5) rotate(720deg);opacity: 1;"
+            data-8000="transform: scale(3) rotate(1080deg);opacity: 1;"
+            data-10000="transform: scale(1) rotate(720deg);opacity: 1;"
+            >
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-2"
+            data-1000="opacity: 0;"
+            data-2000="transform: scale(1) rotate(0deg);opacity: 0.5;"
+            data-4000="transform: scale(3) rotate(360deg);opacity: 1;"
+            data-6000="transform: scale(5) rotate(720deg);opacity: 1;"
+            data-8000="transform: scale(3) rotate(1080deg);opacity: 1;"
+            data-10000="transform: scale(1) rotate(1440deg);opacity: 1;"
+            >
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-3"
+            data-1000="opacity: 0;"
+            data-2000="transform: scale(1) rotate(0deg);opacity: 0.5;"
+            data-4000="transform: scale(3) rotate(360deg);opacity: 1;"
+            data-6000="transform: scale(5) rotate(720deg);opacity: 1;"
+            data-8000="transform: scale(3) rotate(1080deg);opacity: 1;"
+            data-10000="transform: scale(1) rotate(720deg);opacity: 1;"
+            >
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-4"
+            data-1000="opacity: 0;"
+            data-2000="transform: scale(1) rotate(0deg);opacity: 0.5;"
+            data-4000="transform: scale(3) rotate(360deg);opacity: 1;"
+            data-6000="transform: scale(5) rotate(720deg);opacity: 1;"
+            data-8000="transform: scale(3) rotate(1080deg);opacity: 1;"
+            data-10000="transform: scale(1) rotate(1440deg);opacity: 1;"
+            >
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        let s = skrollr.init();
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY;
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+        });
+    </script>
+</body>
+</html>

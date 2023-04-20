@@ -32,6 +32,55 @@
     color: #000;
 }
 
+
+
+
+
+/* parallax__dot */
+.parallax__dot {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 10px;
+    border-radius: 30px;
+}
+
+.parallax__dot li {
+    position: relative; 
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 12px 8px;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+    text-indent: -9999px;  
+    transition: box-shadow .2s ease;
+
+}
+.parallax__dot li a {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    transition: transform .2s ease;
+}
+.parallax__dot li.active {
+    box-shadow: 0 0 0 2px rgba(255,255,255, 1);
+}
+.parallax__dot li.active a{
+    transform: scale(0.4);
+}
+
+.parallax__item__num.active {
+    
+}
+
+
 /* footer */
 #footer { 
     /* position: absolute;
@@ -109,6 +158,12 @@
     top: -16vw;
     opacity: 0.01vw;
     z-index: -2;
+}
+.parallax__item__num > .parallax__item__dot li.active{
+    z-index: 9999;
+}
+.parallax__dot li.active .parallax__item__num {
+    z-index: 9999;
 }
 .parallax__item:nth-child(even) .parallax__item__num {
     left: auto;
@@ -192,8 +247,7 @@
         left: 10px;
         top: 10px;
         border-radius: 5px;
-        text-align: center
-        ;
+        text-align: center;
     }
     .parallax__nav li {
         margin: 0 1px;
@@ -202,4 +256,19 @@
         font-size: 12px;
         padding: 0px 14px;
     }
+}
+/* scroll__bar */
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+}
+body::-webkit-scrollbar-track {
+    background-color: grey;
 }
