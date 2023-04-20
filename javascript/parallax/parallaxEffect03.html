@@ -45,13 +45,20 @@
             transform: translate(-50%, -50%);
             z-index: 1;
         }
+        .s1-text0 {
+            letter-spacing: 0.5;
+            font-size: 10vw;
+            line-height: 1;
+            color: #000000;
+            text-shadow:10px 10px 10px #d0ae80;
+
+          }
         .s1-text1 {
             letter-spacing: 0.5;
             font-size: 30vw;
             line-height: 1;
             color: #174b5c;
             text-shadow:10px 10px 10px #d0ae80;
-            opacity: 0.9;
 
         }
         .s1-text2 {
@@ -116,15 +123,19 @@
     <div class="scrollTop"></div>
 
     <div id="section1">
+        <div class="s1-text0 fixed"
+        data-0="font-size: 0vw; opacity: 1; "
+        data-1000="font-size: 5vw; opacity: 0"
+        >Hi there,</div>
         <div class="s1-text1 fixed"
-        data-0="font-size: 0vw; opacity: 1; transition: all ease 1s;"
-        data-1000="font-size: 9vw; opacity: 1; z-index: 7;"
-        data-2000="font-size: 9vw; opacity: 1"
+        data-1000="font-size: 0vw; opacity: 1; transition: all ease 1s;"
+        data-2000="font-size: 9vw; opacity: 1; z-index: 7;"
+        data-2500="font-size: 9vw; opacity: 1"
         data-3000="font-size: 0vw; opacity: 0"
         >Come-in!</div>
         <div class="s1-text2 fixed"
-        data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg);"
-        data-3000="font-size: 13vw; transform: translate(-50%, -50%) rotate(720deg)"
+        data-3000="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg);"
+        data-4000="font-size: 13vw; transform: translate(-50%, -50%) rotate(720deg)"
         data-8000="font-size: 0vw; opacity: 1"
         >Welcome</div>
         <div class="s1-text3 fixed"
