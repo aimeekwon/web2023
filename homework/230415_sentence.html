@@ -24,16 +24,12 @@
     margin: 0;
     padding: 0;
     color: #34190e;
-    /* background-color: #9fb6be; */
-
+    background-color: #9fb6be;
 }
 .wrap {
     width:100%;
-    height: 100vh;
-    margin: 0 auto;
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 100px auto;
+
 }
 .container {
     width:1000px;
@@ -43,7 +39,7 @@
 }
 .sentence {
     width: 800px;
-    padding: 60px 0;
+    margin: 60px auto;
     font-size: 60px;
     font-family: 'Cafe24Shiningstar';
 }
@@ -67,22 +63,18 @@
     
     <script>
         let order = 0
-       
-
-        const sentence = () => {
+        const dataQuestion = () => {
             const random = Math.floor(Math.random()*30)
             order = random 
             fetch("json/dummy01.json")
             .then(res => res.json())
             .then(items => {
-                document.querySelector(".container .sentence").innerHTML=items.quotes[order].quote;
-                document.querySelector(".container .speaker").innerHTML=items.quotes[order].author;
-                document.querySelector(".wrap").style.backgroundImage='url(' + items.quotes[order].image+')';
+                document.querySelector(".container .sentence").innerHTML=items.quotes[order].quote
+                document.querySelector(".container .speaker").innerHTML=items.quotes[order].author
             });
-
         };
-        sentence()
-        setInterval(sentence,5000)
+        dataQuestion()
+        setInterval(dataQuestion,15000)
     </script>
 </body>
 </html>
