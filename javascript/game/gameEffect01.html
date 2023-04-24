@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Effect01</title>
+    <link rel="stylesheet" href="css/bg.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/game.css">
+<style>
+
+
+</style>
+</head>
+<body>
+    <div class="cursor">
+        <img src="img/game_mouse01.png" alt>
+    </div>
+    <header id="header">
+        <h1>AIMEE GAME SPACE</h1>
+        <div class="time">2023년 4월 24일 09시 30분 15초</div>
+    </header>
+
+    <main>
+        <div class="icon__box">
+            <div class="icon1">
+                <img src="img/game_icon01.png" alt="뮤직">
+                <span>뮤직듣기</span>
+            </div>
+            <div class="icon2">
+                <img src="img/game_icon02.png" alt="뮤직">
+                <span>뮤직듣기</span>
+            </div>
+            
+            <div class="icon3">
+                <img src="img/game_icon03.png" alt="뮤직">
+                <span>뮤직듣기</span>
+            </div>
+            
+            <div class="icon4">
+                <img src="img/game_icon04.png" alt="뮤직">
+                <span>뮤직듣기</span>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="info">현재 윈도우를 사용하고 있으며, 화면크기는 1920 X 760입니다</div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        $(".icon1").draggable({
+            containment: ".icon__box", scroll: false,
+            
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse01.png")
+            },
+        });
+        $(".icon2").draggable({
+            containment: ".icon__box", scroll: false,
+
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse02.png")
+            },
+        });
+        $(".icon3").draggable({
+            containment: ".icon__box", scroll: false,
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse03.png")
+            },
+            
+        });
+        $(".icon4").draggable({
+            containment: ".icon__box", scroll: false,
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse04.png")
+            },
+        });
+
+        //printTime();     오른쪽 상단 시간
+        function printTime() {
+            const clock = document.querySelector("#header .time");
+            let currentDate = new Date();
+            clock.innerHTML = now.getFullYear() + "년 " +
+            (currentDate.getMonth()+1) + "월 " +
+            currentDate.getDate() + "일 " +
+            currentDate.getHours() + "시 " +
+            currentDate.getMinutes() + "분 " +
+            currentDate.getSeconds() + "초 ";
+            setTimeout("printTime()", 1000);
+        };
+
+        window.onload = function(){
+            window.addEventListener("mousemove", e => {
+            gsap.to(".cursor", {
+                duration: 0.3,
+                left: e.pageX -10,
+                top: e.pageY -10
+            })
+        });
+
+
+        printTime(); 
+        
+        printAgent(); 
+        
+        window.onload = function (){
+            let el = document.querySelector("#header");
+            el.onclick = change;
+        }
+        function change() {
+            document.querySelector("#header").style.backgroundColor = "#ff5c5c"
+        }
+
+        //하단 중앙
+        //아이콘 클릭하면 헤더 배경색 바뀌게
+        }
+
+        
+    </script>
+</body>
+</html>

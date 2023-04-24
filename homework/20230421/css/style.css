@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    width: 100%;
+}
+#wrap {
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#aside {
+    width: 30%;
+}
+#aside > h1 {
+    width: 150px;
+    height: 100px;
+}
+#aside .aside__inner {
+    width: 100%;
+}
+#aside .aside__inner > ul {
+    display: block;
+}
+#aside .aside__inner > ul > li {
+    padding: 10px 0;
+}
+#aside .aside__inner > ul > li > a {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+#aside .aside__inner > ul > li:first-child > a {
+    color: #0267db;
+}
+#aside .aside__inner > ul > li > ul {
+    padding: 10px;
+}
+#aside .aside__inner > ul > li > ul >li {
+    border-bottom: 1px solid #eee ;
+    padding: 10px
+}
+#aside .aside__inner > ul > li > ul >li >a {
+    font-size: 14px;
+    color: #222;
+    font-weight: bold;
+}
+#container {
+    width: 70%;
+}
+/* slider */
+.slider__wrap {
+    width: 100%;
+    height: 384px;
+    overflow: hidden;
+}
+.slider__inner {
+    width: 100%;
+    height: 384px;
+}
+.slider__inner .slide {
+    width: 100%;
+}
+.slider__inner .slide img {
+    /* 이미지 여백값 지우기 */
+    vertical-align: top;
+}
+#content {
+    width: 100%;
+    height: 400px;
+}
+#content h2 {
+    text-align: center;
+    padding: 50px 0; 
+}
+#content h2 span {
+    color: #ccc;
+}
+#content ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#content ul li {
+    padding: 5px;
+    text-align: center;
+}
+#content ul li img {
+    width: 80%;
+    
+}
+#content ul li p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+#section {
+    width: 100%;
+    height: 350px;
+}
+#section .sec__inner {
+    display: flex;
+    justify-content: space-between;
+}
+#section .sec__inner .sec {
+    width: 30%;
+    margin: 0 10px;
+    padding: 30px 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: solid 1px #ccc;
+}
+#section .sec__inner .sec  h3 {
+    position: relative;
+}
+#section .sec__inner .sec  h3:after {
+    content: '+';
+    border: 1px solid #ccc;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: -13px;
+    line-height: 25px;
+} 
+#section .sec__inner .sec img {
+    width: 50%;
+    padding: 10px 0 25px 0;
+}
+#section .sec__inner .sec p {
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#section .sec__inner .sec p:before {
+    content: '·';
+}
+#footer {
+    width: 1000px;
+    height: 150px;
+    background-color: #edf2f8;
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom:50px ;
+}
+#footer .logo {
+    width: 10%;
+    padding: 10px 0 0 20px;
+}
+#footer .logo img {
+    width: 80px;
+}
+#footer .footer__inner {
+    width: 50%;
+    padding: 35px 0 0 10px;
+}
+#footer .footer__inner p {
+    font-size: 14px;
+}
+#footer ul {
+    width: 40%;
+    padding: 50px 0 0 200px;
+}
+#footer ul li {
+    width: 20%;
+    float: left;
+}

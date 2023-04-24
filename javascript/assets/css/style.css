@@ -36,21 +36,21 @@
         #header h1 a {
             font-size: 80px;
             font-weight: 800;
-            color: #006f3f;
+            color: #222;
         }
         #header nav ul li {
             display: inline;
         }
         #header nav ul li a {
-            border: 1px dashed #006f3f;
-            color: #006f3f;
+            border: 1px dashed #222;
+            color: #222;
             margin: 6px 3px;
             padding: 10px 20px;
             display: inline-block;
 
         }
         #header nav ul li a:hover {
-            background-color: #006f3f;
+            background-color: #222;
             color: #fff;
              /* inline속성을 가져가면서 padding값도 먹히도록 */
             transition: background-color 0.5s, color 0.5s;
@@ -58,7 +58,7 @@
             
         }
         #header nav ul li.active a {
-            background-color: #006f3f;
+            background-color: #222;
             color: #fff;
         }
         
