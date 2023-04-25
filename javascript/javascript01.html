@@ -20,7 +20,7 @@
 </head>
 <body>
     <header id="header">
-        <h1><a href="index.html">JAVASCRIPT</a></h1>
+        <h1><a href="index.html">javascript</a></h1>
         <nav>
             <ul>
                 <li class="active"><a href="javascript01.html">데이터 저장하기</a></li>
@@ -56,6 +56,7 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
+                    <li><a href="#sample00">00. 연산자</a></li>
                     <li><a href="#sample01">01. 변수 : 데이터 저장</a></li>
                     <li><a href="#sample02">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
                     <li><a href="#sample03">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>       
@@ -81,6 +82,54 @@
             </div>
             <div class="main__sample">
                 <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다-->             
+                <div id="sample00" class="sample">
+                    <h3>00. 연산자</h3>
+                    <p>변수는 여러 연산자로 계산 할 수 있다</p>
+                    <div class="script">
+<pre><code class="language-js">{                      
+    const a = 10000;
+    const b = 20000;
+
+    //연산자
+    console.log(a+b);
+    console.log(a-b);
+    console.log(a>b);
+    console.log(a*b);
+    console.log(a/b);
+    console.log(a%b); //나머지
+
+    let c =10;
+
+    c=100;
+    c=1000;
+    c+=1000;
+
+    console.log(c);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div>
+                                30000<br>
+                                -10000<br>
+                                false<br>
+                                200000000<br>
+                                0.5<br>
+                                10000<br>
+                                2000
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>연산자</h4>
+                        <p>연산자는 여러 연산자가 있지만 기본으로 사용하는 산술연산자와 비교 연산자를 알아두면 유용하게 사용할 수 있습니다.<br>
+                        사칙연산과 수학에서 배운 비교를 떠올리면 편합니다.
+                        </p>
+                    </div>
+                </div>
+                <!-- //sample01 -->
                 <div id="sample01" class="sample">
                     <h3>01. 변수 : 데이터 저장</h3>
                     <p>변수(variable)는 데이터(data)를 저장하는 저장소이다.</p>
@@ -106,6 +155,12 @@
                                 "javascript"
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4>변수에 데이터를 저장합니다</h4>
+                        <p>변수에 데이터를 저장하여 선언하면 변수를 통해 데이터를 출력하는 방식입니다<br>
+                           'var x =100;'은 변수 x에 숫자 100을 저장함을 'console.log(x)'는 x의 값을 console로 출력함을 의미합니다
+                        </p>
                     </div>
                 </div>
                 <!-- //sample01 -->
@@ -683,6 +738,8 @@
 
 
     <script src="assets/js/highlight.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
+
     <script>hljs.highlightAll();</script>
     <script>
         //

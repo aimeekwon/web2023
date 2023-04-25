@@ -13,7 +13,7 @@
         /* 링크초기화 */
         a { 
             text-decoration: none;
-            color: #222;
+            color: #151515;
         }
         /* 제목초기화 */
         h1, h2, h3, h4, h5, h6 {
@@ -25,12 +25,13 @@
         }
         body {
             padding: 40px;
+            background-color: #d5d0ca;
         }
         /* 헤더영역 */
         #header {
             text-align: center;
             padding-bottom: 40px;
-            border-bottom: 1px dashed #dcdcdc;
+            border-bottom: 1px solid #151515;
         }
         /* h1이 블록구조라 text-align: center 얘가 먹히는 거 */
         #header h1 a {
@@ -42,15 +43,15 @@
             display: inline;
         }
         #header nav ul li a {
-            border: 1px dashed #222;
-            color: #222;
+            border: 1px dashed #151515;
+            color: #151515;
             margin: 6px 3px;
             padding: 10px 20px;
             display: inline-block;
 
         }
         #header nav ul li a:hover {
-            background-color: #222;
+            background-color: #151515;
             color: #fff;
              /* inline속성을 가져가면서 padding값도 먹히도록 */
             transition: background-color 0.5s, color 0.5s;
@@ -58,7 +59,7 @@
             
         }
         #header nav ul li.active a {
-            background-color: #222;
+            background-color: #151515;
             color: #fff;
         }
         
@@ -81,14 +82,15 @@
         }
 
         /* 메인영역 */
+
         #main {
             padding: 40px 0;
-            border-bottom: 1px dashed #dcdcdc;
+            border-bottom: 3px solid #151515;
         }
 
         .main__menu {
             padding-bottom: 40px;
-            border-bottom: 1px dashed #dcdcdc;
+            border-bottom: 1px solid #151515;
         }
         .main__menu li {
             line-height: 2;
@@ -101,7 +103,10 @@
             background: #b0c5ff;
             position: absolute;
             left: 0;
-            bottom: 0;width: 100%;height: 50%;z-index: -1;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            z-index: -1;
             border-radius: 20px;
         }
         .main__desc {
@@ -113,9 +118,9 @@
         }
         .main__desc p {
             margin-bottom: 15px;
-            border-left: 5px solid #006f3f;
+            border-left: 5px solid #151515;
             padding: 12px 10px 10px 20px;
-            background-color: #ececec;
+            background-color: #fff;
 
         }
         .main__desc ul {
@@ -127,7 +132,7 @@
         }
         .main__desc a{
             display: block;
-            border: 1px dotted #ccc;
+            border: 1px solid #151515;
             margin: 10px 0;
             text-align: center;
             padding: 10px;
@@ -158,17 +163,17 @@
         }
         .main__sample .result {
             margin-top: 10px;
-            background-color: #f3f3f3;
+            background-color: #fff;
             padding: 1em;
             border-radius: 5px;
             margin-bottom: 10px;
         }
 
         .main__sample .notice {
-            border-left: 3px solid #006f3f ;
+            border-left: 3px solid #d32d08 ;
             /* border-left: 3px solid #006f3f ; */
             padding: 10px 10px 10px 15px;
-            background-color: #f6f6f6;
+            background-color: #fff;
         }
         .main__sample .notice h4 { 
             margin-bottom: 5px;
@@ -188,7 +193,7 @@
             content: '';
             width: 3px;
             height: 3px;
-            background-color: #006f3f;
+            background-color: #d32d08;
             position: absolute;
             left: 0;
             top: 9px;
@@ -198,13 +203,13 @@
     width: 100%;
 }
 .main__sample .table th {
-    background-color: #f5f5f5;
+    background-color: #fff;
     padding: 2px;
 }
 .main__sample .table td {
     text-align: center;
     padding: 2px;
-    border : 1px solid #f5f5f5;
+    border : 1px solid #151515;
 }
 .main__sample .table button {
     cursor: pointer;
