@@ -58,6 +58,7 @@ const musicName = musicWrap.querySelector(".music__control .title h3");
 const musicArtist = musicWrap.querySelector(".music__control .title p")
 const musicView = musicWrap.querySelector(".music__view .image img")
 const musicAudio = musicWrap.querySelector("#main-audio")
+const musicPlay = musicWrap.querySelector("#control-play")
 
 let musicIndex = 2; //현재 음악 인덱스
 
@@ -69,6 +70,10 @@ const loadMusic = (num) => {
     musicView.alt = allMusic[num-1].name;                  //뮤직이미지 alt
      musicAudio.src = `audio/${allMusic[num-1].audio}.mp3`; //뮤직파일
 }
+//
+musicPlay.addEventListener("click", () =>{
+    
+})
 
 window.addEventListener("load",() => {
     loadMusic(musicIndex);
