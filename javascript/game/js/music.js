@@ -59,7 +59,7 @@ const musicArtist = musicWrap.querySelector(".music__control .title p")
 const musicView = musicWrap.querySelector(".music__view .image img")
 const musicAudio = musicWrap.querySelector("#main-audio")
 
-let musicIndex = 4; //현재 음악 인덱스
+let musicIndex = 2; //현재 음악 인덱스
 
 //음악재생
 const loadMusic = (num) => {
