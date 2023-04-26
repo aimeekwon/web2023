@@ -4,22 +4,22 @@ const allMusic = [
         name : "1. hello",
         artist : "patric",
         img : "music_img01",
-        audio : "music_audio01.mp3" 
+        audio : "1.mp3" 
     },{
         name : "1. nice to meet you",
         artist : "patric",
         img : "music_img02",
-        audio : "music_audio01.mp3" 
+        audio : "2.mp3" 
     },{
         name : "1. hello",
         artist : "patric",
         img : "music_img03",
-        audio : "music_audio01.mp3" 
+        audio : "3.mp3" 
     },{
         name : "1. hello",
         artist : "patric",
         img : "music_img04",
-        audio : "music_audio01.mp3" 
+        audio : "4.mp3" 
     },{
         name : "1. hello",
         artist : "patric",
