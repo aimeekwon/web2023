@@ -89,5 +89,53 @@
     color: #4c2269;
     font-size: 12px;
 }
+.music__control .control {
+    width: 100%;
+    margin-top: 40px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.music__control .control span {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+   
+}
+.music__control .control span i {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 8px auto;
+    background-image: url(../img/music_icon.svg);
+}
+.music__control .control span i.repeat {
+    background-position: 0 0;
+}
+.music__control .control span i.prev {
+    background-position: -24px 0;
+    
+}
+.music__control .control span i.play {
+    background-position: -24px -24px;
+
+
+}
+.music__control .control span:nth-child(3){
+    border-radius: 50%;
+    background-color: #4c2269;
+}
+.music__control .control span i.next {
+    background-position: -48px 0;
+
+}
+.music__control .control span i.list {
+    background-position: -72px 0;
+
+}
+.music__control .control span  i .repeat_one {}
+.music__control .control span  i .suffle {}
+.music__control .control span  i .stop {}
 
 .music__footer {}
