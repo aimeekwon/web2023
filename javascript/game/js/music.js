@@ -1,13 +1,13 @@
 const allMusic = [
 
     {
-        name : "1. hello",
-        artist : "patric",
+        name : "1. Surfin' USA",
+        artist : "The Beach Boys",
         img : "music_img01",
         audio : "1.mp3" 
     },{
-        name : "2. nice to meet you",
-        artist : "patric",
+        name : "2. Wipe Out",
+        artist : "The Surfaris",
         img : "music_img02",
         audio : "2.mp3" 
     },{
@@ -164,3 +164,26 @@ window.addEventListener("load",() => {
     loadMusic(musicIndex);
     musicAudio.play();
 });
+// 여름재즈 10
+// Summertime - Ella Fitzgerald & Louis Armstrong
+// My Funny Valentine - Chet Baker
+// Fly Me to the Moon - Frank Sinatra
+// Take Five - Dave Brubeck
+// Desafinado - Stan Getz & João Gilberto
+// Night and Day - Cole Porter
+// The Girl from Ipanema - Astrud Gilberto, João Gilberto, Stan Getz
+// Blue Skies - Ella Fitzgerald
+// Corcovado - Antonio Carlos Jobim
+// Autumn Leaves - Cannonball Adderley
+
+//surf10
+// Surfin' USA - The Beach Boys
+// Wipe Out - The Surfaris
+// California Girls - The Beach Boys
+// Surf City - Jan & Dean
+// Good Vibrations - The Beach Boys
+// Kokomo - The Beach Boys
+// Little Deuce Coupe - The Beach Boys
+// Pipeline - The Chantays
+// Surfing Safari - The Beach Boys
+// Fun, Fun, Fun - The Beach Boys
