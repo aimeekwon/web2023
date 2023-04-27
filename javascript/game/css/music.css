@@ -73,7 +73,7 @@
     height: 5px;
 }
 .music__control .progress .bar{
-    width: 80%;
+    width: 0%;
     height: 5px;
     background-color: #4c2269;
     border-radius: 3px;
@@ -103,39 +103,50 @@
     display: inline-block;
    
 }
+.music__control .control span:active {
+    background-color: #eaeaea;
+    border-radius: 50%;
+    }
 .music__control .control span i {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     display: block;
-    margin: 8px auto;
     background-image: url(../img/music_icon.svg);
 }
 .music__control .control span i.repeat {
     background-position: 0 0;
 }
 .music__control .control span i.prev {
-    background-position: -24px 0;
+    background-position: -40px 0;
     
 }
 .music__control .control span i.play {
-    background-position: -24px -24px;
+    background-position: -200px 0;
 
 
 }
 .music__control .control span:nth-child(3){
     border-radius: 50%;
-    background-color: #4c2269;
+    /* background-color: #c798e9; */
+    background: linear-gradient(to right, rgb(68, 26, 68), rgb(195, 0, 255));
+    line-height: 1;
 }
 .music__control .control span i.next {
-    background-position: -48px 0;
+    background-position: -80px 0;
 
 }
 .music__control .control span i.list {
-    background-position: -72px 0;
+    background-position: -120px 0;
 
 }
-.music__control .control span  i .repeat_one {}
-.music__control .control span  i .suffle {}
-.music__control .control span  i .stop {}
+.music__control .control span i.repeat_one {
+    background-position: -160px 0;
+}
+.music__control .control span i.suffle {
+    background-position: -280px 0;
+}
+.music__control .control span i.stop {
+    background-position: -240px 0px;    
+}
 
 .music__footer {}
