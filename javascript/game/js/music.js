@@ -55,10 +55,12 @@ const allMusic = [
 
 const musicWrap = document.querySelector(".music__wrap");
 const musicName = musicWrap.querySelector(".music__control .title h3");
-const musicArtist = musicWrap.querySelector(".music__control .title p")
-const musicView = musicWrap.querySelector(".music__view .image img")
-const musicAudio = musicWrap.querySelector("#main-audio")
-const musicPlay = musicWrap.querySelector("#control-play")
+const musicArtist = musicWrap.querySelector(".music__control .title p");
+const musicView = musicWrap.querySelector(".music__view .image img");
+const musicAudio = musicWrap.querySelector("#main-audio");
+const musicPlay = musicWrap.querySelector("#control-play");
+const musicPrevBtn = musicWrap.querySelector("#control-prev");
+const musicNextBtn = musicWrap.querySelector("#control-next");
 
 let musicIndex = 2; //현재 음악 인덱스
 
@@ -68,12 +70,53 @@ const loadMusic = (num) => {
     musicArtist.innerText = allMusic[num-1].artist;        //뮤직아티스트
     musicView.src = `img/${allMusic[num-1].img}.png`;      //뮤직이미지
     musicView.alt = allMusic[num-1].name;                  //뮤직이미지 alt
-     musicAudio.src = `audio/${allMusic[num-1].audio}.mp3`; //뮤직파일
+    musicAudio.src = `audio/${allMusic[num-1].audio}.mp3`; //뮤직파일
+
 }
 //
+
+
+//재생버튼
+const playMusic = () =>{
+    playMusic();
+
+}
+
+
+//정지버튼
+const pauseMusic = () =>{
+    pauseMusic();
+
+}
+
+//이전 곡 듣기 버튼
+const prevMusic = () =>{
+
+    prevMusic();
+
+}
+
+
+//다음 곡 듣기 
+const nextMusic = () =>{
+    alert(nextMusic);
+
+}
+
+
+//플레이 버튼
 musicPlay.addEventListener("click", () =>{
-    
+    playMusic();
 })
+
+
+
+
+
+
+
+
+
 
 window.addEventListener("load",() => {
     loadMusic(musicIndex);
