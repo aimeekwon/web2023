@@ -4,7 +4,7 @@ const allMusic = [
         name : "1. Surfin' USA",
         artist : "The Beach Boys",
         img : "music_img01",
-        audio : "1.mp3" 
+        audio : "Surfin_Usa.mp3" 
     },{
         name : "2. Wipe Out",
         artist : "The Surfaris",
@@ -66,7 +66,7 @@ const musicProgressBar = musicWrap.querySelector(".progress .bar");
 const musicProgressCurrent = musicWrap.querySelector(".progress .timer .current");
 const musicProgressDuration = musicWrap.querySelector(".progress .timer .duration");
 
-let musicIndex = 2; //현재 음악 인덱스
+let musicIndex =    1; //현재 음악 인덱스
 
 //음악재생
 const loadMusic = (num) => {
