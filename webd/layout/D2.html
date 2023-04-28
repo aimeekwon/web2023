@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 1200px;
+            
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #aside {
+            width: 200px;
+            height: 750px;
+            background-color: #111;
+        }
+        #aside h1{
+            width: 100%;
+            height: 200px;
+            background-color: #888;
+        }
+        #aside nav{
+            width: 100%;
+            height: 550px;
+            background-color: #333;
+        }
+        #aside nav ul{
+            width: 100%;
+        }
+        #aside nav ul>li{
+            width: 100%;
+            background-color: #555;
+            border: solid 1px #fff;
+
+        }
+        #aside nav ul>li>ul{
+            width: 100%;
+            text-align: right;
+
+        }
+        #aside nav ul>li>ul>li {
+            background-color: #777;
+            padding-right: 10px;
+            display: inline-block;
+
+        }
+
+        #main {
+            width: clac(100% - 200px);
+            height: 750px;
+            background-color: #222;
+        }
+        .main__inner{
+            width: 100%;
+            height: 450px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #slider {
+            width: 70%;
+            height: inherit;
+            background-color: #222;
+        }
+        #banner {
+            width: 30%;
+            height: inherit;
+
+            background-color: #333;
+        }
+        #content {
+            width: 100%;
+            height: 300px;
+            background-color: #444;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            background-color: #555;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #footer .logo {
+            width: 20%;
+            height: inherit;
+            background-color: #666;
+        }
+        #footer .copyright {
+            width: 60%;
+            height: inherit;
+            background-color: #777;
+        }
+        #footer .site {
+            width: 20%;
+            height: inherit;
+            background-color: #888;
+        }
+    </style>
+</head>
+<body>
+    <wrap id="wrap">
+        <aside id="aside">
+            <h1></h1>
+            <nav>
+                <ul>
+                    <li>대메뉴1
+                        <ul>
+                            <li>메뉴1</li>
+                            <li>메뉴2</li>
+                            <li>메뉴3</li>
+                            <li>메뉴4</li>
+                        </ul>
+                    </li>
+                    <li>대메뉴2</li>
+                    <li>대메뉴3</li>
+                    <li>대메뉴4</li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <div class="main__inner">
+                <div id="slider"></div>
+                <div id="banner"></div>
+            </div>
+            <div id="content"></div>
+
+        </main>
+        <footer id="footer">
+            <div class="logo"></div>
+            <div class="copyright"></div>
+            <div class="site"></div>            
+        </footer>
+    </wrap>
+</body>
+</html>
+
+

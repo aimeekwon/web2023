@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        #wrap{
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside{
+            width: 200px;
+            height: 750px;
+            background-color: #111;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: #333;
+        }
+        #aside .menu {
+            width: 100%;
+            height: 650px;
+            background-color: #444;
+        }
+        .menu ul{
+            width: 100%;
+
+        }
+        .menu ul> li{
+            background-color: #ffb8b8;
+            padding: 5px;
+            border: 1px solid #333;
+        }
+        .menu ul> li a{}
+        .menu ul> li a:hover{
+            background-color: #ff8181;
+        }
+        .menu ul> li>ul{}
+        .menu ul> li> ul> li {
+            display: none;
+        }
+        .menu ul> li> ul> li a{}
+
+
+
+
+
+        #section{
+            width: 400px;
+            height: 750px;
+            background-color: #222;
+        }
+        #section #banner {
+            width: 100%;
+            height: 150px;
+            background-color: #666;
+        }
+        #section .sec1{
+            width: 100%;
+            height: 200px;
+            background-color: #777;
+        }
+        #section .sec2{
+            width: 100%;
+            height: 200px;
+            background-color: #888;
+        }
+        #section .sec3{
+            width: 100%;
+            height: 150px;
+            background-color: #999;
+        }
+        #slider{
+            width: calc(100% - 600px);
+            height: 750px;
+            background-color: #333;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            background-color: #999;
+            display: flex;
+        }
+        #footer .logo{
+            width: 20%;
+            background-color: #333;
+        }
+        #footer .f_menu{
+            width: 60%;
+        }
+        #footer .f_menu .f_menu_1{
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+        }
+        #footer .f_menu .f_menu_2{
+            width: 100%;
+            height: 50px;
+            background-color: #727272;
+        }
+        #footer .sns{
+            width: 20%;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <wrap id="wrap">
+        <aside id="aside">
+            <h1></h1>
+            <div class="menu">
+                <ul class="nav">
+                    <li><a href="#">menu1</a></li>
+                    <li>menu2
+                        <ul class="submenu">
+                            <li><a href="#">submenu2-1</a></li>
+                            <li><a href="#">submenu2-2</a></li>
+                            <li><a href="#">submenu2-3</a></li>
+                            <li><a href="#">submenu2-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul>
+
+            </div>
+        </aside>
+        <section id="section">
+            <div id="banner"></div>
+            <div class="sec1"></div>
+            <div class="sec2"></div>
+            <div class="sec3"></div>
+
+        </section>
+        <contents id="slider"></contents>
+        
+    </wrap>    
+    <footer id="footer">
+        <div class="logo"></div>
+        <div class="f_menu">
+            <div class="f_menu_1"></div>
+            <div class="f_menu_2"></div>
+        </div>
+        <div class="sns"></div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".nav > ul> li").mouseover(function(){
+            $(this).find(".submenu").stop().slideDown();
+        });
+        $(".nav > ul> li").mouseout(function(){
+            $(this).find(".submenu").stop().slideUp();
+        });
+
+    </script>
+</body>
+</html>
+
+
