@@ -1,3 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #wrap {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #aside {
+            width: 200px;
+            height: calc(100% -100px);
+            background-color: #245953;
+        }
+
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.2);
+            line-height: 100px;
+        }
+
+        #aside .menu {
+            width: 100%;
+            height: 200px;
+
+        }
+
+        #aside .banner {
+            width: 100%;
+            display: flex;
+        }
+
+        #aside .ban {
+            width: 50%;
+        }
+
+        .menu ul {
+            width: 100%;
+        }
+
+        .menu ul>li {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 5px;
+        }
+
+        .menu ul>li a {}
+
+        .menu ul>li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .menu ul>li>ul {}
+
+        .menu ul>li>ul>li {
+            display: none;
+        }
+
+        .menu ul>li>ul>li a {}
+
+        #section {
+            width: 400px;
+            height: calc(100% -100px);
+            background-color: #408E91;
+        }
+
+        #section .sec1 {
+            width: 100%;
+            height: 15%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        #section .sec2 {
+            width: 100%;
+            height: 40%;
+            background-color: rgba(0, 0, 0, 0.1);
+
+        }
 
 
+        #section .sec3 {
+            width: 100%;
+            height: 45%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
 
+        #slider {
+            width: calc(100% - 600px);
+            height: calc(100% -100px);
+            background-color: #E49393;
+            line-height: 750px;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #D8D8D8;
+            display: flex;
+
+        }
+
+        #footer .logo {
+            width: 200px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.3);
+            line-height: 100px;
+        }
+
+        #footer .f_inner {
+            width: calc(100% - 200px);
+            line-height: 100px;
+            display: flex;
+        }
+
+        #footer .f_inner .f_2 {
+            width: 70%;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        #footer .f_inner .f_3 {
+            width: 30%;
+            height: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <wrap id="wrap">
+        <aside id="aside">
+            <h1>logo</h1>
+            <div class="menu">
+                <ul class="nav">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2
+                            <ul class="submenu">
+                                <li><a href="#">submenu2-1</a></li>
+                                <li><a href="#">submenu2-2</a></li>
+                                <li><a href="#">submenu2-3</a></li>
+                                <li><a href="#">submenu2-4</a></li>
+
+                            </ul>
+                        </a>
+                    </li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul>
+
+            </div>
+            <div class="banner">
+                <div class="ban"><a href="">spot</a></div>
+                <div class="ban"><a href="">spot</a></div>
+            </div>
+        </aside>
+        <section id="section">
+            <div class="sec1">contents</div>
+            <div class="sec2">gallery
+
+            </div>
+            <div class="sec3">img_link
+
+            </div>
+
+        </section>
+        <contents id="slider">slider</contents>
+
+    </wrap>
+    <footer id="footer">
+        <div class="logo">logo</div>
+        <div class="f_inner">
+            <!-- <div class="f_1">
+                <ul>
+                    <li><a href="">menu</a></li>
+                    <li><a href="">menu</a></li>
+                    <li><a href="">menu</a></li>
+                    <li><a href="">menu</a></li>
+                    <li><a href="">menu</a></li>
+                    <li><a href="">menu</a></li>
+                </ul>
+            </div> -->
+            <div class="f_2">copylights</div>
+            <div class="f_3">sns</div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".nav > ul> li").mouseover(function () {
+            $(this).find(".submenu").stop().slideDown();
+        });
+        $(".nav > ul> li").mouseout(function () {
+            $(this).find(".submenu").stop().slideUp();
+        });
+
+    </script>
+</body>
+
+</html>
