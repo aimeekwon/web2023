@@ -88,6 +88,7 @@
 .music__control .progress .timer span{
     color: #4c2269;
     font-size: 12px;
+    pointer-events: none;
 }
 .music__control .control {
     width: 100%;
