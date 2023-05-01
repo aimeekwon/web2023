@@ -104,6 +104,7 @@ const prevMusic = () => {
 
     loadMusic(musicIndex);//플레이되는 음악
     playMusic();//음악재생
+    playListMusic();
 };
 //다음곡 듣기 
 const nextMusic = () => {
@@ -113,11 +114,12 @@ const nextMusic = () => {
 
     loadMusic(musicIndex);
     playMusic();
+    playListMusic();
 };
 
 //뮤직 진행바
 musicAudio.addEventListener("timeupdate", e => {//e : 리액트 , 
-    console.log(e);
+   // console.log(e);
     const currentTime = e.target.currentTime; //현재 재생되는 시간
     const duration = e.target.duration;       //오디오의 총길이
     let progressWidth = (currentTime / duration) * 100;
@@ -199,7 +201,8 @@ musicAudio.addEventListener("ended", () => {
             playMusic();
             break;
     }
-})
+    playListMusic();
+});
 
 
 //플레이 버튼
@@ -210,6 +213,7 @@ musicPlay.addEventListener("click", () => {
 //이전곡 버튼 클릭
 musicPrevBtn.addEventListener("click", () => {
     prevMusic();
+    playListMusic();
 });
 //다음곡 버튼클릭
 musicNextBtn.addEventListener("click", () => {
@@ -232,7 +236,8 @@ musicListClose.addEventListener("click", () => {
 // 뮤직 리스트 구현하기
 for(let i=0; i<allMusic.length; i++){
     let li = `
-        <li>
+
+        <li data-index="${i+1}">
             <span class="img">
                 <img class="img" src="img/${allMusic[i].img}.png" alt=${allMusic[i].name}>
             </span>
@@ -256,17 +261,50 @@ for(let i=0; i<allMusic.length; i++){
         let totalSec = Math.floor(audioDuration % 60);
         if(totalSec < 10) totalSec = `0${totalSec}`;
         liAudioDuration.innerText = `${totalMin}:${totalSec}`;
+        liAudioDuration.setAttribute("data-duration", `${totalMin}:${totalSec}`);
     });
 }
 
 
+//뮤직리스트를 클릭하면 재생
+function playListMusic() {
+    const musicListAll = musicListUl.querySelectorAll("li");//뮤직리스트 목록
 
+    for(let i=0; i<musicListAll.length; i++){
 
+        let audioTag = musicListAll[i].querySelector(".audio-duration");
+        
+        musicListAll[i].setAttribute("onclick", "clicked(this)");
+
+        if(musicListAll[i].classList.contains("playing")){
+            musicListAll[i].classList.remove("palying");
+           let dataAudioDuration = audioTag.getAttribute("data-duration");
+           audioTag.innerText = dataAudioDuration;
+        }
+
+        if(musicListAll[i].getAttribute("data-index")== musicIndex){
+            musicListAll[i].classList.add("playing");
+            audioTag.innerText = "재생중";
+        }
+    }
+}
+playListMusic();
+
+//뮤직리스트를 클릭하면
+function clicked(el){
+    let getIndex = el.getAttribute("data-index");
+    //alert(getIndex);
+    musicIndex =getIndex;
+    loadMusic(musicIndex);
+    playMusic();
+    playListMusic();
+}
 
 
 window.addEventListener("load", () => {
     loadMusic(musicIndex);
     musicAudio.play();
+    playListMusic();
 });
 // 여름재즈 10
 // Summertime - Ella Fitzgerald & Louis Armstrong

@@ -223,7 +223,7 @@
 
 }
 .music__list ul li.active {
-    background-color: rgba (0,0,0,0.7);
+    background-color: rgba(0,0,0,0.7);
 } 
 .music__list ul li em {
     width: 100%;
