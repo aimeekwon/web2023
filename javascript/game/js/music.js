@@ -4,52 +4,52 @@ const allMusic = [
         name: "1. Surfin' USA",
         artist: "The Beach Boys",
         img: "music_img01",
-        audio: "Surfin_Usa.mp3"
+        audio: "music01"
     }, {
         name: "2. Wipe Out",
         artist: "The Surfaris",
         img: "music_img02",
-        audio: "2.mp3"
+        audio: "music02"
     }, {
         name: "3. hello",
         artist: "patric",
         img: "music_img03",
-        audio: "3.mp3"
+        audio: "music03"
     }, {
         name: "4. hello",
         artist: "patric",
         img: "music_img04",
-        audio: "4.mp3"
+        audio: "music04"
     }, {
         name: "5. hello",
         artist: "patric",
         img: "music_view01",
-        audio: "music_audio01.mp3"
+        audio: "music01"
     }, {
         name: "6. hello",
         artist: "patric",
         img: "music_view01",
-        audio: "music_audio01.mp3"
+        audio: "music02"
     }, {
         name: "7. hello",
         artist: "patric",
         img: "music_view01",
-        audio: "music_audio01.mp3"
+        audio: "music03"
     }, {
         name: "8. hello",
         artist: "patric",
         img: "music_view01",
-        audio: "music_audio01.mp3"
+        audio: "music04"
     }, {
         name: "9. hello",
         artist: "patric",
         img: "music_view01",
-        audio: "music_audio01.mp3"
+        audio: "music01"
     }, {
         name: "10. hello",
         artist: "patric",
         img: "music_view01",
-        audio: "music_audio01.mp3"
+        audio: "music02"
     }
 ];
 
@@ -66,6 +66,11 @@ const musicProgressBar = musicWrap.querySelector(".progress .bar");
 const musicProgressCurrent = musicWrap.querySelector(".progress .timer .current");
 const musicProgressDuration = musicWrap.querySelector(".progress .timer .duration");
 const musicRepeat = musicWrap.querySelector("#control-repeat");
+
+const musicListBtn = musicWrap.querySelector("#control-list");
+const musicList = musicWrap.querySelector(".music__list");
+const musicListUl = musicWrap.querySelector(".music__list ul");
+const musicListClose = musicWrap.querySelector(".music__list h3 .close");
 
 let musicIndex = 1; //현재 음악 인덱스
 
@@ -184,13 +189,15 @@ musicAudio.addEventListener("ended", () => {
         break;
 
         case "shuffle":
-            let randomIndex = Math.floor(Math.random()                                                                * allMusic.length+1); //랜덤 인덱스 생성
 
-
-            loadMusic(randomIndex);
+        let randomIndex = Math.floor(Math.random() * allMusic.length + 1);    // 랜덤 인덱스 생성
+            do {
+                randomIndex = Math.floor(Math.random() * allMusic.length + 1);
+            } while (musicIndex == randomIndex);
+            musicIndex = randomIndex;   // 현재 인덱스를 랜덤 인덱스로 변경
+            loadMusic(musicIndex);
             playMusic();
-        break;
-
+            break;
     }
 })
 
@@ -208,6 +215,55 @@ musicPrevBtn.addEventListener("click", () => {
 musicNextBtn.addEventListener("click", () => {
     nextMusic();
 });
+
+
+
+//뮤직리스트 버튼
+
+musicListBtn.addEventListener("click", () => {
+    musicList.classList.add("show");
+});
+
+musicListClose.addEventListener("click", () => {
+    musicList.classList.remove("show");
+});
+
+
+// 뮤직 리스트 구현하기
+for(let i=0; i<allMusic.length; i++){
+    let li = `
+        <li>
+            <span class="img">
+                <img class="img" src="img/${allMusic[i].img}.png" alt=${allMusic[i].name}>
+            </span>
+            <span class="title">
+                <strong>${allMusic[i].name}</strong>
+                <em>${allMusic[i].artist}</em>
+                <audio class="${allMusic[i].audio}" src="audio/${allMusic[i].audio}.mp3"></audio>
+            </span>
+            <span class="audio-duration" id="${allMusic[i].audio}">3:04</span>
+        </li>
+    `;
+    // musicListUl.innerHTML += li;
+    musicListUl.insertAdjacentHTML("beforeend", li);
+    // 리스트에 음악 시간 불러오기
+    let liAudioDuration = musicListUl.querySelector(`#${allMusic[i].audio}`);   //리스트에서 시간을 표시할 선택자
+    let liAudio = musicListUl.querySelector(`.${allMusic[i].audio}`);           //리스트에서 오디오 파일 선택
+    liAudio.addEventListener("loadeddata", () => {
+        let audioDuration = liAudio.duration;
+        // console.log(audioDuration)
+        let totalMin = Math.floor(audioDuration / 60);
+        let totalSec = Math.floor(audioDuration % 60);
+        if(totalSec < 10) totalSec = `0${totalSec}`;
+        liAudioDuration.innerText = `${totalMin}:${totalSec}`;
+    });
+}
+
+
+
+
+
+
 window.addEventListener("load", () => {
     loadMusic(musicIndex);
     musicAudio.play();
