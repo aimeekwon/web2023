@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,19 +15,27 @@
 
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/favicon.png"/> 
-    <link rel="apple-touch-icon" href="assets/ico/favicon.png"/> 
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/ico/favicon.png" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 
     <!-- CSS섹션별 -->
+
+    <style>
+        * {
+            font-family: 'NEXON Lv1 Gothic OTF';
+        }
+    </style>
 </head>
+
 <body>
     <div id="skip">
         <a href="">헤더영역바로가기</a>
@@ -40,15 +49,77 @@
     </div>
 
     <header id="headerType">
-        
+
 
     </header>
     <!-- //header -->
     <main id="mainType">
-            <section id="sliderType" class="nexon hide">
-                <h2 class="blind">슬라이드영역</h2>
-                <div class="slider__inner">
-                    <div class="slider">
+        <section id="sliderType" class="nexon">
+            <h2 class="blind">슬라이드영역</h2>
+            <div class="slider__inner">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">식물 건강하게 키우기</h3>
+                                    <p class="desc">이번 식물은 죽이지 마세요. 건강하게 오래오래 잘 키울 수 있어요.<br>
+                                        처음 보는 식물도 잘 키울 수 있어요! </p>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="swiper-slide">
+                                <div class="slider img2">
+                                    <div class="slider__info container">
+                                        <span class="small">event</span>
+                                        <h3 class="title">식물 건강하게 키우기</h3>
+                                        <p class="desc">이번 식물은 죽이지 마세요. 건강하게 오래오래 잘 키울 수 있어요.<br>
+                                            처음 보는 식물도 잘 키울 수 있어요! </p>
+                                        <div class="btn">
+                                            <a href="#">자세히보기</a>
+                                            <a href="#">상담신청</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="swiper-slide">
+                                <div class="slider img3">
+                                    <div class="slider__info container">
+                                        <span class="small">event</span>
+                                        <h3 class="title">식물 건강하게 키우기</h3>
+                                        <p class="desc">이번 식물은 죽이지 마세요. 건강하게 오래오래 잘 키울 수 있어요.<br>
+                                            처음 보는 식물도 잘 키울 수 있어요! </p>
+                                        <div class="btn">
+                                            <a href="#">자세히보기</a>
+                                            <a href="#">상담신청</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <!-- 글씨대신 이미지가 들어갈 때 ir넣음 -->
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- <div class="slider">
                         <div class="slider__info container">
                             <span class="small">event</span>
                             <h3 class="title" >식물 건강하게 키우기</h3>
@@ -71,73 +142,73 @@
                             <a href="#" class="stop"><span class="blind">정지</span></a>
                         </div>
         
-                    </div>
-                    <!-- <div class="slider"></div>
+                    </div> -->
+                <!-- <div class="slider"></div>
                     <div class="slider"></div> -->
-                </div>
-            </section>
-            <!-- //sliderType -->
-            <section id="imageType" class="nexon section center">
-                <h2 class="blind">이미지영역</h2>
-                <h2 class="section_h2">PLANT</h2>
-                <p class="section_desc">반려 식물 건강하게 키우기</p>
-                <div class="image__inner container">
-                    <article class="image">
-                        <figure class="image__header">
-                            <img src="assets/img/imageType01_01.jpg" alt="">
-                        </figure>
-                        <div class="image__body">
+            </div>
+        </section>
+        <!-- //sliderType -->
+        <section id="imageType" class="nexon section center">
+            <h2 class="blind">이미지영역</h2>
+            <h2 class="section_h2">PLANT</h2>
+            <p class="section_desc">반려 식물 건강하게 키우기</p>
+            <div class="image__inner container">
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="assets/img/imageType01_01.jpg" alt="">
+                    </figure>
+                    <div class="image__body">
                         <h3 class="title">품종에 맞는 흙과 비료</h3>
-                            <p class="desc">다양한 식물이 가지는 특성에 맞춰 잘 자랄 수 있도록 조건에 맞는 흙과 비료를 알아두세요.</p>
-                            <button class="btn_1 btn"><a href="">자세히보기</a></button>
-                        </div>
-                    </article>
-                    <article class="image">
-                        <figure class="image__header">
-                            <img src="assets/img/imageType01_02.jpg" alt="">
-                        </figure>
-                        <div class="image__body">
-                            <h3 class="title">적당한 빛과 바람, 물 </h3>
-                            <p class="desc">적당한 햇볕과 통풍이 잘되는 환경이 필요합니다.<br>
-                                때에 따라 일정한 주기로 물을 주시는 것도 중요합니다</p>
-                                <button class="btn"><a href="">자세히보기</a></button>
-                        </div>    
-                    </article>
-                </div>
-            </section>
-            <!-- //imageType -->
-            <section id="imgTextType" class="nexon section gray center">
-                <h2 class="blind">이미지텍스트영역</h2>
-                <div class="imgtext__inner container">
-                    <article class="imgtext__text">
-                        <span class="notice">NOTICE</span>
-                        <h3>플랜테리어<br>: 식물과 인테리어</h3>
-                        <p class="desc">플랜테리어란 식물 ‘플랜트’와 실내장식 ‘인테리어’의 
-                            합성어입니다. </p>
-                        <span class="desc_p">
-                            소품으로 식물이나 화분을 접목해 포인트를 주는 인테
-                            리어를 의미한다. 도시에서 자연친화적인 삶을 추구하
-                            는 것이 하나의 유행인 요즘, 플랜테리어 문화가 트렌
-                            드로 자리잡고 있다. 희귀식물이나 이색적인 화분을 활
-                            용하면 자신의 감성 라이프에 최적화된 공간을 연출할 수 있다.
-                            식물은 인테리어 소품으로 미적인 만족감을 주기도 하
-                            지만 공기정화 역할도 한다. 인체에 해로운 오염 물질이
-                            있는 밀폐된 공간에 식물을 넣어두면 실내 공기오염 물질
-                            들이 제거된다. 특히 아레카야자, 관음죽, 대나무야자, 
-                            인도고무나무, 레몬라임, 여인초 등은 공기
-                        </span>
-                    </article>
-                    <article class="imgtext__img">
-                        <div class="img i1"><a href="#">플랜테리어</a></div>
-                    </article>
-                    <article class="imgtext__img">
-                        <div class="img i2"><a href="#">홈가드닝</a></div>
-                    </article>
-                </div>
-            </section>
-            <!-- //imgTextType -->
-            <section id="cardType" class="nexon section center">
-                <div class="container">
+                        <p class="desc">다양한 식물이 가지는 특성에 맞춰 잘 자랄 수 있도록 조건에 맞는 흙과 비료를 알아두세요.</p>
+                        <button class="btn_1 btn"><a href="">자세히보기</a></button>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="assets/img/imageType01_02.jpg" alt="">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">적당한 빛과 바람, 물 </h3>
+                        <p class="desc">적당한 햇볕과 통풍이 잘되는 환경이 필요합니다.<br>
+                            때에 따라 일정한 주기로 물을 주시는 것도 중요합니다</p>
+                        <button class="btn"><a href="">자세히보기</a></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- //imageType -->
+        <section id="imgTextType" class="nexon section gray center">
+            <h2 class="blind">이미지텍스트영역</h2>
+            <div class="imgtext__inner container">
+                <article class="imgtext__text">
+                    <span class="notice">NOTICE</span>
+                    <h3>플랜테리어<br>: 식물과 인테리어</h3>
+                    <p class="desc">플랜테리어란 식물 ‘플랜트’와 실내장식 ‘인테리어’의
+                        합성어입니다. </p>
+                    <span class="desc_p">
+                        소품으로 식물이나 화분을 접목해 포인트를 주는 인테
+                        리어를 의미한다. 도시에서 자연친화적인 삶을 추구하
+                        는 것이 하나의 유행인 요즘, 플랜테리어 문화가 트렌
+                        드로 자리잡고 있다. 희귀식물이나 이색적인 화분을 활
+                        용하면 자신의 감성 라이프에 최적화된 공간을 연출할 수 있다.
+                        식물은 인테리어 소품으로 미적인 만족감을 주기도 하
+                        지만 공기정화 역할도 한다. 인체에 해로운 오염 물질이
+                        있는 밀폐된 공간에 식물을 넣어두면 실내 공기오염 물질
+                        들이 제거된다. 특히 아레카야자, 관음죽, 대나무야자,
+                        인도고무나무, 레몬라임, 여인초 등은 공기
+                    </span>
+                </article>
+                <article class="imgtext__img">
+                    <div class="img i1"><a href="#">플랜테리어</a></div>
+                </article>
+                <article class="imgtext__img">
+                    <div class="img i2"><a href="#">홈가드닝</a></div>
+                </article>
+            </div>
+        </section>
+        <!-- //imgTextType -->
+        <section id="cardType" class="nexon section center">
+            <div class="container">
                 <h2 class="section__h2">식물 건강하게 키우기</h2>
                 <p class="section_desc">적당한 햇볕과 통풍이 잘되는 환경이 필요합니다. <br>때에 따라 일정한 주기로 물을 주시는 것도 중요합니다.<br>
                     다양한 식물이 가지는 특성에 맞춰 잘 자랄 수 있도록 조건에 맞는 흙과 비료를 알아두세요.</p>
@@ -148,9 +219,9 @@
                         </figure>
                         <div class="card__body">
                             <h3 class="title">물 줄 때 꼭 흙 상태 확인하세요</h3>
-                            <p class="desc">보통 '겉흙이 젖으면 듬뿍' 이라는 표현을 많이 
+                            <p class="desc">보통 '겉흙이 젖으면 듬뿍' 이라는 표현을 많이
                                 사용하는데, 겉의 흙 색깔만 보고 판단했다가는
-                                속의 흙이 젖어있는 것을 놓치고 물을 주게 될 
+                                속의 흙이 젖어있는 것을 놓치고 물을 주게 될
                                 수 있어요.이렇게 젖은 화분에 또 물을 주게 ...</p>
                             <a href="#" class="btn">자세히보기
                             </a>
@@ -164,7 +235,7 @@
                             <h3 class="title">'음지식물' 꽁꽁 숨겨두지 마세요</h3>
                             <p class="desc">흔히 '음지식물'이라고 부르는 빛 요구도가 낮은
                                 식물들이 있어요. 하지만 이런 음지식물들을 빛
-                                을 못 받는 어둠 속에서 키우면 식물의 성장이 
+                                을 못 받는 어둠 속에서 키우면 식물의 성장이
                                 더뎌지거나, 마디가 길어지거나, 쉽게 과습이 ...</p>
                             <a href="#" class="btn">자세히보기
                             </a>
@@ -186,75 +257,75 @@
                     </article>
                 </div>
             </div>
-            </section>
-            <!-- //cardType -->
-            <section id="bannerType" class="nexon section center">
-                <h2 class="blind">배너영역</h2>
-                <div class="banner__inner container">
-                    <h3>우리 집으로 숲을 가져오는 방법 </h3>
-                    <p>숲을 일상 공간으로 가져오고 싶은 마음에 식물 키우기를 시작합니다.<br>
-                        일상 공간에서 식물과 함께 하는 방법을 알아볼까요?  </p>
-                    <a href="">youtube.com/plenty</a>
-                </div>
-            </section>
-            <!-- //bannerType -->
-            <section id="textType" class="nexon section center">
-                <h2 class="blind">텍스트영역</h2>
+        </section>
+        <!-- //cardType -->
+        <section id="bannerType" class="nexon section center">
+            <h2 class="blind">배너영역</h2>
+            <div class="banner__inner container">
+                <h3>우리 집으로 숲을 가져오는 방법 </h3>
+                <p>숲을 일상 공간으로 가져오고 싶은 마음에 식물 키우기를 시작합니다.<br>
+                    일상 공간에서 식물과 함께 하는 방법을 알아볼까요? </p>
+                <a href="#">youtube.com/plenty</a>
+            </div>
+        </section>
+        <!-- //bannerType -->
+        <section id="textType" class="nexon section center">
+            <h2 class="blind">텍스트영역</h2>
 
-                <span class="section__small">NOTICE</span>
-                <h2 class="section__h2 mb70">나에게 맞는 반려식물 고르기</h2>
-                <div class="text__inner container">
-                    <div class="text t1">
-                        <h3 class="text__title">건강 관심형</h3>
-                        <p class="text__desc">스투키는 사막에 살던 다육식물로 물을 자주 줄 
-                            필요가 없어 키우기 쉬운 편에 속합니다. 또 밤에 
-                            이산화탄소를 배출하는 보통 식물과는 달리, 밤에
-                            이산화탄소를 흡수하고 산소를 배출해 침실에...</p>
-                         <a class="text__btn" href="#">더보기</a>   
-                    </div>
-                    <div class="text t2">
-                        <h3 class="text__title">깜빡깜빡형</h3>
-                        <p class="text__desc">식물에 물 주는 것을 자꾸 깜빡~깜빡하는 분들은
-                            주목해 주세요! 고무나무는 열대지방 일대 식물로
-                            건조한 환경에 강해 관리하기 쉬워요. 특성상 일
-                            시적으로 물이 부족하다고 쉽게 죽지 않으니, ..</p>
-                         <a class="text__btn" href="#">더보기</a>
-                    </div>
-                    <div class="text t3">
-                        <h3 class="text__title">훌쩍훌쩍형</h3>
-                        <p class="text__desc">청량한 향으로 많은 이들의 사랑을 받고 있는
-                            유칼립투스! 봄철 알레르기성 비염으로 고생하는
-                            분들에게 특효과를 가져다준다고 하는데요. 겨울
-                            에는 물주는 주기를 길게 잡고 속과 겉의 흙이 ...</p>
-                         <a class="text__btn" href="#">더보기</a>
-                    </div>
-                    <div class="text t4">
-                        <h3 class="text__title">호기심가득형</h3>
-                        <p class="text__desc">평소 알고 있던 잎의 모양과 달리 몬스테라의 잎
-                            은 구멍이 듬성듬성~ 독특하게 생겼죠. 생소한 잎
-                            의 모양 때문에 라틴어 'monstrum(이상하다)'에
-                            서 유래되었으며, 잎에 난 구멍이 스위스 치즈와..</p>
-                         <a class="text__btn" href="#">더보기</a>
-                    </div>
-                    <div class="text t5">
-                        <h3 class="text__title">통통튀는 예술가형</h3>
-                        <p class="text__desc">​흙과 화분 없이도 키울 수 있는 공중 식물로 유명
-                            한 탈란드시아 이오난사! 기존 발상을 뒤집는 통
-                            통 튀는 매력의 식물인데요. 이 식물은 뿌리가 아
-                            닌 잎으로 필요한 영양분을 주변 환경에서 흡수...</p>
-                         <a class="text__btn" href="#">더보기</a>
-                    </div>
-                    <div class="text t6">
-                        <h3 class="text__title">건강 관심형</h3>
-                        <p class="text__desc">반려식물은 식물을 인생의 동반자로 생각해 붙여
-                            진 이름입니다. 반려동물을 키우는 것과 비교해 
-                            상대적으로 비용과 노력이 적게 들지만 비슷한 효과를
-                             가져온다고 해요. 전국 만 19~59세...</p>
-                         <a class="text__btn" href="#">더보기</a>
-                    </div>            
+            <span class="section__small">NOTICE</span>
+            <h2 class="section__h2 mb70">나에게 맞는 반려식물 고르기</h2>
+            <div class="text__inner container">
+                <div class="text t1">
+                    <h3 class="text__title">건강 관심형</h3>
+                    <p class="text__desc">스투키는 사막에 살던 다육식물로 물을 자주 줄
+                        필요가 없어 키우기 쉬운 편에 속합니다. 또 밤에
+                        이산화탄소를 배출하는 보통 식물과는 달리, 밤에
+                        이산화탄소를 흡수하고 산소를 배출해 침실에...</p>
+                    <a class="text__btn" href="#">더보기</a>
                 </div>
-            </section>
-            <!-- //textType -->
+                <div class="text t2">
+                    <h3 class="text__title">깜빡깜빡형</h3>
+                    <p class="text__desc">식물에 물 주는 것을 자꾸 깜빡~깜빡하는 분들은
+                        주목해 주세요! 고무나무는 열대지방 일대 식물로
+                        건조한 환경에 강해 관리하기 쉬워요. 특성상 일
+                        시적으로 물이 부족하다고 쉽게 죽지 않으니, ..</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">훌쩍훌쩍형</h3>
+                    <p class="text__desc">청량한 향으로 많은 이들의 사랑을 받고 있는
+                        유칼립투스! 봄철 알레르기성 비염으로 고생하는
+                        분들에게 특효과를 가져다준다고 하는데요. 겨울
+                        에는 물주는 주기를 길게 잡고 속과 겉의 흙이 ...</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">호기심가득형</h3>
+                    <p class="text__desc">평소 알고 있던 잎의 모양과 달리 몬스테라의 잎
+                        은 구멍이 듬성듬성~ 독특하게 생겼죠. 생소한 잎
+                        의 모양 때문에 라틴어 'monstrum(이상하다)'에
+                        서 유래되었으며, 잎에 난 구멍이 스위스 치즈와..</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">통통튀는 예술가형</h3>
+                    <p class="text__desc">​흙과 화분 없이도 키울 수 있는 공중 식물로 유명
+                        한 탈란드시아 이오난사! 기존 발상을 뒤집는 통
+                        통 튀는 매력의 식물인데요. 이 식물은 뿌리가 아
+                        닌 잎으로 필요한 영양분을 주변 환경에서 흡수...</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">건강 관심형</h3>
+                    <p class="text__desc">반려식물은 식물을 인생의 동반자로 생각해 붙여
+                        진 이름입니다. 반려동물을 키우는 것과 비교해
+                        상대적으로 비용과 노력이 적게 들지만 비슷한 효과를
+                        가져온다고 해요. 전국 만 19~59세...</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+            </div>
+        </section>
+        <!-- //textType -->
 
     </main>
     <!-- //main -->
@@ -319,10 +390,48 @@
         <address class="footer__right">
             2023 PLENTY<br>ALL RIGHT RESERVED
         </address>
-    </div>
+        </div>
     </footer>
     <!-- //footerType -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,//페이지 넘김을 누르면 자동 슬라이드가 안되는것을 제거
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
 
 
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+
+        btnStart.style.display ="none";
+
+        btnStop.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
+        btnStart.addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+
+        });
+    </script>
 </body>
+
 </html>
