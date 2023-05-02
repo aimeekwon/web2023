@@ -208,6 +208,10 @@
     width: 50px;
     border-radius: 5px;
 }
+
+.music__list ul li .playing {
+    
+}
 .music__list ul li span:nth-child(2) {
     width: 60%;
     display: flex;
