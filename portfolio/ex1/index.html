@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio_ex01</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abel" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900');
+
+        * {
+            /* font-family: 'Montserrat', sans-serif; */
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-CondensedRegular';
+            src: url('PPNeueWorld-CondensedRegular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-CondensedRegular';
+            src: url('PPNeueWorld-CondensedRegular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-ExtendedThin';
+            src: url('PPNeueWorld-ExtendedThin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-ExtendedThin';
+            src: url('PPNeueWorld-ExtendedThin.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-Regular';
+            src: url('PPNeueWorld-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-Regular';
+            src: url('PPNeueWorld-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SemiCondensedUltrabold';
+            src: url('PPNeueWorld-SemiCondensedUltrabold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SemiCondensedUltrabold';
+            src: url('PPNeueWorld-SemiCondensedUltrabold.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SemiExtendedBlack';
+            src: url('PPNeueWorld-SemiExtendedBlack.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SemiExtendedBlack';
+            src: url('PPNeueWorld-SemiExtendedBlack.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SuperCondensedLight';
+            src: url('PPNeueWorld-SuperCondensedLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SuperCondensedLight';
+            src: url('PPNeueWorld-SuperCondensedLight.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-Thin';
+            src: url('PPNeueWorld-Thin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /*  */
+        @font-face {
+            font-family: 'PPNeueWorld-Thin';
+            src: url('PPNeueWorld-Thin.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: #0b130d;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* header */
+        #header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            color: #fff;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 10px 20px;
+            font-family: 'Abel';
+            z-index: 1000;
+        }
+
+        #header h1 {
+            font-weight: normal;
+            color: #d2e3cd;
+            font-size: 28px;
+        }
+
+        #header nav li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        #header nav li a {
+            text-transform: uppercase;
+            color: #d2e3cd;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        #footer {
+            position: fixed;
+            left: 50%;
+            bottom: 1vw;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        #footer a {
+            color: #fff;
+            font-family: 'Abel';
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+
+        #main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .text__inner {
+            text-align: center;
+            color: #D2E3C0;
+        }
+
+        .text__inner>div {
+            font-size: 6vw;
+            line-height: 1;
+            z-index: 2000;
+            position: relative;
+        }
+
+        .text__inner>div.ti1 {
+            font-family: 'Montserrat', sans-serif;
+
+            font-weight: 400;
+        }
+
+        .text__inner>div.ti1 em {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
+
+        }
+
+        .text__inner>div.ti2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
+            font-size: 9vw;
+
+            
+        }
+
+        .text__inner>div.ti2 >em {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-style: italic;
+            
+        }
+
+        .text__inner>div.ti3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .text__inner>div.ti3 em {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .img__inner>img {
+            width: 10vw;
+            position: absolute;
+            z-index: 500;
+        }
+
+        .img__inner .li1 {
+            left: 45%;
+            top: 50%;
+            transform: translateY(-180%);
+        }
+
+        .img__inner .li2 {
+            left: 10%;
+            top: 50%;
+            transform: rotate(80deg);
+        }
+
+        .img__inner .li3 {
+            right: 10%;
+            top: 60%;
+            transform: rotate(20deg) translateY(-180%);
+        }
+
+        #webgl {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+        #webgl iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Aimee's PORTFOLIO</h1>
+        <nav>
+            <ul>
+                <li><a href="#">work</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="text__inner">
+            <div class="ti1">LET'S <em>INTRODUCE</em></div>
+            <div class="ti2 split"><em>frontend</em> developer's</div>
+            <div class="ti3"><em>LET'S</em> INTRODUCE</div>
+        </div>
+        <div class="img__inner">
+            <img class="li1" src="img/figure01.png" alt="">
+            <img class="li2" src="img/figure02.png" alt="">
+            <img class="li3" src="img/figure03.png" alt="">
+
+        </div>
+        <div id="webgl">
+            <iframe src="three.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="aimee00418@gmail.com" target="_blank">aimee00418.dothome.co.kr</a>
+    </footer>
+    <!-- //footer -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        //글씨 분리하기 
+        document.querySelectorAll(".split").forEach(desc => {
+            let splitText = desc.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+            splitWrap = "<span>" + splitWrap + "</span>";
+            desc.innerHTML = splitWrap;
+            desc.setAttribute("aria-label", splitText);
+
+            console.log(splitWrap)
+
+
+        });
+
+
+
+
+        //메인 기본 세팅
+        gsap.set(".text__inner .ti1", { opacity: 0, y: "10vh" });
+        gsap.set(".text__inner .ti2 span", { opacity: 0, x: 500, scale: 2, display: 'inline-block', minWidth: "1.4vw" });
+        gsap.set(".text__inner .ti3", { opacity: 0, y: "-10vh" });
+        gsap.set(".img__inner .li1", { opacity: 0 });
+        gsap.set(".img__inner .li2", { opacity: 0 });
+        gsap.set(".img__inner .li3", { opacity: 0 });
+        gsap.set("#header",{y: -100});
+        gsap.set("#footer",{y: 100});
+        gsap.set("#webgl",{opacity: 0});
+
+        //메인 애니메이션
+
+
+        setTimeout(() => {
+            let tl = gsap.timeline();
+
+            tl.to(".text__inner .ti2 span", { opacity: 1, x: 0, scale: 1, rotation: 0, duration: 0.6, stagger: 0.1, ease: Power3.easeInOut })
+            tl.to(".text__inner .ti1", { opacity: 1, y: 0, duration: 0.5, ease: Circ.easeOut }, "aimee +=0.5")
+            tl.to(".text__inner .ti3", { opacity: 1, y: 0, duration: 0.5, ease: Circ.easeOut }, "aimee +=0.5")
+            tl.to(".img__inner .li1", {duration:0.5, opacity: 1})
+            tl.to(".img__inner .li3", {duration:0.5, opacity: 1})
+            tl.to(".img__inner .li2", {duration:0.5, opacity: 1, ease: Circ.easeOut})
+            tl.to("#header",{y: 0}, "noh +=0.5")
+            tl.to("#footer",{y: 0}, "noh +=0.5")
+            tl.to("#webgl",{duration: 1, opacity: 1});
+        }, 3000);
+
+    </script>
+</body>
+
+</html>
