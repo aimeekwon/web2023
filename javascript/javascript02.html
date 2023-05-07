@@ -81,10 +81,6 @@
                     <li><a href="#">20. 객체 : 데이터 불러오기 : 객체 펼침연산자</a></li>
                     <li><a href="#">21. 객체 : 데이터 불러오기 : 객체 구조분해할당(비구조화 할당)</a></li>
                 </ul>
-
-                <ul>
-                    <li>형변화, typeof() </li>
-                </ul>
             </div>
             <div class="main__sample">
                 <!-- div#sample$$.sample*10  $$는 숫자를 넣어준다--> 
@@ -262,7 +258,16 @@
                         <details>
                             <summary>결과확인하기</summary>
                             <div>
-                                3                           
+                                i : 1 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 2 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 3 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 4 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 5 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 6 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 7 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 8 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 9 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 10 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10                          
                             </div>
                         </details>
                     </div>
@@ -359,6 +364,33 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4>(참고) forEach문을 화살표 함수로 생략</h4>
+                        <p>forEach문은 함수를 사용하기 때문에 화살표 함수를 사용할 수 있다.</p>
+    <pre><code class="language-js">                     
+        {
+            const num = [100, 200, 300, 400, 500];
+        
+            // forEach문
+            num.forEach(function(el){
+                document.write(el);
+            });
+        
+            //forEach문 : 화살표 함수
+            num.forEach((el) => {
+                document.write(el);
+            });
+        
+            //forEach문 : 화살표 함수 : 괄호 생략(매개변수가 한 개일때 사용가능합니다.)
+            num.forEach(el => {
+                document.write(el);
+            });
+        
+            //forEach문 : 화살표 함수 : 괄호 생략 + 중괄호 생략
+            num.forEach(el => document.write(el));
+        
+        }
+    </code></pre>
                 </div>
                 <!-- //sample08 -->   
                 <div id="sample09" class="sample">
@@ -504,7 +536,7 @@
                 <!-- //sample13 --> 
                 <div id="sample14" class="sample">
                     <h3>14. 객체 : 데이터 불러오기 : 기본</h3>
-                    <p></p>
+                    <p>객체의 데이터를 불러오는 기본적인 방법이다.</p>
 <pre class="line-numbers"><code class="language-js">
     const obj = {
         a: 100,
@@ -529,7 +561,7 @@
                 <!-- //sample14 --> 
                 <div id="sample15" class="sample">
                     <h3>15. 객체 : 데이터 불러오기 : Object</h3>
-                    <p></p>
+                    <p>객체의 데이터를 키 및 값 또는 키와 값 모두를 불러오는 방법이다.</p>
 <pre class="line-numbers"><code class="language-js">
     const obj = {
         a: 100,
@@ -554,7 +586,7 @@
                 <!-- //sampl15 --> 
                 <div id="sample16" class="sample">
                     <h3>16. 객체 : 데이터 불러오기 : 변수</h3>
-                    <p></p>
+                    <p>객체의 키와 값을 변수로 설정하고 출력값에 변수를 입력하여 불러오는 방법이다.</p>
 <pre class="line-numbers"><code class="language-js">
     
     const name1 = obj.a;
@@ -579,7 +611,7 @@
                 <!-- //sample16 --> 
                 <div id="sample17" class="sample">
                     <h3>17. 객체 : 데이터 불러오기 : for in</h3>
-                    <p></p>
+                    <p>for in문을 사용하여 객체의 데이터를 불러오는 방법이다.</p>
 <pre class="line-numbers"><code class="language-js">
     const obj = {
         a: 100,
@@ -634,7 +666,8 @@ obj.map(function(el){
                 <!-- //sample18 --> 
                 <div id="sample19" class="sample">
                     <h3>19. 객체 : 데이터 불러오기 : hasOwnProperty()</h3>
-                    <p></p>
+                    <p>객체에 특정 속성이 존재하는지 여부를 나타내는 불리언 값을 반환한다.<br>
+                    해당 속성이 객체 자신의 속성으로 존재하면 <b>true</b>, 해당 속성이 존재하지 않으면 <b>false</b>를 반환한다.</p>
 <pre class="line-numbers"><code class="language-js">
     const obj = {
         a: 100,
@@ -660,11 +693,12 @@ obj.map(function(el){
                             </div>
                         </details>
                     </div>
+
                 </div>
                 <!-- //sample19 --> 
                 <div id="sample20" class="sample">
                     <h3>20. 객체 : 데이터 불러오기 : 객체 펼침연산자</h3>
-                    <p></p>
+                    <p>펼침 연산자는 배열, 객체, 문자열 등의 요소를 펼쳐서 개별 요소로 분리하는 연산자이며, 데이터를 추가해서 불러오거나 합칠 수도 있다.</p>
 <pre class="line-numbers"><code class="language-js">
     const obj = {
         a: 100,
@@ -704,11 +738,49 @@ obj.map(function(el){
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4>데이터 추가, 합침 예시</h4>
+<pre><code class="language-js">                     
+    { // 데이터 추가
+        const obj = {
+            a: 100,
+            b: 200,
+            c: "javascript"
+        }
+        const spread = {...obj, d: "react"};    // 데이터를 추가로 입력해서 출력이 가능합니다.
+    
+        console.log(spread.a);      // 100
+        console.log(spread.b);      // 200  
+        console.log(spread.c);      // javascript
+        console.log(spread.d);      // react
+    }
+</code></pre>
+<pre><code class="language-js">                     
+    { // 두 개의 데이터 합침
+        const obj1 = {
+            a: 100,
+            b: 200
+        }
+    
+        const obj2 = {
+            c: "javascript",
+            d: "react"
+        }
+    
+        const spread = {...obj1, ...obj2};      // 두 개의 데이터를 합쳐서 출력이 가능합니다.
+    
+        console.log(spread.a);      // 100
+        console.log(spread.b);      // 200  
+        console.log(spread.c);      // javascript
+        console.log(spread.d);      // react
+    }
+</code></pre>
+                    </div>
                 </div>
                 <!-- //sample20 --> 
                 <div id="sample21" class="sample">
                     <h3>21. 객체 : 데이터 불러오기 : 객체 구조분해할당(비구조화 할당)</h3>
-                    <p></p>
+                    <p>객체의 속성들을 변수로 분해하여 할당한다.</p>
 <pre class="line-numbers"><code class="language-js">
     const obj = {
         a: 100,
@@ -741,6 +813,24 @@ obj.map(function(el){
                                 100200javascriptreact
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4>활용 예시</h4>
+<pre><code class="language-js">                     
+    {
+        const obj = {
+            a: 100,
+            b: 200,
+            c: "javascript"
+        }
+    
+        const {a:name1, b:name2, c:name3} = obj;
+    
+        console.log(name1);     // 100
+        console.log(name2);     // 200
+        console.log(name3);     // javascript
+    }
+</code></pre>
                     </div>
                 </div>
                 <!-- //sample21 --> 
