@@ -13,10 +13,10 @@
 @import "intro.css";
 
 /* * Join */ 
-@import "/html/assets/css/LOGIN/join.css";
+@import "LOGIN/join.css";
 
 /* login */
-@import "/html/assets/css/LOGIN/login.css";
+@import "LOGIN/login.css";
 
 /* login */
 @import "board.css";

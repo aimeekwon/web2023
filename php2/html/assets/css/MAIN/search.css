@@ -1,7 +1,7 @@
 .searchType__wrap {
     width: 100%;
     height: 800px;
-    background-image: url(/html/assets/img/MAIN/search__img01.png);
+    background-image: url(../../img/MAIN/search__img01.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,7 +42,7 @@
     position: absolute;
     top: 23px;
     left: 37%;
-    background-image: url(/html/assets/img/MAIN/search__icon01.png);
+    background-image: url(../../img/MAIN/search__icon01.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

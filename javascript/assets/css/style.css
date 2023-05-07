@@ -1,6 +1,8 @@
 
         /* 웹폰트 */
         @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
         /* 여백초기화 */
         *{
             margin: 0;
