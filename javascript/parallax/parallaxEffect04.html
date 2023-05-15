@@ -1,54 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" parallax="IE=edge">
     <meta name="viewport" parallax="width=device-width, initial-scale=1.0">
-    <title>02. 패럴랙스 이펙트</title>
+    <title>04. 패럴랙스 이펙트</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
+<style>
+/* 한번에  */
+/* .parallax__wrap > section {
+    opacity: 0;
+    transition: all 1s;
+}
+.parallax__wrap > section.show  {
+    opacity: 1;
+    transition: all 1s;
+} */
+/* 개별적으로 나타내기 */
+.parallax__wrap > section .parallax__item__num {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1s 0.1s cubic-bezier(0,0.49, 0.25, 1);
+}
+.parallax__wrap > section .parallax__item__title {
+    opacity: 0;
+    transform: translateX(200px) rotate(30deg) skew(20deg);
+    transition: all 0.6s 0.3s cubic-bezier(0,0.49, 0.25, 1);
+}
+.parallax__wrap > section:nth-child(even) .parallax__item__title {
+
+    transform: translateX(-200px) rotate(30deg) skew(20deg);
+}
+.parallax__wrap > section .parallax__item__imgWrap {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 0.6s 0.3s cubic-bezier(0,0.49, 0.25, 1);
+}
+.parallax__wrap > section .parallax__item__desc {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.6s 0.3s ;
+}
+.parallax__wrap > section:nth-child(even) .parallax__item__desc {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.6s 0.3s ;
+}
+
+
+.parallax__wrap > section.show .parallax__item__num{
+    transform: translateY(0);
+    opacity: 0.07;
+}
+.parallax__wrap > section.show .parallax__item__title {
+    opacity: 1;
+    transform: translateX(0);
+}
+.parallax__wrap > section.show .parallax__item__imgWrap {
+    opacity: 1;
+    transform: translateY(0);
+}
+.parallax__wrap > section.show .parallax__item__desc {
+    opacity: 1;
+    transform: translateX(0);
+}
+</style>
+
 <body class="img01 bg01 font01">
     <header id="header">
-        <h1>Javascript parallax Effect02</h1>
+        <h1>Javascript parallax Effect04</h1>
         <p>패럴랙스 이펙트</p>
         <ul>
-            <li><a  href="parallaxEffect01.html">1</a></li>
-            <li class="active"><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
             <li><a href="parallaxEffect03.html">3</a></li>
-            <li><a href="parallaxEffect04.html">4</a></li>
+            <li class="active"><a href="parallaxEffect04.html">4</a></li>
             <li><a href="parallaxEffect05.html">5</a></li>
             <li><a href="parallaxEffect06.html">6</a></li>
-            <li><a href="parallaxEffect07.html">7</a></li>
-            
-
-  
+            <li><a href="parallaxEffect06.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
-    <nav class="parallax__dot">
-        <ul>
-            <!-- li*9>a[href="#section$"]{메뉴$} -->
-            <li class="active"><a href="#section1">메뉴1</a></li>
-            <li><a href="#section2">메뉴2</a></li>
-            <li><a href="#section3">메뉴3</a></li>
-            <li><a href="#section4">메뉴4</a></li>
-            <li><a href="#section5">메뉴5</a></li>
-            <li><a href="#section6">메뉴6</a></li>
-            <li><a href="#section7">메뉴7</a></li>
-            <li><a href="#section8">메뉴8</a></li>
-            <li><a href="#section9">메뉴9</a></li>
 
-        </ul>
-    </nav>
-
-    <!-- //parallax__dot -->
+    <!-- //parallax__nav -->
     <main id="main">
-        <div class=""parallax__wrap>
+        <div class="parallax__wrap">
 
             <section id="section1" class="parallax__item">
-                <span class="parallax__item__num active">01</span>
+                <span class="parallax__item__num">01</span>
                 <h2 class="parallax__item__title">section1</h2>
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
@@ -56,7 +100,7 @@
                 <p class="parallax__item__desc">시간은 금이다</p>
             </section><!--//section1-->
             <section id="section2" class="parallax__item">
-                <span class="parallax__item__num active">02</span>
+                <span class="parallax__item__num">02</span>
                 <h2 class="parallax__item__title">section2</h2>
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
@@ -64,7 +108,7 @@
                 <p class="parallax__item__desc">배우고 때때로 익히면 또한 기쁘지 않겠는가</p>
             </section><!--//section2-->
             <section id="section3" class="parallax__item">
-                <span class="parallax__item__num active">03</span>
+                <span class="parallax__item__num">03</span>
                 <h2 class="parallax__item__title">section3</h2>
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
@@ -120,59 +164,30 @@
                 <p class="parallax__item__desc">군자는 말에 앞서 행동하고, 그 다음에 그에 따라 말을 해야 한다</p>
             </section><!--//section9-->
         </div>
-    
-        </main>
+
+    </main>
     <!-- //main -->
 
 
-
-    <aside class="parallax__info">
-        <div class="scroll">scrollTop : <span>0</span>px</div>
-
-    </aside>
-    
     <footer id="footer">
         <a href="mailto:aimee00418@gmail.com">aimee00418@gmail.com</a>
     </footer>
     <!-- //footer -->
     <script>
-        document.querySelectorAll(".parallax__dot li a").forEach(dot => {
-            dot.addEventListener("click", e => {
-                e.preventDefault();
-                document.querySelector(dot.getAttribute("href")).scrollIntoView({behavor: "smooth"});
-            })
-        });
-
-        window.addEventListener("scroll", ()=> {
+        function scroll(){
             let scrollTop = window.pageYOffset || window.scrollY;
-            document.querySelector(".parallax__info .scroll span").innerText = parseInt(scrollTop)
 
-            document.querySelectorAll(".parallax__item").forEach((item, num) => {
-                if(scrollTop >= item.offsetTop -2){
-                    document.querySelectorAll(".parallax__dot li").forEach(li => {
-                        li.classList.remove("active");
-                    });
-                    document.querySelector(".parallax__dot li:nth-child("+(num+1)+")").classList.add("active")
+
+            document.querySelectorAll(".parallax__item").forEach(item => {
+                if(scrollTop > item.offsetTop - window.innerHeight/2){
+                    item.classList.add("show");
                 }
             })
-            if(".parallax__dot li.active"){
-                document.querySelector(".parallax__item__num").style.z-index = '-999';
-            }
 
-        })
-
-    // window. scroll(0, 10000);
-    // window. scroll({left: 100, top: 4000});
-    // window. scroll({left: 100, top: 4000, behavior:"smooth"}); 
-    
-    // window. scrollTo(0, 1000); 
-    // window. scrollTo({left: 0, top: 1000}); 
-    // window. scrollTo({left: 0, top: 1000, behavior:"smooth"}); 
-    
-    // window. scrollBy(0, 1000); 
-    // window. scrollBy({left: 0, top: 1000}); 
-    // window. scrollBy({left: 0, top: 1000, behavior:"smooth"}); 
-      
-   </script>
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+    </script>
 </body>
+
 </html>
