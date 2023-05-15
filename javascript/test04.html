@@ -1,187 +1,181 @@
+
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en" >
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0310_test04</title>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+  <title>CodePen - Zdog Like &lt;3</title>
+    <link rel="canonical" href="https://codepen.io/kotAndy/pen/gJBXNK" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+  
+<style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #232323;
+  color: #fff;
+  font-family: "Space Mono", monospace;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
 </head>
-<body>
-    <script>
-        //01. 0~100
-        {
-            for(let i=0; i<=100; i++){
-                document.write(i);
-            }
-        }
-        {
-            let table = "<table border='1'>"
-                for(let i=1; i<=10; i++){
-                    table += "<tr>";
-                        for(let j=1; j<=10; j++){
-                            table += "<td>"+j+"</td>";
-                        }
-                        table += "</tr>"
-                }
-                table += "</table>";
-                document.write(table)
-        }
-        //구구단 20단
-        {
-            for(let i=20; i<21; i++){
-                document.write(i,"<br>")
-                for(let j=1; j<10; j++){
-                    document.write(i +"*"+j+"="+i*j,"<br>")
-                }
-            }
-        }
-        //4. 1-100까지 짝수의 합
-        { 
-            let sum=0;
-            for(let i=0; i<=100; i+=2){
-                sum +=i
-            }
-            document.write(sum,"<br>")
-        } 
-        {
-            let sum=0;
-            for(let i=0; i<=100; i++){
-                if(i%2==0){
-                    document.write
-                }
-            }
-        }
-        //5. 1-100까지 출력(짝수는 파란색 홀수는 빨간색)
-        {
-            for(let i=1; i<=100; i++){
-                if(i %2 ==0){
-                    document.write("<span style='color:red'>"+i+"</span>")
-                }else {document.write("<span style='color:blue'>"+i+"</span>")}
-            }
-        }   
-        document.write("<br>");
-        //6. 배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
-        {
-            let arr = [1,2,3,4,5,6,7,8,9,10];
-            arr.forEach(aa =>{
-                document.write(aa);
-            })
 
-           
-        }
-        document.write("<br>")
-        {
-        //배열 : 데이터 불러오기
-            let arr = [1,2,3,4,5,6,7,8,9]
-            arr.forEach(function(el){
-                document.write(el)
-            })
-        }
-        document.write("<br>");
-        //7. 함수의 유형 4가지
-        {
-            function func(){
-                document.write("선언함수","<br>")
-            }
-            func()
-        }
-        {
-            const func = function(){
-                document.write("익명함수","<br>")
-            }
-            func()
-        }
-        {
-            function func(str){
-                document.write(str)
-            }
-            func("매개변수","<br>")
-        }
-        {
-            function func(){
-               
-                return document.write("리턴함수","<br>");
-            }
-            func();
-        }
-        //8. 7번을 화살표 함수로
-        {
-            function func(){
-                document.write("선언함수","<br>")
-            }
-            func()
-        }
-        {
-            const func = function(){
-                document.write("익명함수","<br>")
-            }
-            func()
-        }
-        {
-            function func(str){
-                document.write(str)
-            }
-            func("매개변수","<br>")
-        }
-        {
-            function func(){
-               
-                return document.write("리턴함수","<br>");
-            }
-            func();
-        }
-        {
-            function func(){
-                document.write("선언")
-            }
-            func()
-        }
-        {
-            const func = function(){
-                document.write("익명")
-            }
-            func()
-        }
-        {
-            function func(str){
-                document.write(str)
-            }
-            func("매개변수")
-        }
-        {
-            function func(){
-                const str = "리턴";
-                return str;
-            }
-            document.write(func())
+<body translate="no">
+  <canvas class="illo"></canvas>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
 
-        }
-        {
-            func= () => {
-                document.write("선언")
-            }
-            func()
-        }
-        {
-            const func = () =>{
-                document.write("익명")
-            }
-            func()
-        }
-        {
-            func = (str) =>{
-                document.write(str)
-            }
-            func("매개변수")
-        }
-        {
-            func = () =>{
-                const str = "리턴";
-                return str;
-            }
-            document.write(func())
+  <script src='https://unpkg.com/zdog@1/dist/zdog.dist.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+      <script id="rendered-js" >
+const getRandom = (min, max) => {
+  return Math.random() * (max - min) + min;
+};
 
-        }
+const illoElem = document.querySelector('.illo');
+const w = 160;
+const h = 160;
+const minWindowSize = Math.min(window.innerWidth, window.innerHeight);
+const zoom = Math.min(20, Math.floor(minWindowSize / w));
+illoElem.setAttribute('width', w * zoom);
+illoElem.setAttribute('height', h * zoom);
+
+let illo = new Zdog.Illustration({
+  element: illoElem,
+  dragRotate: true });
+
+
+const TAU = Math.PI * 2; // easier to read constant
+
+// fill bubble
+new Zdog.RoundedRect({
+  addTo: illo,
+  width: 120,
+  height: 80,
+  fill: true,
+  stroke: 4,
+  cornerRadius: 14,
+  color: '#fe6e7b' });
+
+new Zdog.Shape({
+  addTo: illo,
+  path: [
+  { x: 20, y: 40 },
+  { x: 0, y: 60 },
+  { x: -20, y: 40 }],
+
+  stroke: 4,
+  fill: true,
+  closed: false,
+  color: '#fe6e7b' });
+
+
+// shape heart
+var heartPath = (() => {
+  let path = [];
+  const radius = 1.3;
+  for (let i = 0; i < 7; i += 0.1) {if (window.CP.shouldStopExecution(0)) break;
+    let point = {
+      x: radius * 16 * Math.pow(Math.sin(i), 3) * radius,
+      y: -radius * (13 * Math.cos(i) * radius - 5 * Math.cos(2 * i) - 2 * Math.cos(3 * i) - Math.cos(4 * i)) };
+
+    path.push(point);
+  }window.CP.exitedLoop(0);
+  return path;
+})();
+
+new Zdog.Shape({
+  addTo: illo,
+  path: heartPath,
+  closed: false,
+  stroke: 2,
+  color: '#fff',
+  fill: true,
+  translate: {
+    z: 10 } });
+
+
+
+// star shape
+var starPath = (() => {
+  let path = [];
+  const starRadiusA = 25;
+  const starRadiusB = 15;
+  for (let i = 0; i < 10; i++) {if (window.CP.shouldStopExecution(1)) break;
+    let radius = i % 2 ? starRadiusA : starRadiusB;
+    let angle = TAU * i / 10 + TAU / 4;
+    let point = {
+      x: Math.cos(angle) * radius,
+      y: Math.sin(angle) * radius };
+
+    path.push(point);
+  }window.CP.exitedLoop(1);
+  return path;
+})();
+
+new Zdog.Shape({
+  addTo: illo,
+  path: starPath,
+  translate: { z: -10 },
+  lineWidth: 2,
+  color: '#fff',
+  fill: true });
+
+
+// render & animate
+const deg = Math.PI / 180;
+
+const moveLike = new TimelineMax();
+moveLike.to({ my: 0 }, 5, {
+  my: -20,
+  onUpdate: function () {
+    illo.translate.y = this.target.my;
+    illo.updateRenderGraph();
+  },
+  ease: Back.easeInOut.config(1.7),
+  repeat: -1,
+  yoyo: true });
+
+
+const rotateLike = new TimelineMax();
+rotateLike.to({ ry: 0 }, 3, {
+  ry: 360,
+  onUpdate: function () {
+    illo.rotate.y = this.target.ry * deg;
+    illo.updateRenderGraph();
+  },
+  ease: Power1.easeInOut,
+  repeat: -1,
+  yoyo: true });
+//# sourceURL=pen.js
     </script>
+
+  
 </body>
+
 </html>
