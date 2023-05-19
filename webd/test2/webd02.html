@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+
+</head>
+<style>
+    @font-face {
+    font-family: 'Tenada';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    body {
+        width: 100%;
+        font-family: 'Tenada';
+    }
+
+    #wrap {
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    #header {
+        width: 20%;
+        border-left: 1px solid #000;
+        text-align: center;
+    }
+
+    #header h1 {
+        background-image: url(assets/img/logo.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 80%;
+        height: 80px;
+        margin-bottom: 30px;
+
+    }
+
+    #header .menu {
+        width: 100%;
+    }
+
+    #header .menu>li {
+        text-align: center;
+        padding: 10px 0;
+        margin: 0px 10px;
+        border: 1px solid #CBE4DE;
+        position: relative;
+        display: block;
+    }
+
+    #header .menu>li>a {
+        font-size: 18px;
+        color: #2C3333;
+        font-weight: bold;
+    }
+
+    #header .menu>li>a:hover {
+        color: #0E8388;
+    }
+
+    #header .menu>li>.submenu {
+        display: none;
+        position: absolute;
+        left: 150px;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+
+    #header .menu>li>.submenu>li {
+        padding: 10px;
+       
+
+    }
+
+    #header .menu>li>.submenu>li>a {
+        font-size: 16px;
+        color: #fff;
+        display: block;
+    }
+
+    /*  */
+    #main {
+        width: 80%;
+        /* background-color: #2E4F4F; */
+    }
+
+    #slide {
+        width: 100%;
+        height: 350px;
+        background-color: #0E8388;
+        position: relative;
+    }
+
+    #slide .slide {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+
+    #slide .slide img {
+        vertical-align: top;
+    }
+
+    #section {
+        width: 100%;
+        height: 200px;
+        background-color: #CBE4DE;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+    .section__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #section .sec {
+        width: 33.33%;
+        height: 200px;
+    }
+    #section .sec:nth-child(1){
+        background-color: #0E8388;
+    }
+    #section .sec:nth-child(2){
+        background-color: #2e7173;
+    }
+    #section .sec:nth-child(3){
+        background-color: #6e9092;
+    }
+    #footer {
+        width: 100%;
+        height: 100px;
+
+    }
+
+    .footer__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer__inner .foot1 {
+        width: 20%;
+        background-image: url(assets/img/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100px;
+        background-position: center center;
+    }
+
+    .footer__inner .foot2 {
+        width: 60%;
+        background-color: #2C3333;
+        height: 100px;
+
+    }
+
+    .footer__inner .foot3 {
+        width: 20%;
+        background-color: #0E8388;
+        height: 100px;
+
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo">
+                <h1></h1>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">축제소개
+                        <ul class="submenu sub1">
+                            <li><a href="#">축제소개</a></li>
+                            <li><a href="#">예약안내</a></li>
+                            <li><a href="#">아티스트</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                        </ul>
+
+                    </a>
+                </li>
+                <li><a href="#">예약안내
+                        <ul class="submenu sub2">
+                            <li><a href="#">축제소개</a></li>
+                            <li><a href="#">예약안내</a></li>
+                            <li><a href="#">아티스트</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li><a href="#">아티스트
+                        <ul class="submenu sub3">
+                            <li><a href="#">축제소개</a></li>
+                            <li><a href="#">예약안내</a></li>
+                            <li><a href="#">아티스트</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li><a href="#">커뮤니티
+                        <ul class="submenu sub4">
+                            <li><a href="#">축제소개</a></li>
+                            <li><a href="#">예약안내</a></li>
+                            <li><a href="#">아티스트</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div id="main">
+            <div id="slide">
+                <div class="slide__inner">
+                    <div class="slide">
+                        <a href="#"><img src="assets/img/slide01.jpg" alt="페스티발"></a>
+                        <div class="text">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <a href="#"><img src="assets/img/slide02.jpg" alt="페스티발"></a>
+                        <div class="text">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <a href="#"><img src="assets/img/slide03.jpg" alt=" 페스티발"></a>
+                        <div class="text">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div id="section">
+                <div class="section__inner">
+                    <div class="sec">
+                        <h3>공지사항</h3>
+                    </div>
+                    <div class="sec">
+                        <h3>갤러리</h3>
+
+                    </div>
+                    <div class="sec">
+                        <h3>바로가기</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div id="footer">
+                <div class="footer__inner">
+                    <div class="foot1">
+                    </div>
+                    <div class="foot2">
+
+                    </div>
+                    <div class="foot3"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

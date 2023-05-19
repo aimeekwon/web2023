@@ -1,9 +1,9 @@
 $(function(){
     // 메뉴 : 하나씩 나오기
-    $(".nav > ul > li").mouseover(function(){
+    $(".menu > li").mouseover(function(){
         $(this).find(".submenu").stop().slideDown(200);
     });
-    $(".nav > ul > li").mouseout(function(){
+    $(".menu > li").mouseout(function(){
         $(this).find(".submenu").stop().slideUp(200);
     });
     //슬라이드 : 페이드 효과
