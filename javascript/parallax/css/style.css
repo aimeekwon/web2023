@@ -179,7 +179,7 @@ main {
 .parallax__item__imgWrap {
     width: 100%;
     padding-bottom: 56.25%;
-    background-color: #000;
+    /* background-color: #000; */
     position: relative;
     z-index: -1;
     overflow: hidden;
