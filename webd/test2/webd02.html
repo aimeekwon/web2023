@@ -12,11 +12,12 @@
 </head>
 <style>
     @font-face {
-    font-family: 'Tenada';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+        font-family: 'Tenada';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -94,7 +95,7 @@
 
     #header .menu>li>.submenu>li {
         padding: 10px;
-       
+
 
     }
 
@@ -110,19 +111,38 @@
         /* background-color: #2E4F4F; */
     }
 
+
+
+    #slide .silde__inner {
+        height: 100%;
+        width: 300%;
+        display: flex;
+    }
+
+    #slide .silde__inner .slide {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+
+    /*  */
     #slide {
         width: 100%;
         height: 350px;
         background-color: #0E8388;
         position: relative;
-    }
-
-    #slide .slide {
-        position: absolute;
-        left: 0;
-        top: 0;
+        overflow: hidden;
 
     }
+
 
     #slide .slide img {
         vertical-align: top;
@@ -149,15 +169,19 @@
         width: 33.33%;
         height: 200px;
     }
-    #section .sec:nth-child(1){
+
+    #section .sec:nth-child(1) {
         background-color: #0E8388;
     }
-    #section .sec:nth-child(2){
+
+    #section .sec:nth-child(2) {
         background-color: #2e7173;
     }
-    #section .sec:nth-child(3){
+
+    #section .sec:nth-child(3) {
         background-color: #6e9092;
     }
+
     #footer {
         width: 100%;
         height: 100px;
