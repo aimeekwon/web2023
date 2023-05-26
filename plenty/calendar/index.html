@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- fullcalendar CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css">
+    <style>
+        body {
+            width: 100%;
+        }
+
+        #calendar {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .check {
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='calendar'></div>
+
+    <!-- fullcalendar JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <!-- fullcalendar locale script -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    start: 'prev,next today',
+                    center: 'title',
+                    end: 'dayGridMonth,dayGridWeek,dayGridDay'
+                },
+                titleFormat: function (date) {
+                    return date.date.year + '년 ' + (parseInt(date.date.month) + 1) + '월';
+                },
+                selectable: true,
+                droppable: true,
+                editable: true,
+                nowIndicator: true,
+                locale: 'ko',
+                events: [],
+                eventClick: function (info) {
+                    // Handle event click here
+                    console.log('Event clicked:', info.event);
+                },
+                select: function (info) {
+                    // Handle date selection here
+                    console.log('Selected:', info.start, info.end);
+                    var title = prompt('Enter event title:');
+                    if (title) {
+                        calendar.addEvent({
+                            title: title,
+                            start: info.startStr,
+                            end: info.endStr,
+                            allDay: info.allDay
+                        });
+                    }
+                    calendar.unselect();
+                }
+            });
+
+            calendar.render();
+        });
+
+    </script>
+</body>
+
+</html>
