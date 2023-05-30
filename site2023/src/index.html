@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹표준 사이트 만들기</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/webs.svg" />
+
+  <meta name="author" content="웹스토리보이">
+  <meta name="description" content="웹스토리보이와 함께 만드는 사이트 튜토리얼입니다.">
+  <meta name="keyword" content="웹스토리보이, 사이트, 사이트 만들기, 튜토리얼">
+  <meta name="robots" content="all">
+</head>
+<body class="nanum9">
+  <div id="skip">
+
+    <a href="#sliderSection">슬라이드 영역 바로가기</a>
+    <a href="#introSection">소개 영역 바로가기</a>
+    <a href="#member">멤버 영역 바로가기</a>
+    <a href="#portSection">포트폴리오 영역 바로가기</a>
+    <a href="#youtubeSection">유튜브 영역 바로가기</a>
+    <a href="#unsplashSection">언스플래쉬 영역 바로가기</a>
+    <a href="#moviesSection">영화 영역 바로가기</a>
+    <a href="#reviewSection">리뷰 영역 바로가기</a>
+  </div>
+  <!-- //skip -->
+
+<header id="header" class="header__wrap" role="heading">
+  <div class="header__inner container">
+    <h1 class="header__logo">
+      <a href="#">web <em>site</em>
+
+      
+      </a>
+    </h1>
+    <nav class="header__nav" role="navigation">
+      <ul>
+        <li><a href="#introSection">소개</a></li>
+        <li><a href="#member">멤버</a></li>
+        <li><a href="#portSection">포트폴리오</a></li>
+        <li><a href="#youtubeSection">유튜브</a></li>
+        <li><a href="#unsplashSection">이미지</a></li>
+        <li><a href="#moviesSection">영화</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+</header>
+<!-- //header -->
+<main id="main">
+  <section id="sliderSection" class="slider__wrap section">
+    <div class="slider__inner">
+      <h2 class="blind">배너 슬라이더</h2>
+      <div class="slider__img">
+        <div class="silder s1 container">
+          <div class="text">
+            <h3>New <br>portfolio</h3>
+            <p>DESIRE<br>IMAGINE/</p>
+            <a href="#" class="more button-blue">more</a>
+          </div>
+          <div class="img" aria-label="hidden">
+            <img src="images/icon01.png" alt="이미지">
+            <img src="images/icon02.png" alt="이미지">
+            <img src="images/icon03.png" alt="이미지">
+          </div>
+          <div class="circle" aria-label="hidden">
+            <span class="circle c1"></span>
+            <span class="circle c2"></span>
+            <span class="circle c3"></span>
+            <span class="circle c4"></span>
+            <span class="circle c5"></span>
+            
+          </div>
+        </div>
+<!-- 
+        <div class="silder s2">
+          <h3>New <br>portfolio</h3>
+          <p>DESIRE<br>IMAGINE/</p>
+          <a href="#">more</a>
+        </div>
+        <div class="silder s3">
+          <h3>New <br>portfolio</h3>
+          <p>DESIRE<br>IMAGINE/</p>
+          <a href="#">more</a>
+        </div>
+         -->
+      </div>
+      <div class="slider__btn">
+        <a href="#" class="left"><span class="ir">이전이미지</span></a>
+        <a href="#" class="right"><span class="ir">다음이미지</span></a>
+      </div>
+      <div class="slider__dot">
+        <a href="#" class="dot active"><span class="ir">1번 이미지</span></a>
+        <a href="#" class="dot"><span class="ir">2번 이미지</span></a>
+        <a href="#" class="dot"><span class="ir">3번 이미지</span></a>
+      </div>
+    </div>
+  </section><!-- //slider__wrap -->
+  <section id="introSection" class="intro__wrap section bg_blue">
+    <h3 class="blind">커리큘럼 소개</h3>
+
+    <div class="intro__inner container">
+      <div class="intro__title">
+        <span>frontend</span>
+        <h3>프론트앤드<br> 과정</h3>
+
+        <p>프론트앤드 과정입니다</p>
+      </div>
+      <div class="intro__desc">
+        <div>
+          <h4 class="icon-bg1">React.js</h4>
+          <p>프론트앤드 과정입니다</p>
+        </div>
+        <div>
+          <h4 class="icon-bg2">Node.js</h4>
+          <p>프론트앤드 과정입니다</p>
+        </div>
+        <div>
+          <h4 class="icon-bg3">Vue.js</h4>
+          <p>프론트앤드 과정입니다</p>
+        </div>
+        <div>
+          <h4 class="icon-bg4">Next.js</h4>
+          <p>프론트앤드 과정입니다</p>
+        </div>
+
+
+      </div>
+    </div>
+  </section><!-- //intro__wrap -->
+  <section id="memberSection" class="member__wrap">
+    <div class="member__inner container">
+      <h3>멤버소개</h3>
+    </div>
+  </section><!-- //member__wrap -->
+  <section id="portSection" class="port__wrap">
+    <div class="port__inner container">
+      <h3>포트폴리오</h3>
+    </div>
+  </section><!-- //port__wrap -->
+  <section id="youtubeSection" class="youtube__wrap">
+    <div class="youtube__inner container">
+      <h3>유튜브</h3>
+    </div>
+  </section><!-- //youtube__wrap -->
+  <section id="unsplashSection" class="unsplash__wrap">
+    <div class="unsplash__inner container">
+      <h3>언스플래쉬</h3>
+    </div>
+  </section><!-- //unsplash__wrap -->
+  <section id="moviesSection" class="movies__wrap">
+    <div class="movies__inner container">
+      <h3>영화</h3>
+    </div>
+  </section><!-- //movies__wrap -->
+  <section id="reviewSection" class="review__wrap">
+    <div class="review__inner container">
+      <h3>리뷰</h3>
+    </div>
+  </section><!-- //review__wrap -->
+</main>
+<!-- //main -->
+<footer id="footer" class="footer__wrap" role="contentsInfo"></footer>
+<!-- //footer -->
+<script type="module" src="main.js"></script>
+</body>
+</html>
