@@ -19,4 +19,22 @@ $(function(){
     }, 3000)
     // 탭 메뉴
 
+
+
+        //이미지슬라이드
+        // let currentIndex = 0;
+      
+        // $(".slide__inner").append($(".slide").first().clone(true));
+    
+        // setInterval(function(){
+        //     currentIndex++;
+        //     $(".slide__inner").animate({marginLeft: -100*currentIndex+ "%" } ,600)
+        
+        //     if(currentIndex==3){
+        //         setTimeout(function(){
+        //             $(".slide__inner").animate({marginLeft: 0}, 0);
+        //             currentIndex = 0;
+        //         })
+        //     }
+        // },3000)
 });

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head> 
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,18 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz_copy1.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>  
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png"/> 
-    <link rel="apple-touch-icon" href="img/favicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
 
 </head>
+
 <body>
     <header id="header">
         <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인 CBT 유형</em></h1>
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
-            <li><a href="quizEffect02.html">2</a></li> 
+            <li><a href="quizEffect02.html">2</a></li>
             <li><a href="quizEffect03.html">3</a></li>
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
@@ -173,7 +175,7 @@
         let questionAll = [];                  //모든 퀴즈 정보
         let questionLength = 0;                //전체 문제수
         let questionRest = questionLength;     //남은 문제수
-        let questionTime = "";  
+        let questionTime = "";
         let questionTimeRemain = "1000";
 
         //시작하기
@@ -183,54 +185,54 @@
             //시간 설정
             questionTime = setInterval(reduceTime, 1000);
         }
- 
+
         //데이터 가져오기
         const dataQuestion = (value) => {
             fetch(`https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`)
-            .then(res => res.json())
-            .then(items => {
-                questionAll = items.map((item, index) => {
-                    const formattedQuestion = {
-                        question: item.question,
-                        number: index + 1
-                    }
-                    const answerChoices = [...item.incorrect_answers];  //오답 불러오기
-                    formattedQuestion.answer = Math.round(Math.random() * answerChoices.length) + 1;
-                    answerChoices.splice(formattedQuestion.answer-1, 0, item.correct_answer); 
+                .then(res => res.json())
+                .then(items => {
+                    questionAll = items.map((item, index) => {
+                        const formattedQuestion = {
+                            question: item.question,
+                            number: index + 1
+                        }
+                        const answerChoices = [...item.incorrect_answers];  //오답 불러오기
+                        formattedQuestion.answer = Math.round(Math.random() * answerChoices.length) + 1;
+                        answerChoices.splice(formattedQuestion.answer - 1, 0, item.correct_answer);
 
-                    //보기를 추가
-                    answerChoices.forEach((choice, index) => {                  
-                        formattedQuestion["choice" + (index+1)] = choice;
+                        //보기를 추가
+                        answerChoices.forEach((choice, index) => {
+                            formattedQuestion["choice" + (index + 1)] = choice;
+                        });
+
+                        //문제에 대한 해설이 있으면 출력
+                        if (item.hasOwnProperty("question_desc")) {
+                            formattedQuestion.question_desc = item.question_desc;
+                        }
+
+                        //문제에 대한 이미지가 있으면 출력
+                        if (item.hasOwnProperty("question_img")) {
+                            formattedQuestion.question_img = item.question_img;
+                        }
+
+                        //해설이 있으면 출력
+                        if (item.hasOwnProperty("desc")) {
+                            formattedQuestion.desc = item.desc;
+                        }
+
+                        //console.log(formattedQuestion);
+                        return formattedQuestion;
                     });
 
-                    //문제에 대한 해설이 있으면 출력
-                    if(item.hasOwnProperty("question_desc")){
-                        formattedQuestion.question_desc = item.question_desc;
-                    }
+                    newQuestion();  //문제 만들기
 
-                    //문제에 대한 이미지가 있으면 출력
-                    if(item.hasOwnProperty("question_img")){
-                        formattedQuestion.question_img = item.question_img;
-                    }
+                    //전체 문제수
+                    questionLength = questionAll.length;
+                    cbtLength.innerHTML = questionLength;
+                    cbtRest.innerHTML = questionLength;
 
-                    //해설이 있으면 출력
-                    if(item.hasOwnProperty("desc")){
-                        formattedQuestion.desc = item.desc;
-                    }
-
-                    //console.log(formattedQuestion);
-                    return formattedQuestion;
-                });
-
-                newQuestion();  //문제 만들기
-
-                //전체 문제수
-                questionLength = questionAll.length;
-                cbtLength.innerHTML = questionLength;
-                cbtRest.innerHTML = questionLength;
-
-            })
-            .catch((err) => console.log(err));
+                })
+                .catch((err) => console.log(err));
         }
 
         //문제 만들기
@@ -272,25 +274,25 @@
                     </div>
                 `)
             });
-        
+
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
 
             //설명없는 것 제거
-            document.querySelectorAll(".cbt__question__desc").forEach(desc =>{
-                if(desc.innerText === "undefined"){
+            document.querySelectorAll(".cbt__question__desc").forEach(desc => {
+                if (desc.innerText === "undefined") {
                     desc.classList.add("hide")
                 }
             })
-        
 
-        
+
+
             //이미지 없는 것 제거
 
-            document.querySelectorAll(".cbt__question__img").forEach(img =>{
+            document.querySelectorAll(".cbt__question__img").forEach(img => {
                 let src = img.querySelector("img").src;
 
-                if(src.includes("undefined")){
+                if (src.includes("undefined")) {
                     img.classList.add("hide")
                 }
             })
@@ -306,22 +308,22 @@
                 const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
 
-                if(numberAnswer == question.answer){
+                if (numberAnswer == question.answer) {
                     console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
                 } else {
                     console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
-                    
+
                     //오답 일 경우 정답 표시
                     const label = cbtSelects[number].querySelectorAll("label");
-                    label[question.answer-1].classList.add("correct");
+                    label[question.answer - 1].classList.add("correct");
                 }
 
                 // 설명 숨기기
                 const quizDesc = document.querySelectorAll(".cbt__desc");
 
-                if(quizDesc[number].innerText == "undefined"){
+                if (quizDesc[number].innerText == "undefined") {
                     quizDesc[number].classList.add("hide");
                 } else {
                     quizDesc[number].classList.remove("hide");
@@ -333,23 +335,23 @@
         const answerSelect2 = (elem) => {
             const answer = elem.value;
             const answerNum = answer.split("_");
-            
+
             const select = document.querySelectorAll(".cbt__omr .omr");     //전체 문항 수 100개
             const label = select[answerNum[0]].querySelectorAll("input");   //보기 4개
-            label[answerNum[1]-1].checked = true;
+            label[answerNum[1] - 1].checked = true;
 
             const answerInputs = document.querySelectorAll(".cbt__selects input:checked");
             cbtRest.innerHTML = questionLength - answerInputs.length;
         }
-        
+
         // 보기 체크2
         const answerSelect = (elem) => {
             const answer = elem.value;
             const answerNum = answer.split("_");
-            
+
             const select = document.querySelectorAll(".cbt__quiz .cbt");     //전체 문항 수 100개
             const label = select[answerNum[0]].querySelectorAll("input");   //보기 4개
-            label[answerNum[1]-1].checked = true;
+            label[answerNum[1] - 1].checked = true;
 
             const answerInputs = document.querySelectorAll(".cbt__selects input:checked");
             cbtRest.innerHTML = questionLength - answerInputs.length;
@@ -380,14 +382,14 @@
         const reduceTime = () => {
             questionTimeRemain--;
 
-            if(questionTimeRemain == 0) endQuiz();
+            if (questionTimeRemain == 0) endQuiz();
 
             cbtTime.innerText = displayTime();
         }
 
         // 시간 표시
         const displayTime = () => {
-            if(questionTimeRemain <= 0){
+            if (questionTimeRemain <= 0) {
                 return "0분 00초";
             } else {
                 let minutes = Math.floor(questionTimeRemain / 60);
@@ -409,4 +411,5 @@
 
     </script>
 </body>
+
 </html>
