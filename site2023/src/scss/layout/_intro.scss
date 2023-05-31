@@ -2,8 +2,7 @@
 
 .intro__wrap {}
 .intro__inner {
-   display: flex;
-   justify-content: space-between;
+   @include flex-between;
 }
 .intro__title {
     width: 33%;

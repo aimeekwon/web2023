@@ -1,21 +1,18 @@
-
 html {
     scroll-behavior: smooth;
-  }
+}
 main {
     width: 100%;
     overflow: hidden;
-  }
+}
 /* header */
 #header {
     position: absolute;
     left: 20px;
-    top:20px;
-
+    top: 20px;
 }
 #header h1 {
     margin-bottom: 0.3em;
-
 }
 #header ul {
     margin-top: 0.6em;
@@ -24,24 +21,20 @@ main {
     list-style: none;
     display: inline-block;
 }
-#header li a{
+#header li a {
     width: 30px;
     height: 30px;
     line-height: 30px;
-    color : #fff;
+    color: #fff;
     border: 1px solid #fff;
     display: inline-block;
     border-radius: 50%;
     text-align: center;
 }
-#header li.active a{
+#header li.active a {
     background-color: #fff;
     color: #000;
 }
-
-
-
-
 
 /* parallax__dot */
 .parallax__dot {
@@ -50,21 +43,20 @@ main {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px 10px;
     border-radius: 30px;
 }
 
 .parallax__dot li {
-    position: relative; 
+    position: relative;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     margin: 12px 8px;
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
-    text-indent: -9999px;  
-    transition: box-shadow .2s ease;
-
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    text-indent: -9999px;
+    transition: box-shadow 0.2s ease;
 }
 .parallax__dot li a {
     background-color: #fff;
@@ -74,33 +66,29 @@ main {
     left: 0;
     top: 0;
     border-radius: 50%;
-    transition: transform .2s ease;
+    transition: transform 0.2s ease;
 }
 .parallax__dot li.active {
-    box-shadow: 0 0 0 2px rgba(255,255,255, 1);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
 }
-.parallax__dot li.active a{
+.parallax__dot li.active a {
     transform: scale(0.4);
 }
 
 .parallax__item__num.active {
-    
 }
 
-
 /* footer */
-#footer { 
+#footer {
     /* position: absolute;
     left: 50%;
     bottom: 20px; */
     padding: 100px;
     transform: translateX(-50%);
 }
-#footer a{
+#footer a {
     color: #fff;
     font-size: 14px;
-
-    
 }
 #footer a:hover {
     text-decoration: underline;
@@ -111,12 +99,11 @@ main {
     right: 20px;
     top: 20px;
     z-index: 2000;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 20px 30px;
     border-radius: 50px;
-
 }
-.parallax__nav li{
+.parallax__nav li {
     display: inline;
     margin: 0 5px;
 }
@@ -126,14 +113,14 @@ main {
     text-align: center;
     line-height: 30px;
     color: #fff;
-} 
+}
 .parallax__nav li.active a {
     background-color: #fff;
     color: #000;
     border-radius: 20px;
     box-sizing: content-box;
 }
-.parallax__wrap{
+.parallax__wrap {
     max-width: 1600px;
     width: 98%;
     margin: 0 auto;
@@ -150,9 +137,9 @@ main {
 }
 .parallax__item__title {
     font-weight: bold;
-} 
+}
 
-.parallax__item:nth-child(even){
+.parallax__item:nth-child(even) {
     margin-left: 0;
     text-align: right;
 }
@@ -166,7 +153,7 @@ main {
     opacity: 0.01vw;
     z-index: -2;
 }
-.parallax__item__num > .parallax__item__dot li.active{
+.parallax__item__num > .parallax__item__dot li.active {
     z-index: 9999;
 }
 .parallax__dot li.active .parallax__item__num {
@@ -225,31 +212,27 @@ main {
     background-image: url(../img/parallaxEffect09.jpg);
 }
 .parallax__item__desc {
-  font-size: 3vw;
-  line-height: 1.4;
-  margin-top: -5vw;
-  margin-left: -4vw;  
-  font-weight: 100;
-} 
+    font-size: 3vw;
+    line-height: 1.4;
+    margin-top: -5vw;
+    margin-left: -4vw;
+    font-weight: 100;
+}
 .parallax__item:nth-child(even) .parallax__item__desc {
     margin-left: auto;
     margin-right: -4vw;
 }
 
-
-
 .parallax__info {
     position: fixed;
     left: 20px;
     bottom: 20px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 20px;
     font-size: 14px;
     line-height: 1.4;
 }
-
-
 
 .parallax__top {
     position: fixed;
@@ -257,13 +240,12 @@ main {
     bottom: 20px;
     transition: all 0.3s;
     z-index: 1000;
-
 }
 .parallax__top.show {
     bottom: 20px;
 }
 .parallax__top:hover {
-    background-color:#000;
+    background-color: #000;
     color: #fff;
 }
 .parallax__top a {
@@ -271,17 +253,17 @@ main {
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    background-color: rgba(255, 255,255,1);
+    background-color: rgba(255, 255, 255, 1);
     color: #000;
     text-align: center;
     font-size: 14px;
     cursor: pointer;
     line-height: 40px;
 }
-@media(max-width: 1200px){
+@media (max-width: 1200px) {
     .parallax__nav {
         padding: 10px;
-        background-color:rgba(0,0,0,0.9);
+        background-color: rgba(0, 0, 0, 0.9);
         right: 10px;
         left: 10px;
         top: 10px;
