@@ -1,56 +1,197 @@
-function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 할당
+function tetris() {
+    //블록이름 지정, 블록의 위치를 2차원 배열로 할당
 
     const blocks = {
         Tmino: [
-            [[2, 1], [0, 1], [1, 0], [1, 1],],
-            [[1, 2], [0, 1], [1, 0], [1, 1],],
-            [[1, 2], [0, 1], [2, 1], [1, 1],],
-            [[2, 1], [1, 2], [1, 0], [1, 1],]
+            [
+                [2, 1],
+                [0, 1],
+                [1, 0],
+                [1, 1],
+            ],
+            [
+                [1, 2],
+                [0, 1],
+                [1, 0],
+                [1, 1],
+            ],
+            [
+                [1, 2],
+                [0, 1],
+                [2, 1],
+                [1, 1],
+            ],
+            [
+                [2, 1],
+                [1, 2],
+                [1, 0],
+                [1, 1],
+            ],
         ],
         Imino: [
-            [[0, 0], [0, 1], [0, 2], [0, 3],],
-            [[0, 0], [1, 0], [2, 0], [3, 0],],
-            [[0, 0], [0, 1], [0, 2], [0, 3],],
-            [[0, 0], [1, 0], [2, 0], [3, 0],]
+            [
+                [0, 0],
+                [0, 1],
+                [0, 2],
+                [0, 3],
+            ],
+            [
+                [0, 0],
+                [1, 0],
+                [2, 0],
+                [3, 0],
+            ],
+            [
+                [0, 0],
+                [0, 1],
+                [0, 2],
+                [0, 3],
+            ],
+            [
+                [0, 0],
+                [1, 0],
+                [2, 0],
+                [3, 0],
+            ],
         ],
         Omino: [
-            [[0, 0], [0, 1], [1, 0], [1, 1],],
-            [[0, 0], [0, 1], [1, 0], [1, 1],],
-            [[0, 0], [0, 1], [1, 0], [1, 1],],
-            [[0, 0], [0, 1], [1, 0], [1, 1],]
+            [
+                [0, 0],
+                [0, 1],
+                [1, 0],
+                [1, 1],
+            ],
+            [
+                [0, 0],
+                [0, 1],
+                [1, 0],
+                [1, 1],
+            ],
+            [
+                [0, 0],
+                [0, 1],
+                [1, 0],
+                [1, 1],
+            ],
+            [
+                [0, 0],
+                [0, 1],
+                [1, 0],
+                [1, 1],
+            ],
         ],
         Zmino: [
-            [[0, 0], [1, 0], [1, 1], [2, 1],],
-            [[1, 0], [0, 1], [1, 1], [0, 2],],
-            [[0, 0], [1, 0], [1, 1], [2, 1],],
-            [[1, 0], [0, 1], [1, 1], [0, 2],]
+            [
+                [0, 0],
+                [1, 0],
+                [1, 1],
+                [2, 1],
+            ],
+            [
+                [1, 0],
+                [0, 1],
+                [1, 1],
+                [0, 2],
+            ],
+            [
+                [0, 0],
+                [1, 0],
+                [1, 1],
+                [2, 1],
+            ],
+            [
+                [1, 0],
+                [0, 1],
+                [1, 1],
+                [0, 2],
+            ],
         ],
         Smino: [
-            [[1, 0], [2, 0], [0, 1], [1, 1],],
-            [[0, 0], [0, 1], [1, 1], [1, 2],],
-            [[1, 0], [2, 0], [0, 1], [1, 1],],
-            [[0, 0], [0, 1], [1, 1], [1, 2],]
+            [
+                [1, 0],
+                [2, 0],
+                [0, 1],
+                [1, 1],
+            ],
+            [
+                [0, 0],
+                [0, 1],
+                [1, 1],
+                [1, 2],
+            ],
+            [
+                [1, 0],
+                [2, 0],
+                [0, 1],
+                [1, 1],
+            ],
+            [
+                [0, 0],
+                [0, 1],
+                [1, 1],
+                [1, 2],
+            ],
         ],
         Jmino: [
-            [[0, 2], [1, 0], [1, 1], [1, 2],],
-            [[0, 0], [0, 1], [1, 1], [2, 1],],
-            [[0, 0], [1, 0], [0, 1], [0, 2],],
-            [[0, 0], [1, 0], [2, 0], [2, 1],]
+            [
+                [0, 2],
+                [1, 0],
+                [1, 1],
+                [1, 2],
+            ],
+            [
+                [0, 0],
+                [0, 1],
+                [1, 1],
+                [2, 1],
+            ],
+            [
+                [0, 0],
+                [1, 0],
+                [0, 1],
+                [0, 2],
+            ],
+            [
+                [0, 0],
+                [1, 0],
+                [2, 0],
+                [2, 1],
+            ],
         ],
         Lmino: [
-            [[0, 0], [0, 1], [0, 2], [1, 2],],
-            [[0, 0], [1, 0], [2, 0], [0, 1],],
-            [[0, 0], [1, 0], [1, 1], [1, 2],],
-            [[0, 1], [1, 1], [2, 0], [2, 1],]
-        ]
+            [
+                [0, 0],
+                [0, 1],
+                [0, 2],
+                [1, 2],
+            ],
+            [
+                [0, 0],
+                [1, 0],
+                [2, 0],
+                [0, 1],
+            ],
+            [
+                [0, 0],
+                [1, 0],
+                [1, 1],
+                [1, 2],
+            ],
+            [
+                [0, 1],
+                [1, 1],
+                [2, 0],
+                [2, 1],
+            ],
+        ],
     };
     //DOM
     const tetrisView = document.querySelector(".tetris__play>.view> ul");
 
-    const gameEnd = document.querySelector('.gameEnd');
-    const gameStart = document.querySelector('.gameStart');
-    const startBtn = document.querySelector('.startBtn');
-    const reStartBtn = document.querySelector('.restartBtn');
+    const gameEnd = document.querySelector(".gameEnd");
+    const gameStart = document.querySelector(".gameStart");
+    const startBtn = document.querySelector(".startBtn");
+    const reStartBtn = document.querySelector(".restartBtn");
     const scoreDisplay = document.querySelector(".tetris_score");
     //배경세팅
     const line_rows = 20; //가로
@@ -65,8 +206,8 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
         //블록의 정보 변수
         type: "", //블록 타입
         direction: 0, //화살표 '위' 누르면 방향전환
-        top: 0,  //블록 위치x값 0-11
-        left: 3 //블록 위치 y값 0-19
+        top: 0, //블록 위치x값 0-11
+        left: 3, //블록 위치 y값 0-19
     };
 
     // 시작하기
@@ -77,7 +218,6 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
             newLine(); //라인만들기
         }
 
-
         generateNewBlock();
         renderBlocks(); //블록 만들기
     }
@@ -85,14 +225,12 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
     // 라인 만들기
     function newLine() {
         // for (let i = 0; i < line_rows; i++) {
-        const li = document.createElement('li');
-        const ul = document.createElement('ul');
+        const li = document.createElement("li");
+        const ul = document.createElement("ul");
 
         for (let j = 0; j < line_cols; j++) {
-
             const subLi = document.createElement("li");
             ul.prepend(subLi);
-
         }
 
         li.prepend(ul);
@@ -101,37 +239,37 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
     }
     // 블록 만들기
     function renderBlocks(moveType = "") {
-
         const { type, direction, top, left } = tempMovingItem;
         //이동 효과를 주기 위해 이동 전 블록의 클래스를 지움
         // console.log(type, direction, top, left);
-        const movingBlocks = document.querySelectorAll('.moving');
+        const movingBlocks = document.querySelectorAll(".moving");
 
-        movingBlocks.forEach(moving => {
-            moving.classList.remove(type, 'moving');
-        })
+        movingBlocks.forEach((moving) => {
+            moving.classList.remove(type, "moving");
+        });
 
-        blocks[type][direction].some(block => {
+        blocks[type][direction].some((block) => {
             const x = block[0] + left;
             const y = block[1] + top;
             // console.log({ tetrisView });
 
-            const target = tetrisView.childNodes[y] ? tetrisView.childNodes[y].childNodes[0].childNodes[x] : null;
+            const target = tetrisView.childNodes[y]
+                ? tetrisView.childNodes[y].childNodes[0].childNodes[x]
+                : null;
 
             const isAvailable = checkEmpty(target);
 
             if (isAvailable) {
                 target.classList.add(type, "moving");
-            }
-            else {
+            } else {
                 tempMovingItem = { ...movingItem };
 
-                if (moveType === 'retry') {
+                if (moveType === "retry") {
                     clearInterval(downInterval);
                     showGameOverText();
                 }
                 setTimeout(() => {
-                    renderBlocks('retry');
+                    renderBlocks("retry");
 
                     if (moveType === "top") {
                         seizeBlock();
@@ -145,11 +283,10 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
         movingItem.direction = direction;
     }
 
-
     //블록잡기
     function seizeBlock() {
         const movingBlocks = document.querySelectorAll(".moving");
-        movingBlocks.forEach(moving => {
+        movingBlocks.forEach((moving) => {
             moving.classList.remove("moving");
             moving.classList.add("seized");
         });
@@ -159,10 +296,9 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
     function checkMatch() {
         const childNodes = tetrisView.childNodes;
 
-        childNodes.forEach(child => {
-
+        childNodes.forEach((child) => {
             let matched = true;
-            child.children[0].childNodes.forEach(li => {
+            child.children[0].childNodes.forEach((li) => {
                 if (!li.classList.contains("seized")) {
                     matched = false;
                 }
@@ -172,14 +308,13 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
                 newLine();
                 // score++;
                 // scoreDisplay.innerText = score;
-            }  
+            }
         });
 
         generateNewBlock();
     }
     function showGameOverText() {
         gameEnd.style.display = "block";
-
     }
     function generateNewBlock() {
         clearInterval(downInterval);
@@ -211,7 +346,8 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
     }
     // 모양 변경하기
     function changeDirection() {
-        const direction = tempMovingItem.direction + 1 < 4 ? tempMovingItem.direction + 1 : 0;
+        const direction =
+            tempMovingItem.direction + 1 < 4 ? tempMovingItem.direction + 1 : 0;
         tempMovingItem.direction = direction;
         // const direction = tempMovingItem.direction;
         // direction === 3
@@ -247,17 +383,15 @@ function tetris() {//블록이름 지정, 블록의 위치를 2차원 배열로 
                 break;
         }
     });
-    startBtn.addEventListener('click', () => {
+    startBtn.addEventListener("click", () => {
         gameStart.style.display = "none";
 
-        init();
-        reStartBtn.addEventListener('click', () => {
-
+        init(tetris);
+        reStartBtn.addEventListener("click", () => {
             tetrisView.innerHTML = ""; // 게임판 초기화
             init(tetris); //새로운 게임 시작
             gameEnd.style.display = "none"; //종료창 제거
-        })
-    })
-
-} export default tetris;
-
+        });
+    });
+}
+export default tetris;
