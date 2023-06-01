@@ -1,0 +1,48 @@
+//movies__wrap
+.movies__wrap {
+    overflow: hidden;
+}
+
+.movies__inner {
+    height: 500px;
+    .movies__text {
+        h3 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 22px;
+            font-weight: 300;
+            margin: 10px 0;
+        }
+        a {
+            width: 100px;
+            height: 30px;
+            background-color: var(--button_red);
+            display: inline-block;
+            font-weight: 300;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+        }
+    }
+    .movies__item {
+        position: absolute;
+        margin-top: 100px;
+        display: flex;
+        > div {
+            width: 400px;
+            margin-right: 20px;
+        }
+
+        .movies__img {
+            width: 270px;
+            height: 400px;
+            border: 1px solid var(--color_body);
+            margin-left: 10px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
