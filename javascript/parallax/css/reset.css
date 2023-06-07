@@ -10,6 +10,12 @@
 @import url('https://webfontworld.github.io/BMJua/BMJua.css');
 @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+@font-face {
+    font-family: 'YESGothic-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* reset */
 * {
     margin: 0;
@@ -66,6 +72,9 @@ em {
 }
 .font10 {
     font-family: 'GmarketSans';
+}
+.font11 {
+    font-family: 'YESGothic-Regular';
 }
 
 
