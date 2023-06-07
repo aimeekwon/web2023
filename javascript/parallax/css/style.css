@@ -168,7 +168,7 @@ main {
     padding-bottom: 56.25%;
     /* background-color: #000; */
     position: relative;
-    z-index: -1;
+    /*z-index: -1;*/
     overflow: hidden;
 }
 .parallax__item__img {
@@ -182,6 +182,10 @@ main {
     background-position: center center;
     background-repeat: no-repeat;
     filter: saturate(0%);
+    transition: filter 1s;
+}
+.parallax__item__img:hover {
+    filter: saturate(100%);
     transition: filter 1s;
 }
 .parallax__item:nth-child(1) .parallax__item__img {
@@ -217,6 +221,7 @@ main {
     margin-top: -5vw;
     margin-left: -4vw;
     font-weight: 100;
+    position: relative;
 }
 .parallax__item:nth-child(even) .parallax__item__desc {
     margin-left: auto;
