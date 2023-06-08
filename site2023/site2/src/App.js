@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./components/pages/Main.jsx";
 import Member from "./components/pages/Member.jsx";

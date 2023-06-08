@@ -1,5 +1,35 @@
 import React from "react";
 
+const introText = [
+    {
+        iconClass: "icon-bg1",
+        title: "React.js",
+        desc: "프론트앤드 과정입니다",
+    },
+    {
+        iconClass: "icon-bg2",
+        title: "Vue.js",
+        desc: "프론트앤드 과정00입니다",
+    },
+    {
+        iconClass: "icon-bg3",
+        title: "Node.js",
+        desc: "프론트앤드 과정입니다",
+    },
+    {
+        iconClass: "icon-bg4",
+        title: "Next.js",
+        desc: "프론트앤드 과정입니다",
+    },
+]
+function IntroDesc({iconClass, title, desc}) {
+    return (
+        <div>
+            <h4 className={iconClass}>{title}</h4>
+            <p>{desc}</p>
+        </div>
+    )
+}
 function IntroSection(props) {
     return (
         <section id="introSection" className={props.attr}>
@@ -8,30 +38,17 @@ function IntroSection(props) {
             <div className="intro__inner container">
                 <div className="intro__title">
                     <span>frontend</span>
-                    <h3>
-                        프론트앤드
-                        <br /> 과정
-                    </h3>
-
+                    <h3>프론트앤드<br /> 과정</h3>
                     <p>프론트앤드 과정입니다</p>
                 </div>
                 <div className="intro__desc">
-                    <div>
-                        <h4 className="icon-bg1">React.js</h4>
-                        <p>프론트앤드 과정입니다</p>
-                    </div>
-                    <div>
-                        <h4 className="icon-bg2">Node.js</h4>
-                        <p>프론트앤드 과정입니다</p>
-                    </div>
-                    <div>
-                        <h4 className="icon-bg3">Vue.js</h4>
-                        <p>프론트앤드 과정입니다</p>
-                    </div>
-                    <div>
-                        <h4 className="icon-bg4">Next.js</h4>
-                        <p>프론트앤드 과정입니다</p>
-                    </div>
+                    {introText.map((text, index) => (
+                        <IntroDesc
+                            iconClass={text.iconClass}
+                            title={text.title}
+                            desc={text.desc}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
