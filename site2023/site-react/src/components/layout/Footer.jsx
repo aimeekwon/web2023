@@ -10,7 +10,7 @@ function Footer(props) {
             질문 환영 :파티하는_얼굴: <br />
             궁금한 사항은 메일로 연락주세요!
             <a href="mailto:aimee00418@gmail.com">
-            aimee00418@gmail.com
+              aimee00418@gmail.com
             </a>
           </p>
           <ul className="sns">
