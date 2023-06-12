@@ -49,3 +49,50 @@ overflow: hidden;
 
 
 
+////movie page
+.movie__page {}
+.movie__slider {
+    display: none;
+}
+.movie__search {
+    text-align: center;
+    margin: 50px;
+    input {
+        border: 1px solid #e8ecf2;
+        font-size: 16px;
+        padding: 10px 20px;
+        
+    }
+    button {
+        @include button (#475EE4, #fff)
+    }
+}
+.movie__tag {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        margin-top: 100px;
+        li {
+            a{
+                border: 1px solid gray;
+                margin: 10px 20px;
+                margin: 0 10px;
+                color: red;
+
+            }
+        }
+    }
+}
+.movie__cont {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        li {
+            width: 31.33%;
+            margin-bottom: 4%;
+        }
+    }
+}
